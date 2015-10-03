@@ -1,0 +1,25 @@
+html {
+  padding: $navbar-height 0;
+}
+
+html, body {
+
+}
+
+body {
+
+}
+
+main {
+
+}
+
+::selection {
+	color: white;
+	background-color: $base-blue;
+}
+
+::-moz-selection {
+	color: white;
+	background-color: $main-blue;
+}

@@ -1,0 +1,9 @@
+title: Studiocraft
+author: Bryan Colosky
+year: 2015
+
+port: 3001
+url: http://studiocraft.cc
+baseurl:
+
+exclude: [package.json, bower.json, Gruntfile.js, node_modules, bower_components, gulp, GitHub Repos, /**/styles, /**/scripts, .bowerrc, .sass-cache, .DS_Store, .gitignore, .editorconfig, .jshintrc, /*.txt, /*.md, /*.ai, /*.pdf, /*.indd, /*.idlk]

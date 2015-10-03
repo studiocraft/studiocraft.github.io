@@ -1,0 +1,33 @@
+html {
+  padding: $navbar-height 0;
+  font-weight: $font-weight;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  overflow: auto;
+}
+
+footer[data-nav="footer"] {
+  text-align: center;
+  margin: 0;
+  border: none;
+}
+
+::selection {
+	color: white;
+	background-color: $main-blue;
+}
+
+::-moz-selection {
+	color: white;
+	background-color: $main-blue;
+}
