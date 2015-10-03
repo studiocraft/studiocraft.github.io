@@ -1,3 +1,2 @@
-# Studiocraft[http://studiocraft.cc]
-## About
+# [Studiocraft](http://studiocraft.cc)
 Hello World.
