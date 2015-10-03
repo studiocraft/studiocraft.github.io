@@ -1,1 +1,1 @@
-Copyright 2015 Bryan Colosky
+Copyright 2015 Studiocraft

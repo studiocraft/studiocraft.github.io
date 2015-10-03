@@ -1,3 +1,3 @@
-# Melda Kahraman-Colosky
+# Studiocraft[http://studiocraft.cc]
 ## About
-Hello World
+Hello World.
