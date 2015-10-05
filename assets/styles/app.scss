@@ -1,14 +1,14 @@
 //	VARIABLES
-@import "variables/_main";
+@import 'variables/main';
 
 //	BOWER COMPONENTS
-@import "vendors/_main";
+@import 'vendors/main';
 
 //	STYLE
-@import "style/global";
+@import 'style/global';
 
 //	COMPONENTS
-@import "style/components/_main";
+@import 'style/components/main';
 
 //	VIEWS
-@import "style/views/_main";
+@import 'style/views/main';

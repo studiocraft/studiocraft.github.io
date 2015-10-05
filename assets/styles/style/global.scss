@@ -1,25 +1,25 @@
-html {
-  padding: $navbar-height 0;
-}
+html {}
 
 html, body {
-
+	height:100%;
+	margin:0;
+	padding:0;
 }
 
 body {
-
+	font-weight: 300;
 }
 
 main {
-
+	height: 100%;
 }
 
 ::selection {
 	color: white;
-	background-color: $base-blue;
+	background-color: $brand-primary;
 }
 
 ::-moz-selection {
 	color: white;
-	background-color: $main-blue;
+	background-color: $brand-primary;
 }

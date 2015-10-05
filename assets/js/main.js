@@ -19,32 +19,9 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        $(document).ready( function() {
-          var $grid = $('.grid').imagesLoaded( function() {
-            $grid.masonry({
-              itemSelector: '.grid-item',
-              percentPosition: true,
-              columnWidth: '.grid-sizer'
-            });
-          });
-        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
-        var isLateralMenuAnimating = false;
-        //open/close lateral navigation
-        $('.main-menu--trigger').on('click', function(event){
-          event.preventDefault();
-          //stop if nav animation is running
-          if( !isLateralMenuAnimating ) {
-            isLateralMenuAnimating = true;
-
-            $('body').toggleClass('main-menu--is-open');
-            $('.main-menu--wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-              isLateralMenuAnimating = false;
-            });
-          }
-        });
       }
     },
     // About page

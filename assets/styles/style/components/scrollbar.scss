@@ -1,15 +1,15 @@
 ::-webkit-scrollbar {
   background: $gray-lighter;
-  width: $scroll-bar-dimension;
+  width: .5rem;
 
 	&:horizontal {
-		height: $scroll-bar-dimension;
+		height: .5rem;
 	}
 }
 
 ::-webkit-scrollbar-thumb {
   background: $gray-darker;
-  border-radius: $scroll-bar-radius;
-  border: ($scroll-bar-dimension / 4) solid $gray-lighter;
+  border-radius: .25rem;
+  border: (.5rem / 4) solid $gray-lighter;
   box-sizing: content-box;
 }

@@ -1,0 +1,13 @@
+.banner {
+  height: 100%;
+  background-image: url('../images/banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.overlay {
+  height: 100%;
+  margin: 0;
+  background-color: transparentize($brand-primary, .25);
+}
