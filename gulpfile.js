@@ -113,6 +113,5 @@ gulp.task('watch', function() {
     gulp.watch(['assets/scripts/**/*.js'], ['js']);
 });
 
-gulp.task('copy', ['vendorScripts', 'vendorStyles', 'vendorFonts']);
-gulp.task('bower', ['copy']);
-gulp.task('default', ['sass','js','watch','bower']);
+gulp.task('vendors', ['vendorScripts', 'vendorStyles', 'vendorFonts']);
+gulp.task('default', ['sass', 'js', 'watch', 'vendors']);
