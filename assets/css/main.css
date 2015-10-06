@@ -8104,3 +8104,9 @@ main {
 
 .overlay {
   background-color: rgba(0, 105, 145, 0.75); }
+  .overlay a {
+    color: white;
+    text-decoration: none; }
+    .overlay a:hover,
+    .overlay a:active {
+      color: #e6e6e6; }

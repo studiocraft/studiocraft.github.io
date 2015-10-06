@@ -22,4 +22,14 @@
 
 .overlay {
   background-color: transparentize($brand-primary, .25);
+
+  & a {
+    color: white;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      color: darken(white, 10);
+    }
+  }
 }
