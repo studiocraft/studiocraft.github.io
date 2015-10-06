@@ -8085,6 +8085,11 @@ main {
     outline: none;
     color: #777777; }
 
+.banner, .overlay {
+  height: 100%;
+  margin: 0;
+  overflow: auto; }
+
 .banner {
   height: 100%;
   background-image: url("../images/banner.jpg");
@@ -8093,6 +8098,4 @@ main {
   background-attachment: fixed; }
 
 .overlay {
-  height: 100%;
-  margin: 0;
   background-color: rgba(0, 105, 145, 0.75); }

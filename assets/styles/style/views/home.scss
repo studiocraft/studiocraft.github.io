@@ -1,3 +1,9 @@
+.banner , .overlay {
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+}
+
 .banner {
   height: 100%;
   background-image: url('../images/banner.jpg');
@@ -7,7 +13,5 @@
 }
 
 .overlay {
-  height: 100%;
-  margin: 0;
   background-color: transparentize($brand-primary, .25);
 }
