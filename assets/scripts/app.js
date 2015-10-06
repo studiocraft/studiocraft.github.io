@@ -19,15 +19,21 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        $(document).ready(function(){
+          var imgCycle = ['bg1','bg2'];
+          var randomBg = Math.floor(Math.random() * imgCycle.length);
+          var backgroundImg = imgCycle[randomBg];
+          $('.banner').addClass(backgroundImg);
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
     },
     // About page
-    'about_us': {
+    'about': {
       init: function() {
-        // JavaScript to be fired on the about us page
+        // JavaScript to be fired on the about  page
       }
     }
   };

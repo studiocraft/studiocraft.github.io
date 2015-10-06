@@ -6,10 +6,18 @@
 
 .banner {
   height: 100%;
-  background-image: url('../images/banner.jpg');
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  &.bg1 {
+    background-image: url('../images/micro-chip.jpg');
+  }
+
+  &.bg2 {
+    background-image: url('../images/new-york.jpg');
+  }
 }
 
 .overlay {
