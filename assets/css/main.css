@@ -4163,8 +4163,8 @@ tbody.collapse.in {
       color: #ccc; }
 
 .navbar-inverse {
-  background-color: #222;
-  border-color: #090909; }
+  background-color: rgba(0, 105, 145, 0.5);
+  border-color: rgba(0, 68, 94, 0.5); }
   .navbar-inverse .navbar-brand {
     color: #9d9d9d; }
     .navbar-inverse .navbar-brand:hover,
@@ -4183,7 +4183,7 @@ tbody.collapse.in {
   .navbar-inverse .navbar-nav > .active > a:hover,
   .navbar-inverse .navbar-nav > .active > a:focus {
     color: #fff;
-    background-color: #090909; }
+    background-color: rgba(0, 68, 94, 0.5); }
   .navbar-inverse .navbar-nav > .disabled > a,
   .navbar-inverse .navbar-nav > .disabled > a:hover,
   .navbar-inverse .navbar-nav > .disabled > a:focus {
@@ -4198,17 +4198,17 @@ tbody.collapse.in {
       background-color: #fff; }
   .navbar-inverse .navbar-collapse,
   .navbar-inverse .navbar-form {
-    border-color: #101010; }
+    border-color: rgba(0, 79, 109, 0.5); }
   .navbar-inverse .navbar-nav > .open > a,
   .navbar-inverse .navbar-nav > .open > a:hover,
   .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #090909;
+    background-color: rgba(0, 68, 94, 0.5);
     color: #fff; }
   @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-      border-color: #090909; }
+      border-color: rgba(0, 68, 94, 0.5); }
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-      background-color: #090909; }
+      background-color: rgba(0, 68, 94, 0.5); }
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
       color: #9d9d9d; }
       .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -4219,7 +4219,7 @@ tbody.collapse.in {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
       color: #fff;
-      background-color: #090909; }
+      background-color: rgba(0, 68, 94, 0.5); }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -8052,30 +8052,6 @@ body {
 main {
   height: 100%; }
 
-::-moz-selection {
-  color: white;
-  background-color: #006991; }
-
-::selection {
-  color: white;
-  background-color: #006991; }
-
-::-moz-selection {
-  color: white;
-  background-color: #006991; }
-
-::-webkit-scrollbar {
-  background: #eeeeee;
-  width: .5rem; }
-  ::-webkit-scrollbar:horizontal {
-    height: .5rem; }
-
-::-webkit-scrollbar-thumb {
-  background: #222222;
-  border-radius: .25rem;
-  border: 0.125rem solid #eeeeee;
-  box-sizing: content-box; }
-
 [data-input="clear"] {
   pointer-events: auto;
   color: #777777; }
@@ -8086,27 +8062,34 @@ main {
     outline: none;
     color: #777777; }
 
-.banner, .overlay {
-  height: 100%;
-  margin: 0;
-  overflow: auto; }
-
 .banner {
-  height: 100%;
+  min-height: 100%; }
+  .banner .jumbotron {
+    border-radius: 0;
+    padding-top: 50px; }
+  .banner .overlay {
+    background-color: rgba(0, 105, 145, 0.75); }
+  .banner a {
+    color: white;
+    text-decoration: none; }
+    .banner a:hover,
+    .banner a:active {
+      color: #e6e6e6; }
+
+.bg, .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1; }
+
+.bg {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed; }
-  .banner.bg1 {
+  .bg.rndm1 {
     background-image: url("../images/micro-chip.jpg"); }
-  .banner.bg2 {
+  .bg.rndm2 {
     background-image: url("../images/new-york.jpg"); }
-
-.overlay {
-  background-color: rgba(0, 105, 145, 0.75); }
-  .overlay a {
-    color: white;
-    text-decoration: none; }
-    .overlay a:hover,
-    .overlay a:active {
-      color: #e6e6e6; }

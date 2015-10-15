@@ -1,26 +1,16 @@
 html {}
 
 html, body {
-	height:100%;
-	margin:0;
-	padding:0;
+  height:100%;
+  margin:0;
+  padding:0;
 }
 
 body {
-	font-weight: 300;
-	letter-spacing: 1px;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 main {
-	height: 100%;
-}
-
-::selection {
-	color: white;
-	background-color: $brand-primary;
-}
-
-::-moz-selection {
-	color: white;
-	background-color: $brand-primary;
+  height: 100%;
 }

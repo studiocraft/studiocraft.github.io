@@ -1,29 +1,16 @@
-.banner , .overlay {
-  height: 100%;
-  margin: 0;
-  overflow: auto;
-}
-
 .banner {
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  min-height: 100%;
 
-  &.bg1 {
-    background-image: url('../images/micro-chip.jpg');
+  .jumbotron {
+    border-radius: 0;
+    padding-top: $navbar-height;
   }
 
-  &.bg2 {
-    background-image: url('../images/new-york.jpg');
+  .overlay {
+    background-color: transparentize($brand-primary, .25);
   }
-}
 
-.overlay {
-  background-color: transparentize($brand-primary, .25);
-
-  & a {
+  a {
     color: white;
     text-decoration: none;
 
@@ -31,5 +18,29 @@
     &:active {
       color: darken(white, 10);
     }
+  }
+}
+
+.bg, .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &.rndm1 {
+    background-image: url('../images/micro-chip.jpg');
+  }
+
+  &.rndm2 {
+    background-image: url('../images/new-york.jpg');
   }
 }

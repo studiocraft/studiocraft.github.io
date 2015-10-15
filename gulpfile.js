@@ -83,6 +83,10 @@ gulp.task('vendorScripts', function() {
                 dest: 'js/vendors'
             })
             .compile({
+                src: 'bootstrap-sass/assets/javascripts/*.js',
+                dest: 'js/vendors'
+            })
+            .compile({
                 src: 'masonry/dist/*.js',
                 dest: 'js/vendors'
             })

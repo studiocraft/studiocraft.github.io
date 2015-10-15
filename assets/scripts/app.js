@@ -20,14 +20,31 @@
       init: function() {
         // JavaScript to be fired on all pages
         $(document).ready(function(){
-          var imgCycle = ['bg1','bg2'];
+          var imgCycle = ['rndm1','rndm2'];
           var randomBg = Math.floor(Math.random() * imgCycle.length);
           var backgroundImg = imgCycle[randomBg];
-          $('.banner').addClass(backgroundImg);
+          $('.bg').addClass(backgroundImg);
         });
+        function renderHeight (e) {
+        var containerHeight = $('.banner').height();
+          $('.banner').children().css({"min-height": containerHeight + "px"})
+        }
+        $(window).on('load resize', renderHeight);
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+        $("a[data-scroll='animate']").click(function() {
+          if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
       }
     },
     // About page
