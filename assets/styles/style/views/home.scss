@@ -1,11 +1,10 @@
-.banner , .overlay {
-  height: 100%;
+.banner, .overlay {
+  min-height: 100%;
   margin: 0;
   overflow: auto;
 }
 
 .banner {
-  height: 100%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -21,6 +20,11 @@
 }
 
 .overlay {
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: auto;
+  left: 0;
   background-color: transparentize($brand-primary, .25);
 
   & a {

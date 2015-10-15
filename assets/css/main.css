@@ -8087,12 +8087,11 @@ main {
     color: #777777; }
 
 .banner, .overlay {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   overflow: auto; }
 
 .banner {
-  height: 100%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -8103,6 +8102,11 @@ main {
     background-image: url("../images/new-york.jpg"); }
 
 .overlay {
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: auto;
+  left: 0;
   background-color: rgba(0, 105, 145, 0.75); }
   .overlay a {
     color: white;
