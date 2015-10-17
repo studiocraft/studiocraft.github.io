@@ -1,16 +1,19 @@
 'use strict';
 
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-ruby-sass'),
     concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync'),
     rename = require('gulp-rename'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
-    scssLint = require('gulp-scss-lint');
+    scssLint = require('gulp-scss-lint'),
+    minifyCss = require('gulp-minify-css'),
+    sourcemaps = require('gulp-sourcemaps');
 
-var css = (function() {
+
+var styles = (function() {
     return {
         compile: function(config) {
             gulp.src('assets/styles/' + config.src + '.scss')
@@ -18,10 +21,28 @@ var css = (function() {
                     'config': 'scss-lint.yml',
                 }));
 
-            gulp.src('assets/styles/' + config.src + '.scss')
-                .pipe(sass())
-                .pipe(autoprefixer())
-                .pipe(rename(config.rename + '.css'))
+            return sass('assets/styles/' + config.src + '.scss', {
+                    precision: 10,
+                    sourcemap: true
+                })
+                .pipe(sourcemaps.init())
+                .on('error', sass.logError)
+                .pipe(autoprefixer("last 2 version", "> 1%", "ie 8", "ie 7"))
+                .pipe(sourcemaps.write('.'))
+                .pipe(gulp.dest('assets/' + config.dest));
+
+            return this;
+        }
+    };
+}());
+
+var css = (function() {
+    return {
+        compile: function(config) {
+            gulp.src('assets/css/' + config.src + '.css')
+                .pipe(minifyCss({
+                    suffix: '.min'
+                }))
                 .pipe(gulp.dest('assets/' + config.dest));
 
             return this;
@@ -55,11 +76,18 @@ var vendors = (function() {
 }());
 
 gulp.task('sass', function() {
+    return styles
+            .compile({
+                src: 'app',
+                dest: 'css'
+            });
+});
+
+gulp.task('css', function() {
     return css
             .compile({
                 src: 'app',
-                rename: 'main',
-                dest: 'css'
+                dest: 'css/dist'
             });
 });
 
@@ -80,6 +108,10 @@ gulp.task('vendorScripts', function() {
             })
             .compile({
                 src: 'respond/dest/*.js',
+                dest: 'js/vendors'
+            })
+            .compile({
+                src: 'bootstrap-sass/assets/javascripts/*.js',
                 dest: 'js/vendors'
             })
             .compile({
@@ -109,9 +141,9 @@ gulp.task('vendorStyles', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(['assets/styles/**/*.scss'], ['sass']);
+    gulp.watch(['assets/styles/**/*.scss'], ['sass', 'css']);
     gulp.watch(['assets/scripts/**/*.js'], ['js']);
 });
 
 gulp.task('vendors', ['vendorScripts', 'vendorStyles', 'vendorFonts']);
-gulp.task('default', ['sass', 'js', 'watch', 'vendors']);
+gulp.task('default', ['sass', 'css', 'js', 'watch', 'vendors']);

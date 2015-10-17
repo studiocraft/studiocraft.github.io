@@ -3,30 +3,91 @@ layout: default
 title: Home
 slug: home
 ---
-<section class="banner jumbotron">
+<section id="hero" class="banner">
+  <div class="bg"></div>
   <div class="overlay"></div>
-  <div class="container text-center">
-    <p>
-      <img class="img-responsive center-block" src="{{ site.baseurl }}/assets/svg/studiocraft-logo.svg" style="max-width: 25rem" alt="Logo">
-    <p>
-    <br>
-    <p><a href="mailto:hello@studiocraft.cc" class="btn btn-primary btn-lg">hello@studiocraft.cc</a></p>
-    <br>
-    <footer>
-      <address>
-        <strong>Studiocraft</strong><br>
-        Upper East Side<br>
-        New York, NY 10021<br>
-      </address>
-      <ul class="list-unstyled list-inline">
-        <li><a href="https://github.com/studiocraft" target="_blank"><i class="fa fa-fw fa-github fa-2x"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fa fa-fw fa-twitter fa-2x"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fa fa-fw fa-linkedin fa-2x"></i></a></li>
-    </footer>
+  <div class="jumbotron">
+    <div class="container">
+      <img class="img-responsive center-block" src="{{ site.baseurl }}/assets/svg/studiocraft-logo.svg" style="width:40rem">
+        <div id="jukebox" class="text-center">
+          <audio preload="auto">Your browser does not support the audio element.</audio>
+          <nav data-control="audio">
+            <a href="#" data-control="previous">
+              <i class="fa fa-fw fa-backward"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a href="#" data-control="pause">
+              <i class="fa fa-fw fa-pause"></i>
+              <span class="sr-only">Pause</span>
+            </a>
+            <a href="#" data-control="play">
+              <i class="fa fa-fw fa-play"></i>
+              <span class="sr-only">Play</span>
+            </a>
+            <a href="#" data-control="next">
+              <i class="fa fa-fw fa-forward"></i>
+              <span class="sr-only">Next</span>
+            </a>
+          </nav>
+          <div class="loader">
+            <div class="load-progress">
+              <div class="play-progress"></div>
+            </div>
+          </div>
+          <small><span data-info="title"></span> by <span data-info="author"></span></small>
+        </div>
+    </div>
   </div>
 </section>
-<section class="work">
-  <div class="container">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<section id="about" class="container">
+  <h1>About Studiocraft</h1>
+  <p class="page-header lead">Studiocraft focuses on design and technology as a broader approach to experience, product performance and consumer perception.</p>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><strong>Custom web development</strong></p>
+      <p class="text-justify">Every project has different requirements, audiences, and long-term goals. Studiocraft believes in building original and custom web sites.</p>
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Microsites & landing pages</strong></p>
+      <p class="text-justify">Studiocraft has a mobile first approach to provide a seamless user experience across phone, tablet, laptop, and desktop devices.</p>
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Branding & Identity</strong></p>
+      <p class="text-justify">Design is Studiocraft's core. We'll help  brand — or rebrand — your image with versatile materials that are easily recognizable across many types of media.</p>
+    </div>
   </div>
+</section>
+<section id="contact" class="container">
+  <h1>Contact</h1>
+  <p class="page-header lead">Have a question, have a project, or just want to say hello? Call or fill out the contact form, and we'll get back to you as fast as humanly possible.</p>
+  <form class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label class="sr-only" for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="email">Message</label>
+        <textarea class="form-control" id="message" placeholder="Say hello ..." rows="6" style="resize:none"></textarea>
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary btn-block btn-default" role="button">hello@studiocraft.cc</button>
+    </div>
+    <div class="col-sm-6">
+      <address class="text-center">
+        <p><strong>Studiocraft</strong><br>
+        Upper East Side<br>
+        New York, NY 10021<br></p>
+        <p><a href="callto:16468927292">+1 646 892 7292</a></p>
+      </address>
+      <ul class="list-unstyled list-inline text-center">
+        <li><a href="https://github.com/studiocraft" target="_blank"><i class="fa-fw fa fa-github"></i>GitHub</a></li>
+        <li><a href="#" target="_blank"><i class="fa-fw fa fa-twitter"></i>Twitter</a></li>
+        <li><a href="#" target="_blank"><i class="fa-fw fa fa-linkedin"></i>LinkedIn</a></li>
+      </ul>
+    </div>
+  </form>
 </section>

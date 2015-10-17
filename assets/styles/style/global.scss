@@ -14,13 +14,3 @@ body {
 main {
   height: 100%;
 }
-
-::selection {
-  color: white;
-  background-color: $brand-primary;
-}
-
-::-moz-selection {
-  color: white;
-  background-color: $brand-primary;
-}
