@@ -1,0 +1,26 @@
+#jukebox {
+  margin-top: 3rem;
+
+
+  .loader {
+    position: fixed;
+    height: .45rem;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .load-progress {
+      height: inherit;
+      background-color: transparentize(#ffffff, .35);
+      width: 0;
+      transition: width .2s;
+
+      .play-progress {
+        height: inherit;
+        background-color: invert($brand-primary);
+        width: 0;
+        transition: width .2s;
+      }
+    }
+  }
+}
