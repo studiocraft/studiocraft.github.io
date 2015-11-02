@@ -7872,24 +7872,24 @@ a {
   margin-top: 3rem; }
   #jukebox .loader {
     position: fixed;
-    height: .45rem;
+    height: .35rem;
     top: 0;
     left: 0;
     right: 0;
     text-align: left;
-    z-index: 1; }
+    z-index: 1090; }
     #jukebox .loader .load-progress {
       height: inherit;
       background-color: rgba(255, 255, 255, 0.65);
       width: 0;
-      -webkit-transition: width .2s;
-              transition: width .2s; }
+      -webkit-transition: width .4s;
+              transition: width .4s; }
       #jukebox .loader .load-progress .play-progress {
         height: inherit;
         background-color: #ff966e;
         width: 0;
-        -webkit-transition: width .2s;
-                transition: width .2s; }
+        -webkit-transition: width .4s;
+                transition: width .4s; }
   #jukebox nav[data-control] {
     margin: 0 1rem; }
 

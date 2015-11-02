@@ -4,24 +4,24 @@
 
   .loader {
     position: fixed;
-    height: .45rem;
+    height: .35rem;
     top: 0;
     left: 0;
     right: 0;
     text-align: left;
-    z-index: 1;
+    z-index: 1090;
 
     .load-progress {
       height: inherit;
       background-color: transparentize(#ffffff, .35);
       width: 0;
-      transition: width .2s;
+      transition: width .4s;
 
       .play-progress {
         height: inherit;
         background-color: invert($brand-primary);
         width: 0;
-        transition: width .2s;
+        transition: width .4s;
       }
     }
   }
