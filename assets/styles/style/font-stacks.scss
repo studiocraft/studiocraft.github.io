@@ -1,0 +1,33 @@
+//
+// Font Stacks
+// -------------------------
+
+//== San-Serif
+//
+
+$sans-serif-font-stack:
+
+("Code", code, code_pro_light-webfont, normal, 300),
+("Code", code, code_pro-webfont, normal, normal),
+("Code", code, code_pro_bold-webfont, normal, bold),
+("Code", code, code_pro_black-webfont, normal, 900);
+
+@each $val in $sans-serif-font-stack {
+	$font-family-name:   nth($val, 1);
+	$font-file-path:     nth($val, 2);
+	$font-file-name:     nth($val, 3);
+	$font-style:         nth($val, 4);
+	$font-weight:        nth($val, 5);
+
+	@font-face {
+		font-family: $font-family-name;
+		src: url('../fonts/#{$font-file-path}/#{$font-file-name}.eot'); /* IE9 Compat Modes */
+		src: url('../fonts/#{$font-file-path}/#{$font-file-name}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('../fonts/#{$font-file-path}/#{$font-file-name}.woff') format('woff'), /* Modern Browsers */
+			url('../fonts/#{$font-file-path}/#{$font-file-name}.woff2') format('woff2'), /* Modern Browsers */
+			url('../fonts/#{$font-file-path}/#{$font-file-name}.ttf')  format('truetype'), /* Safari, Android, iOS */
+			url('../fonts/#{$font-file-path}/#{$font-file-name}.svg#svgFontName') format('svg'); /* Legacy iOS */
+		font-style:  $font-style;
+		font-weight: $font-weight;
+	}
+}

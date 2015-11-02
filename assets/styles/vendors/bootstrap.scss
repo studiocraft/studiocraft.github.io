@@ -1,0 +1,18 @@
+a.navbar-brand {
+  font-family: $headings-font-family;
+  font-weight: normal;
+
+  &:after {
+    content: '';
+    display: block;
+    height: .1rem;
+    width: 0;
+    background: transparent;
+    transition: width .4s ease, background-color .4s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+    background: inherit;
+  }
+}

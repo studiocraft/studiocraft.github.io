@@ -1,0 +1,51 @@
+<header class="banner">
+  <div class="bg"></div>
+  <div class="overlay"></div>
+  <div class="jumbotron">
+    <div class="container text-center">
+      <img class="img-responsive center-block logo animated fadeInDown" src="{{ site.baseurl }}/assets/svg/studiocraft-logo.svg" style="max-width:40rem">
+      <div id="jukebox">
+        <audio preload="auto">Your browser does not support the audio element.</audio>
+        <nav data-control="audio">
+          <a href="javascript:void(0)" data-control="previous">
+            <i class="fa fa-fw fa-backward"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a href="javascript:void(0)" data-control="pause">
+            <i class="fa fa-fw fa-pause"></i>
+            <span class="sr-only">Pause</span>
+          </a>
+          <a href="javascript:void(0)" data-control="play">
+            <i class="fa fa-fw fa-play"></i>
+            <span class="sr-only">Play</span>
+          </a>
+          <a href="javascript:void(0)" data-control="next">
+            <i class="fa fa-fw fa-forward"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </nav>
+        <div class="loader">
+          <div class="load-progress">
+            <div class="play-progress"></div>
+          </div>
+        </div>
+        <!-- <div class="hide form-inline" data-control="volume">
+          <div class="form-group">
+            <label><i class="fa fa-volume-down"></i><span class="sr-only">Low</span></label>
+            <label><i class="fa fa-volume-up"><span class="sr-only">Max</span></i></label>
+            <label class="sr-only" for="volume">Volume</label>
+            <input type="range" data-control="range" value="25" step="1" range="min" min="0" max="100">
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" data-control="mute">
+              <i class="fa fa-volume-off"></i>
+              <span class="sr-only">Mute</span>
+            </label>
+          </div>
+        </div> -->
+        <small><span data-info="title"></span>&nbsp;by&nbsp;<span data-info="author"></span></small>
+      </div>
+    </div>
+  </div>
+</header>

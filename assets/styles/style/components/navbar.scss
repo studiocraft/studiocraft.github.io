@@ -1,0 +1,10 @@
+[data-headroom] {
+	transition: all 1s;
+
+	&.translateUp {
+		transform: translate3d(0,-100%,0);
+	}
+	&.translateDown {
+		transform: translate3d(0,0,0);
+	}
+}

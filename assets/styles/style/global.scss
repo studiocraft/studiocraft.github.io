@@ -14,3 +14,26 @@ body {
 main {
   height: 100%;
 }
+
+a {
+  display: inline-block;
+
+  &:after {
+    content: '';
+    display: block;
+    height: .1rem;
+    width: 0;
+    background: transparent;
+    transition: width .4s ease, background-color .4s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+    background: $link-hover-color;
+  }
+}
+.text-intro {
+  background-image: linear-gradient(30deg, $brand-primary 33.3334%, invert($brand-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
