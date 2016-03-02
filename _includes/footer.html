@@ -1,16 +1,11 @@
-<hr>
-<footer class="container">
-  <p class="pull-right">
-    <a href="#content" data-scroll='animate'><i class="fa fa-fw fa-angle-up"></i>Back to top</a>
-  </p>
-  <p class="pull-left">
-    <small><i class="fa fa-fw fa-copyright"></i>2015 Studiocraft. All rights reserved, built with love in New York City.</small>
-  </p>
+<footer>
+  <small>Built with <i class="fa fa-fw fa-heart"></i> in New York City.</small><br>
+  <small>Copyright <i class="fa fa-fw fa-copyright"></i>{{ site.time | date: "%Y" }} Studiocraft. All rights reserved.</small>
 </footer>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendors/jquery.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendors/respond.src.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendors/bootstrap.min.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendors/headroom.min.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendors/jQuery.headroom.min.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendors/wow.min.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+{% if site.github %}
+<script src="{{ site.baseurl }}dist/js/main.min.js"></script>
+{% else %}
+<script src="{{ site.baseurl }}assets/js/main.js"></script>
+{% endif %}

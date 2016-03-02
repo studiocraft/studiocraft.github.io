@@ -15,21 +15,20 @@
     }
   ],
   "dependencies": {
-    "browser-sync": "^2.7.1",
-    "favicons": "^3.1.3",
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.3.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-csscomb": "^3.0.6",
-    "gulp-jshint": "^1.11.0",
-    "gulp-minify-css": "^1.2.1",
-    "gulp-parker": "^0.1.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-ruby-sass": "^2.0.4",
-    "gulp-sass": "^2.0.4",
-    "gulp-scss-lint": "^0.2.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylestats": "^1.0.0",
-    "jshint-stylish": "^2.0.0"
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-favicons": "latest",
+    "gulp-jshint": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-rename": "latest",
+    "gulp-ruby-sass": "latest",
+    "gulp-scss-lint": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylestats": "latest",
+    "gulp-uglify": "latest",
+    "jshint-stylish": "latest",
+    "jshint": "latest"
   }
 }

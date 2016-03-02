@@ -1,17 +1,6 @@
-//	VARIABLES
-@import 'variables/main';
+// Imports
+@import 'base';
+@import 'type';
+@import 'layout';
 
-//	BOWER COMPONENTS
-@import 'vendors/main';
-
-//	FONTS
-@import 'style/font-stacks';
-
-//	STYLE
-@import 'style/global';
-
-//	COMPONENTS
-@import 'style/components/main';
-
-//	VIEWS
-@import 'style/views/main';
+@import 'buttons';

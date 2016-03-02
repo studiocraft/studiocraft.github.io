@@ -16,9 +16,6 @@
     "font-awesome": "latest",
     "jquery": "latest",
     "respond": "latest",
-    "bootstrap-sass": "latest",
-    "headroom.js": "~0.7.0",
-    "wow": "~1.1.2",
-    "animate.css": "~3.4.0"
+    "animate.css": "latest"
   }
 }

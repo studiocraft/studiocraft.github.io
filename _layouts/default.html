@@ -3,12 +3,10 @@
   <head>
   {% include head.html %}
   </head>
-  <body class="{{ page.slug }} container-fluid">
-    <main id="content" class="row">
-    {% include navbar.html %}
-    {% include banner.html %}
+  <body class="{{ page.slug }}">
+    <main id="content">
     {{ content }}
-    {% include footer.html %}
     </main>
+    {% include footer.html %}
   </body>
 </html>
