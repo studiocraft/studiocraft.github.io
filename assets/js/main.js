@@ -106,103 +106,103 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
-        $(document).ready(function() {
-          var playlist = [
-            {
-              url : "assets/music/jupiter.mp3",
-              title : "The Planets - Jupiter",
-              author : "Gustav Holst",
-            },
-            {
-              url : "assets/music/lakme.mp3",
-              title : "Lakmé - Sous le Dôme Épais",
-              author : "Léo Delibes",
-            }];
-
-          var aud = $('#jukebox audio').get(0);
-          aud.pos = -1;
-
-          $("a[data-control='play']").click(function() {
-            if (aud.pos < 0) {
-              $("a[data-control='next']").trigger('click');
-            } else {
-              aud.play();
-            }
-          });
-
-          $('a[data-control="pause"]').click(function() {
-            aud.pause();
-          });
-
-          $('input[data-control="mute"]').on('change', function() {
-            if( $('#jukebox audio').prop('muted') )
-            {
-              $('#jukebox audio').prop('muted', false);
-              $(this).find("i").toggleClass("fa-volume-off fa-volume-up");
-            } else {
-              $('#jukebox audio').prop('muted', true);
-              $(this).find("i").toggleClass("fa-volume-off fa-volume-up");
-            }
-          });
-
-          $('#jukebox audio').on('play', function() {
-            $('[data-control="volume"]').removeClass('hide').addClass('fade in');
-          });
-
-          $('#jukebox audio').on('pause', function() {
-            $('[data-control="volume"]').addClass('hide').removeClass('fade in');
-          });
-
-          $('input[type="range"]').on('change', function() {
-            var value = $(this).prop("value");
-            $('#jukebox audio').volume = (value / 100);
-          });
-
-          $('a[data-control="next"]').click(function() {
-            aud.pause();
-            aud.pos++;
-            if (aud.pos == playlist.length) aud.pos = 0;
-            aud.setAttribute('src', playlist[aud.pos].url);
-
-            $('[data-info="title"]').html(playlist[aud.pos].title);
-            $('[data-info="author"]').html(playlist[aud.pos].author);
-              aud.load();
-          });
-
-          $('a[data-control="previous"]').click(function() {
-            aud.pause();
-            aud.pos--;
-            if (aud.pos < 0) aud.pos = playlist.length - 1;
-            aud.setAttribute('src', playlist[aud.pos].url);
-            $('[data-info="title"]').html(playlist[aud.pos].title);
-            $('[data-info="author"]').html(playlist[aud.pos].author);
-              aud.load();
-          });
-
-          aud.addEventListener('progress', function() {
-            var percentLoaded = Math.round(parseInt(((aud.buffered.end(0) / aud.duration) * 100), 10));
-            $('.load-progress').css('width', percentLoaded + '%');
-          });
-
-          aud.addEventListener('timeupdate', function() {
-            var percentPlayed = Math.round(aud.currentTime / aud.duration * 100);
-            $('.play-progress').css('width', percentPlayed + '%');
-          });
-
-          aud.addEventListener('canplay', function() {
-            $('a[data-control="play"]').trigger('click');
-          });
-
-          aud.addEventListener('ended', function() {
-            $('a[data-control="next"]').trigger('click');
-          });
-
-          $('[data-info="title"]').html(playlist[0].title);
-
-          $('[data-info="author"]').html(playlist[0].author);
-
-          aud.load();
-        });
+        // $(document).ready(function() {
+        //   var playlist = [
+        //     {
+        //       url : "assets/music/jupiter.mp3",
+        //       title : "The Planets - Jupiter",
+        //       author : "Gustav Holst",
+        //     },
+        //     {
+        //       url : "assets/music/lakme.mp3",
+        //       title : "Lakmé - Sous le Dôme Épais",
+        //       author : "Léo Delibes",
+        //     }];
+        //
+        //   var aud = $('#jukebox audio').get(0);
+        //   aud.pos = -1;
+        //
+        //   $("a[data-control='play']").click(function() {
+        //     if (aud.pos < 0) {
+        //       $("a[data-control='next']").trigger('click');
+        //     } else {
+        //       aud.play();
+        //     }
+        //   });
+        //
+        //   $('a[data-control="pause"]').click(function() {
+        //     aud.pause();
+        //   });
+        //
+        //   $('input[data-control="mute"]').on('change', function() {
+        //     if( $('#jukebox audio').prop('muted') )
+        //     {
+        //       $('#jukebox audio').prop('muted', false);
+        //       $(this).find("i").toggleClass("fa-volume-off fa-volume-up");
+        //     } else {
+        //       $('#jukebox audio').prop('muted', true);
+        //       $(this).find("i").toggleClass("fa-volume-off fa-volume-up");
+        //     }
+        //   });
+        //
+        //   $('#jukebox audio').on('play', function() {
+        //     $('[data-control="volume"]').removeClass('hide').addClass('fade in');
+        //   });
+        //
+        //   $('#jukebox audio').on('pause', function() {
+        //     $('[data-control="volume"]').addClass('hide').removeClass('fade in');
+        //   });
+        //
+        //   $('input[type="range"]').on('change', function() {
+        //     var value = $(this).prop("value");
+        //     $('#jukebox audio').volume = (value / 100);
+        //   });
+        //
+        //   $('a[data-control="next"]').click(function() {
+        //     aud.pause();
+        //     aud.pos++;
+        //     if (aud.pos == playlist.length) aud.pos = 0;
+        //     aud.setAttribute('src', playlist[aud.pos].url);
+        //
+        //     $('[data-info="title"]').html(playlist[aud.pos].title);
+        //     $('[data-info="author"]').html(playlist[aud.pos].author);
+        //       aud.load();
+        //   });
+        //
+        //   $('a[data-control="previous"]').click(function() {
+        //     aud.pause();
+        //     aud.pos--;
+        //     if (aud.pos < 0) aud.pos = playlist.length - 1;
+        //     aud.setAttribute('src', playlist[aud.pos].url);
+        //     $('[data-info="title"]').html(playlist[aud.pos].title);
+        //     $('[data-info="author"]').html(playlist[aud.pos].author);
+        //       aud.load();
+        //   });
+        //
+        //   aud.addEventListener('progress', function() {
+        //     var percentLoaded = Math.round(parseInt(((aud.buffered.end(0) / aud.duration) * 100), 10));
+        //     $('.load-progress').css('width', percentLoaded + '%');
+        //   });
+        //
+        //   aud.addEventListener('timeupdate', function() {
+        //     var percentPlayed = Math.round(aud.currentTime / aud.duration * 100);
+        //     $('.play-progress').css('width', percentPlayed + '%');
+        //   });
+        //
+        //   aud.addEventListener('canplay', function() {
+        //     $('a[data-control="play"]').trigger('click');
+        //   });
+        //
+        //   aud.addEventListener('ended', function() {
+        //     $('a[data-control="next"]').trigger('click');
+        //   });
+        //
+        //   $('[data-info="title"]').html(playlist[0].title);
+        //
+        //   $('[data-info="author"]').html(playlist[0].author);
+        //
+        //   aud.load();
+        // });
       }
     },
   };
