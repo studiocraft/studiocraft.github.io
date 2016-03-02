@@ -142,7 +142,7 @@ var js = (function() {
         compile: function(config) {
             gulp.src('./assets/js/' + config.src + '.js')
                 .pipe(uglify())
-                .pipe(rename(config.rename + 'min.js'))
+                .pipe(rename(config.rename + '.min.js'))
                 .pipe(gulp.dest('./dist/' + config.dest));
 
             return this;
