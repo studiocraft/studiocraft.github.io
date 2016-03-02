@@ -19,7 +19,7 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        new WOW().init();
+        // new WOW().init();
 
         $(document).ready(function(){
           var imgCycle = ['rndm1','rndm2'];
