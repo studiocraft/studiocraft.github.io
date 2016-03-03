@@ -208,3 +208,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['css', 'js', 'watch']);
+gulp.task('build', ['css', 'js', 'icons']);

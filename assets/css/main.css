@@ -1,148 +1,193 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%; }
+  height: 100%;
+}
 
 html {
-  font-family: "proxima-nova",sans-serif;
+  font-family: 'proxima-nova',sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  line-height: 1.4; }
-  @media (min-width: 38em) {
-    html {
-      font-size: 1.4rem;
-      line-height: 1.8; } }
+  line-height: 1.4;
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+}
 
 body {
   color: #333333;
   background-color: #111111;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+      -ms-text-size-adjust: 100%;
+}
 
 a {
   color: #444444;
-  text-decoration: none; }
-  a:hover, a:focus {
-    text-decoration: underline; }
-  a strong {
-    color: inherit; }
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+a strong {
+  color: inherit;
+}
 
 img {
   display: block;
   max-width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 img.logo {
   padding-top: 3rem;
-  max-width: 24rem; }
+  max-width: 24rem;
+}
 
 table {
   margin-bottom: 1rem;
   width: 100%;
-  border: 1px solid #e5e5e5;
-  border-collapse: collapse; }
+  border: 1px solid #E5E5E5;
+  border-collapse: collapse;
+}
 
 td,
 th {
-  padding: .25rem .5rem;
-  border: 1px solid #e5e5e5; }
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #E5E5E5;
+}
 
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9; }
+  background-color: #F9F9F9;
+}
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
   font-weight: bold;
   line-height: 1.25;
   color: #1A1A1A;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+}
 
 h1 {
-  font-size: 2rem; }
+  font-size: 2rem;
+}
 
 h2 {
   margin-top: 1rem;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+}
 
 h3 {
   margin-top: 1.5rem;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+}
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   margin-top: 1rem;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
 
 small {
-  font-size: .8rem; }
+  font-size: 0.8rem;
+}
 
 strong {
-  color: #222222; }
+  color: #222222;
+}
 
-ul, ol, dl {
+ul,
+ol,
+dl {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
 
 .inline {
   list-style: none;
-  margin-left: -.4rem;
+  margin-left: -0.4rem;
   margin-right: 0;
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
-  padding: 0; }
+  padding: 0;
+}
 
 .inline > li {
   display: inline-block;
-  padding-left: .4rem; }
+  padding-left: 0.4rem;
+}
 
 dt {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 dd {
-  margin-bottom: .5rem; }
+  margin-bottom: 0.5rem;
+}
 
 hr {
   position: relative;
   margin: 1.5rem 0;
   border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff; }
+  border-top: 1px solid #EEEEEE;
+  border-bottom: 1px solid #FFFFFF;
+}
 
 abbr {
   font-size: 85%;
   font-weight: bold;
-  color: #555;
-  text-transform: uppercase; }
+  color: #555555;
+  text-transform: uppercase;
+}
 
 abbr[title] {
   cursor: help;
-  border-bottom: 1px dotted #e5e5e5; }
+  border-bottom: 1px dotted #E5E5E5;
+}
 
 /* Quotes */
 blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
-  color: #7a7a7a;
-  border-left: .25rem solid #e5e5e5; }
-  @media (min-width: 30em) {
-    blockquote {
-      padding-right: 5rem;
-      padding-left: 1.25rem; } }
+  padding: 0.5rem 1rem;
+  margin: 0.8rem 0;
+  color: #7A7A7A;
+  border-left: 0.25rem solid #E5E5E5;
+}
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+}
 
 blockquote p:last-child {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .lead {
   font-size: 1.25rem;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 main {
   max-width: 38rem;
@@ -151,22 +196,28 @@ main {
   margin-bottom: -3.6rem;
   margin-left: auto;
   margin-right: auto;
-  min-height: 100%; }
+  min-height: 100%;
+}
 
 main:after {
-  content: "";
-  display: block; }
+  content: '';
+  display: block;
+}
 
 section {
-  text-align: center; }
+  text-align: center;
+}
 
-footer, main:after {
-  height: 3.6rem; }
+footer,
+main:after {
+  height: 3.6rem;
+}
 
 footer {
   height: 3.6rem;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+}
 
 .button,
 button {
@@ -190,15 +241,20 @@ button {
           user-select: none;
   background-image: none;
   background-color: transparent;
-  border: .15rem solid #444444;
+  border: 0.15rem solid #444444;
   border-radius: 1.8rem;
-  transition: color .4s, border-color .4s; }
-  @media (min-width: 38em) {
-    .button,
-    button {
-      letter-spacing: .1rem; } }
+  transition: color 0.4s, border-color 0.4s;
+}
+@media (min-width: 38em) {
+  .button,
+  button {
+    letter-spacing: 0.1rem;
+  }
+}
 
-input[type='submit'], input[type='reset'], input[type='button'] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   display: inline-block;
   padding: 1rem 1.6rem;
   margin-bottom: 0;
@@ -219,38 +275,51 @@ input[type='submit'], input[type='reset'], input[type='button'] {
           user-select: none;
   background-image: none;
   background-color: transparent;
-  border: .15rem solid #444444;
+  border: 0.15rem solid #444444;
   border-radius: 1.8rem;
-  transition: color .4s, border-color .4s; }
-  @media (min-width: 38em) {
-    input[type='submit'], input[type='reset'], input[type='button'] {
-      letter-spacing: .1rem; } }
+  transition: color 0.4s, border-color 0.4s;
+}
+@media (min-width: 38em) {
+  input[type='submit'],
+  input[type='reset'],
+  input[type='button'] {
+    letter-spacing: 0.1rem;
+  }
+}
 
 .button:hover,
 button:hover {
   text-decoration: none;
   color: #FFFFFF;
   border-color: #FFFFFF;
-  transition: color .4s, border-color .4s; }
+  transition: color 0.4s, border-color 0.4s;
+}
 
-input[type='submit']:hover, input[type='reset']:hover, input[type='button']:hover {
+input[type='submit']:hover,
+input[type='reset']:hover,
+input[type='button']:hover {
   text-decoration: none;
   color: #FFFFFF;
   border-color: #FFFFFF;
-  transition: color .4s, border-color .4s; }
+  transition: color 0.4s, border-color 0.4s;
+}
 
 .button:focus,
 button:focus {
   text-decoration: none;
   color: #FFFFFF;
   border-color: #FFFFFF;
-  outline: 0; }
+  outline: 0;
+}
 
-input[type='submit']:focus, input[type='reset']:focus, input[type='button']:focus {
+input[type='submit']:focus,
+input[type='reset']:focus,
+input[type='button']:focus {
   text-decoration: none;
   color: #FFFFFF;
   border-color: #FFFFFF;
-  outline: 0; }
+  outline: 0;
+}
 
 
 
