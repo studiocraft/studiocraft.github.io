@@ -3,8 +3,7 @@ button {
   display: inline-block;
   padding: 1rem 1.6rem;
   margin-bottom: 0;
-  color: #444444;
-  font-size: 1rem;
+  color: inherit;
   font-weight: bold;
   line-height: 1.4;
   text-align: center;
@@ -16,9 +15,8 @@ button {
   user-select: none;
   background-image: none;
   background-color: transparent;
-  border: .15rem solid #444444;
+  border: .15rem solid #FF4136;
   border-radius: 1.8rem;
-  transition: color .4s, border-color .4s;
 
   @media (min-width: 38em) {
     letter-spacing: .1rem;
@@ -32,8 +30,7 @@ input {
     display: inline-block;
     padding: 1rem 1.6rem;
     margin-bottom: 0;
-    color: #444444;
-    font-size: 1rem;
+    color: inherit;
     font-weight: bold;
     line-height: 1.4;
     text-align: center;
@@ -45,9 +42,8 @@ input {
     user-select: none;
     background-image: none;
     background-color: transparent;
-    border: .15rem solid #444444;
+    border: .15rem solid #FF4136;
     border-radius: 1.8rem;
-    transition: color .4s, border-color .4s;
 
     @media (min-width: 38em) {
       letter-spacing: .1rem;
@@ -58,9 +54,8 @@ input {
 .button:hover,
 button:hover {
   text-decoration: none;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
-  transition: color .4s, border-color .4s;
+  color: inherit;
+  filter: brightness(2);
 }
 
 input {
@@ -68,17 +63,16 @@ input {
   &[type='reset']:hover,
   &[type='button']:hover {
     text-decoration: none;
-    color: #FFFFFF;
-    border-color: #FFFFFF;
-    transition: color .4s, border-color .4s;
+    color: inherit;
+    filter: brightness(2);
   }
 }
 
 .button:focus,
 button:focus {
   text-decoration: none;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+  color: inherit;
+  filter: brightness(2);
   outline: 0;
 }
 
@@ -87,8 +81,8 @@ input {
   &[type='reset']:focus,
   &[type='button']:focus {
     text-decoration: none;
-    color: #FFFFFF;
-    border-color: #FFFFFF;
+    color: inherit;
+    filter: brightness(2);
     outline: 0;
   }
 }
