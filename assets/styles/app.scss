@@ -6,11 +6,11 @@
 @import 'buttons';
 
 @keyframes hue {
-  from {
+  0% {
     filter: hue-rotate(0deg);
   }
 
-  to {
+  100% {
     filter: hue-rotate(-360deg);
   }
 }
