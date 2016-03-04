@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: bold;
   line-height: 1.25;
-  color: #1A1A1A;
+  color: inherit;
   text-rendering: optimizeLegibility;
 }
 h1 {
@@ -37,11 +37,12 @@ small {
 }
 
 strong {
-  color: #222222;
+  color: inherit;
 }
 
 // Lists
 ul, ol, dl {
+  color: inherit;
   margin-top: 0;
   margin-bottom: 1rem;
 }
