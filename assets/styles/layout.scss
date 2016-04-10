@@ -3,7 +3,8 @@
 // Styles for managing the structural hierarchy of the site.
 
 main {
-  max-width: 38rem;
+  position: relative;
+  max-width: 160rem;
   padding-left:  1.5rem;
   padding-right: 1.5rem;
   margin-bottom: -3.6rem;
@@ -12,21 +13,24 @@ main {
   min-height: 100%;
 }
 
-main:after {
+main::after {
   content: "";
   display: block;
 }
 
 section {
-  text-align: center;
+  position: absolute;
+  bottom: 4.2rem;
 }
 
-footer, main:after {
+footer, main::after {
   height: 3.6rem;
 }
 
 footer {
   height: 3.6rem;
   width: 100%;
-  text-align: center;
+  max-width: 160rem;
+  padding-left:  1.5rem;
+  padding-right: 1.5rem;
 }

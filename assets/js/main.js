@@ -19,59 +19,24 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        // new WOW().init();
+        var toggles = document.querySelectorAll("a[data-toggle]");
+        for (i = 0; i < toggles.length; ++i) {
+          toggles[i].addEventListener("click", menuToggle, false);
+        }
+        function menuToggle() {
+          if( !isMenuAnimating ) {
+            isMenuAnimating = true;
+            scrollLock();
+            document.body.classList.toggle('nav-canvas--open');
 
-        $(document).ready(function(){
-          var imgCycle = ['rndm1','rndm2'];
-          var randomBg = Math.floor(Math.random() * imgCycle.length);
-          var backgroundImg = imgCycle[randomBg];
-          $('.bg').addClass(backgroundImg);
-        });
-
-        $(window).on('load resize', function (e) {
-          e.preventDefault();
-          var containerHeight = $('.banner').height();
-          $('.banner').children().css({"min-height": containerHeight + "px"});
-
-        });
-
+            $('.nav-overlay').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+              isMenuAnimating = false;
+            });
+          }
+        }
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
-        var scrollTimeout;
-
-        $('a[data-scroll="smooth"]').on('click touchend', function() {
-          if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html,body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
-
-        $(window).on('scroll touchend', function () {
-            if (scrollTimeout) {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = null;
-            }
-            scrollTimeout = setTimeout(scrollHandler, 20);
-        });
-        scrollHandler = function () {
-          var opacityInit = 0.65;
-          var opacityCalc = $(window).scrollTop() / 1000;
-          var opacity = opacityInit + opacityCalc;
-          var opacityMax = 1;
-
-          if(opacity < opacityMax ) {
-            $('.overlay').css({"opacity": opacity});
-          } else {
-            $('.overlay').css({"opacity": opacityMax});
-          }
-        };
       }
     },
     // Home page

@@ -32,7 +32,7 @@ var styles = (function() {
                 })
                 .pipe(sourcemaps.init())
                 .on('error', sass.logError)
-                .pipe(autoprefixer("last 2 version", "> 1%", "ie 8", "ie 7"))
+                .pipe(autoprefixer("last 5 version", "> .5%", "ie 8", "ie 7", "ie 6"))
                 .pipe(sourcemaps.write('.'))
                 .pipe(gulp.dest('./assets/' + config.dest))
                 .pipe(rename(config.rename + '.css'))
@@ -207,5 +207,5 @@ gulp.task('watch', function() {
     gulp.watch(['assets/images/favicons/*.src.png'], ['icons']);
 });
 
-gulp.task('default', ['css', 'js', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'watch']);
 gulp.task('build', ['css', 'js', 'icons']);

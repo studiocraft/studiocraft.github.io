@@ -16,38 +16,38 @@ body {
 }
 
 html {
-  font-family: "proxima-nova",sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.4;
+  font-family: "source-code-pro",sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8;
 
   @media (min-width: 38em) {
-    font-size: 1.4rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.4;
   }
 }
 
 body {
-  color: #FF4136;
+  color: #333333;
   background-color: #111111;
-  animation: hue 60s infinite linear;
+  text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
-// No `:visited` state is required by default (browsers will use `a`)
 a {
   color: inherit;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
   text-decoration: none;
+  transition: .4s;
 
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-    text-decoration: underline;
-  }
-
-  strong {
-    color: inherit;
+    color: #444444;
+    text-decoration: none;
+    transition: .4s;
   }
 }
 
@@ -56,29 +56,15 @@ img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
-}
 
-object {
-  padding-top: 3rem;
-  max-width: 24rem;
-  fill: #FF4136;
+  &.logo {
+    display: inline-block;
+    max-width: 18rem;
+    margin: 0;
+  }
 }
-
-// Tables
-table {
-  margin-bottom: 1rem;
-  width: 100%;
-  border: 1px solid #E5E5E5;
-  border-collapse: collapse;
-}
-
-td,
-th {
-  padding: .25rem .5rem;
-  border: 1px solid #e5e5e5;
-}
-
-tbody tr:nth-child(odd) td,
-tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
-}
+ //Horizontal Row
+ hr {
+   border: #FFFF00 solid .6rem;
+   margin: 1.6rem 0;
+ }
