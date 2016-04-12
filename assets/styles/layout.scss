@@ -19,8 +19,15 @@ main::after {
 }
 
 section {
-  position: absolute;
-  bottom: 4.2rem;
+  position: relative;
+  text-align: center;
+  padding-top: 4.2rem;
+
+  @media (min-width: 38em) {
+    position: absolute;
+    bottom: 4.2rem;
+    padding-top: 0;
+  }
 }
 
 footer, main::after {
@@ -31,6 +38,15 @@ footer {
   height: 3.6rem;
   width: 100%;
   max-width: 160rem;
+  text-align: center;
+  font-size: .8rem;
+  line-height: 1;
+  line-height: 1.4;
   padding-left:  1.5rem;
   padding-right: 1.5rem;
+
+  @media (min-width: 38em) {
+    text-align: left;
+    font-size: 1rem;
+  }
 }

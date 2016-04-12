@@ -4,6 +4,11 @@
   {% include head.html %}
   </head>
   <body class="{{ page.slug }}">
+    <picture class="bg">
+      <source media="(min-width: 650px)" srcset="{{ site.baseurl }}/assets/images/bg.jpg">
+      <source media="(min-width: 465px)" srcset="{{ site.baseurl }}/assets/images/bg.jpg">
+      <img src="{{ site.baseurl }}/assets/images/bg.jpg">
+    </picture>
     <main id="content">
     {{ content }}
     </main>
