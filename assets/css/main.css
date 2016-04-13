@@ -11,14 +11,8 @@ body {
 
 html {
   font-family: 'source-code-pro',sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.8;
-}
-@media (min-width: 38em) {
-  html {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 body {
@@ -32,11 +26,15 @@ body {
 a {
   color: inherit;
   font-weight: 700;
-  letter-spacing: 0.1rem;
   text-transform: uppercase;
   text-decoration: none;
   -webkit-transition: 0.4s;
           transition: 0.4s;
+}
+@media screen and (max-width: 38rem) {
+  a {
+    letter-spacing: 0.1rem;
+  }
 }
 a:hover,
 a:focus {
@@ -78,7 +76,8 @@ picture.bg {
 }
 
 hr {
-  border: #FFFF00 solid 0.6rem;
+  border: #FFFF00 solid 0;
+  border-bottom-width: 1.2rem;
   margin: 1.6rem 0;
 }
 

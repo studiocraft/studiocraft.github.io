@@ -17,13 +17,8 @@ body {
 
 html {
   font-family: "source-code-pro",sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.8;
-
-  @media (min-width: 38em) {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 body {
@@ -37,10 +32,13 @@ body {
 a {
   color: inherit;
   font-weight: 700;
-  letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
   transition: .4s;
+
+  @media screen and (max-width: 38rem) {
+    letter-spacing: .1rem;
+  }
 
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
@@ -82,6 +80,7 @@ picture {
 }
  //Horizontal Row
  hr {
-   border: #FFFF00 solid .6rem;
+   border: #FFFF00 solid 0;
+   border-bottom-width: 1.2rem;
    margin: 1.6rem 0;
  }
