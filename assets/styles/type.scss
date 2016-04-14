@@ -51,3 +51,15 @@ ul, ol {
   margin: 0;
   padding: 0;
 }
+
+// Selection Highlight
+
+::selection {
+  color: #FFFFFF;
+  background-color: #FFDC00;
+}
+
+::moz-selection {
+  color: #FFFFFF;
+  background-color: #FFDC00;
+}

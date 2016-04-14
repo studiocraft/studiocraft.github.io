@@ -26,7 +26,7 @@ a {
   text-decoration: none;
   -webkit-transition: .4s;
   transition: .4s; }
-  @media screen and (max-width: 38rem) {
+  @media screen and (min-width: 38rem) {
     a {
       letter-spacing: .1rem; } }
   a:hover, a:focus {
@@ -38,8 +38,14 @@ a {
 img,
 picture {
   display: block;
-  max-width: 100%;
+  min-width: 100%;
   margin: 0 auto; }
+  img::-moz-selection,
+  picture::-moz-selection {
+    background-color: transparent; }
+  img::selection,
+  picture::selection {
+    background-color: transparent; }
   img.logo,
   picture.logo {
     max-width: 18rem;
@@ -47,18 +53,18 @@ picture {
   img.bg,
   picture.bg {
     min-height: 100%;
-    min-width: 128rem;
+    min-width: 76rem;
     width: 100%;
     height: auto;
     position: fixed;
     top: 0;
     left: 0;
     opacity: .06; }
-    @media screen and (max-width: 128rem) {
+    @media screen and (max-width: 76rem) {
       img.bg,
       picture.bg {
         left: 50%;
-        margin-left: -64rem; } }
+        margin-left: -38rem; } }
 
 hr {
   border: #FFDC00 solid 0;
@@ -105,6 +111,18 @@ ul, ol {
   list-style: none;
   margin: 0;
   padding: 0; }
+
+::-moz-selection {
+  color: #FFFFFF;
+  background-color: #FFDC00; }
+
+::selection {
+  color: #FFFFFF;
+  background-color: #FFDC00; }
+
+::moz-selection {
+  color: #FFFFFF;
+  background-color: #FFDC00; }
 
 main {
   position: relative;

@@ -36,7 +36,7 @@ a {
   text-decoration: none;
   transition: .4s;
 
-  @media screen and (max-width: 38rem) {
+  @media screen and (min-width: 38rem) {
     letter-spacing: .1rem;
   }
 
@@ -53,8 +53,12 @@ a {
 img,
 picture {
   display: block;
-  max-width: 100%;
+  min-width: 100%;
   margin: 0 auto;
+
+  &::selection {
+    background-color: transparent;
+  }
 
   &.logo {
     max-width: 18rem;
@@ -63,7 +67,7 @@ picture {
 
   &.bg {
     min-height: 100%;
-    min-width: 128rem;
+    min-width: 76rem;
     width: 100%;
     height: auto;
     position: fixed;
@@ -71,9 +75,9 @@ picture {
     left: 0;
     opacity: .06;
 
-    @media screen and (max-width: 128rem) {
+    @media screen and (max-width: 76rem) {
       left: 50%;
-      margin-left: -64rem;
+      margin-left: -38rem;
     }
   }
 }
