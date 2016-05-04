@@ -1,125 +1,166 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%; }
+  height: 100%;
+}
 
 html {
-  font-family: "source-code-pro",sans-serif;
+  font-family: 'source-code-pro',sans-serif;
   line-height: 1.4;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
   color: #333333;
   font-size: 1.4rem;
   background-color: #111111;
-  text-size-adjust: 100%;
+          text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+      -ms-text-size-adjust: 100%;
+}
 
 a {
   color: #FFDC00;
   font-weight: 700;
   text-transform: uppercase;
-  text-decoration: none; }
-  @media screen and (min-width: 38rem) {
-    a {
-      letter-spacing: .1rem; } }
-  a:hover, a:focus {
-    color: #ddbf00;
-    text-decoration: underline; }
-  a:active, a:visited {
-    color: #ddbf00;
-    text-decoration: underline; }
+  text-decoration: none;
+}
+@media screen and (min-width: 38rem) {
+  a {
+    letter-spacing: 0.1rem;
+  }
+}
+a:hover,
+a:focus {
+  color: #DDBF00;
+  text-decoration: underline;
+}
+a:active,
+a:visited {
+  color: #DDBF00;
+  text-decoration: underline;
+}
 
 img,
 picture {
   display: block;
   min-width: 100%;
-  margin: 0 auto; }
-  img::-moz-selection,
-  picture::-moz-selection {
-    background-color: transparent; }
-  img::selection,
-  picture::selection {
-    background-color: transparent; }
-  img.logo,
-  picture.logo {
-    max-width: 18rem;
-    margin-bottom: 1rem; }
+  margin: 0 auto;
+}
+img::-moz-selection,
+picture::-moz-selection {
+  background-color: transparent;
+}
+img::selection,
+picture::selection {
+  background-color: transparent;
+}
+img.logo,
+picture.logo {
+  max-width: 18rem;
+  margin-bottom: 1rem;
+}
+img.bg,
+picture.bg {
+  min-height: 100%;
+  min-width: 152rem;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.06;
+}
+@media screen and (max-width: 152rem) {
   img.bg,
   picture.bg {
-    min-height: 100%;
-    min-width: 152rem;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: .06; }
-    @media screen and (max-width: 152rem) {
-      img.bg,
-      picture.bg {
-        left: 50%;
-        margin-left: -76rem; } }
+    left: 50%;
+    margin-left: -76rem;
+  }
+}
 
 hr {
   border: #FFDC00 solid 0;
   border-bottom-width: 4.2rem;
-  margin-bottom: 3.2rem; }
+  margin-bottom: 3.2rem;
+}
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
   line-height: 1.25;
   color: inherit;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+}
 
 h1 {
-  font-size: 3.6rem; }
+  font-size: 3.6rem;
+}
 
 h2 {
   margin-top: 1rem;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+}
 
 h3 {
   margin-top: 1.5rem;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+}
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   margin-top: 1rem;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 p {
   font-size: 1.8rem;
   margin-top: 0;
-  margin-bottom: 1.6rem; }
+  margin-bottom: 1.6rem;
+}
 
 strong {
-  color: inherit; }
+  color: inherit;
+}
 
-ul, ol, dl {
+ul,
+ol,
+dl {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 ::-moz-selection {
   color: #FFFFFF;
-  background-color: #FFDC00; }
+  background-color: #FFDC00;
+}
 
 ::selection {
   color: #FFFFFF;
-  background-color: #FFDC00; }
+  background-color: #FFDC00;
+}
 
 ::moz-selection {
   color: #FFFFFF;
-  background-color: #FFDC00; }
+  background-color: #FFDC00;
+}
 
 main {
   position: relative;
@@ -128,36 +169,49 @@ main {
   margin-bottom: -16rem;
   margin-left: auto;
   margin-right: auto;
-  min-height: 100%; }
+  min-height: 100%;
+}
 
 main::after {
-  content: "";
-  display: block; }
+  content: '';
+  display: block;
+}
 
-header, section {
+header,
+section {
   position: relative;
-  padding-top: 1.6rem; }
-  @media (min-width: 38em) {
-    header, section {
-      width: 50%;
-      max-width: 42.334rem; } }
+  padding-top: 1.6rem;
+}
+@media (min-width: 38em) {
+  header,
+  section {
+    width: 50%;
+    max-width: 42.334rem;
+  }
+}
 
 section > nav {
-  margin-bottom: 12rem; }
+  margin-bottom: 12rem;
+}
 
-footer, main::after {
-  height: 24rem; }
+footer,
+main::after {
+  height: 24rem;
+}
 
 footer {
   height: 16rem;
   width: 100%;
   line-height: 1.4;
   padding-left: 1.6rem;
-  padding-right: 1.6rem; }
-  @media (min-width: 38em) {
-    footer {
-      width: 50%;
-      max-width: 42.334rem; } }
+  padding-right: 1.6rem;
+}
+@media (min-width: 38em) {
+  footer {
+    width: 50%;
+    max-width: 42.334rem;
+  }
+}
 
 .button,
 button {
@@ -180,14 +234,19 @@ button {
           user-select: none;
   background-image: none;
   background-color: transparent;
-  border: .15rem solid #222222;
-  border-radius: 1.8rem; }
-  @media (min-width: 38em) {
-    .button,
-    button {
-      letter-spacing: .1rem; } }
+  border: 0.15rem solid #222222;
+  border-radius: 1.8rem;
+}
+@media (min-width: 38em) {
+  .button,
+  button {
+    letter-spacing: 0.1rem;
+  }
+}
 
-input[type='submit'], input[type='reset'], input[type='button'] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   display: inline-block;
   padding: 1rem 1.6rem;
   margin-bottom: 0;
@@ -207,31 +266,44 @@ input[type='submit'], input[type='reset'], input[type='button'] {
           user-select: none;
   background-image: none;
   background-color: transparent;
-  border: .15rem solid #222222;
-  border-radius: 1.8rem; }
-  @media (min-width: 38em) {
-    input[type='submit'], input[type='reset'], input[type='button'] {
-      letter-spacing: .1rem; } }
+  border: 0.15rem solid #222222;
+  border-radius: 1.8rem;
+}
+@media (min-width: 38em) {
+  input[type='submit'],
+  input[type='reset'],
+  input[type='button'] {
+    letter-spacing: 0.1rem;
+  }
+}
 
 .button:hover,
 button:hover {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+}
 
-input[type='submit']:hover, input[type='reset']:hover, input[type='button']:hover {
+input[type='submit']:hover,
+input[type='reset']:hover,
+input[type='button']:hover {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+}
 
 .button:focus,
 button:focus {
   text-decoration: none;
   color: inherit;
-  outline: 0; }
+  outline: 0;
+}
 
-input[type='submit']:focus, input[type='reset']:focus, input[type='button']:focus {
+input[type='submit']:focus,
+input[type='reset']:focus,
+input[type='button']:focus {
   text-decoration: none;
   color: inherit;
-  outline: 0; }
+  outline: 0;
+}
 
 
 
