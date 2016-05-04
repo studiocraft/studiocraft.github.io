@@ -17,12 +17,13 @@ body {
 
 html {
   font-family: "source-code-pro",sans-serif;
-  font-size: 1rem;
   line-height: 1.4;
+  font-size: 62.5%
 }
 
 body {
   color: #333333;
+  font-size: 1.4rem;
   background-color: #111111;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -30,11 +31,10 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #FFDC00;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  transition: .4s;
 
   @media screen and (min-width: 38rem) {
     letter-spacing: .1rem;
@@ -43,9 +43,13 @@ a {
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-    color: #444444;
-    text-decoration: none;
-    transition: .4s;
+    color: darken(#FFDC00, 6.667%);
+    text-decoration: underline;
+  }
+  &:active,
+  &:visited {
+    color: darken(#FFDC00, 6.667%);
+    text-decoration: underline;
   }
 }
 
@@ -67,7 +71,7 @@ picture {
 
   &.bg {
     min-height: 100%;
-    min-width: 76rem;
+    min-width: 152rem;
     width: 100%;
     height: auto;
     position: fixed;
@@ -75,15 +79,16 @@ picture {
     left: 0;
     opacity: .06;
 
-    @media screen and (max-width: 76rem) {
+    @media screen and (max-width: 152rem) {
       left: 50%;
-      margin-left: -38rem;
+      margin-left: -76rem;
     }
   }
 }
- //Horizontal Row
- hr {
-   border: #FFDC00 solid 0;
-   border-bottom-width: 1.2rem;
-   margin: 1.6rem 0;
- }
+
+//Horizontal Row
+hr {
+  border: #FFDC00 solid 0;
+  border-bottom-width: 4.2rem;
+  margin-bottom: 3.2rem;
+}

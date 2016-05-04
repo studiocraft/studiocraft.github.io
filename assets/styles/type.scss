@@ -5,13 +5,12 @@
 // Headings
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
-  font-weight: bold;
   line-height: 1.25;
   color: inherit;
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 3.6rem;
 }
 h2 {
   margin-top: 1rem;
@@ -28,12 +27,9 @@ h4, h5, h6 {
 
 // Body text
 p {
+  font-size: 1.8rem;
   margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-small {
-  font-size: 90%;
+  margin-bottom: 1.6rem;
 }
 
 strong {
