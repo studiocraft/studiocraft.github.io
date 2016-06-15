@@ -11,22 +11,32 @@
     </picture>
     <main id="content">
       <header>
-      <hr class="animated fadeInLeftBig">
+      <hr>
       <img class="logo" src="{{ site.baseurl }}/assets/svg/studiocraft-logo.svg">
         <nav>
-          <p>
-            <a href="#">Work</a>
-            <a href="#">Labs</a>
-            <a href="mailto:hello@studiocraft.cc">Contact</a>
-          </p>
-          <p>
-            <a href="#"><i class="fa fa-fw fa-rss"></i></a>
-            <a href="#"><i class="fa fa-fw fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-fw fa-google-plus"></i></a>
-            <a href="#"><i class="fa fa-fw fa-instagram"></i></a>
-          </p>
+          <ul>
+            <li><a href="{{ site.baseurl }}/#work">Work</a></li>
+            <!-- <li><a href="#">Labs</a></li> -->
+            <li><a href="{{ site.baseurl }}/#articles">Articles</a></li>
+            <li><a href="mailto:hello@studiocraft.cc">Contact</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+          </ul>
+          <ul>
+            <li>
+              <a href="#" title="RSS"><i class="fa fa-fw fa-rss" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#" title="Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#" title="Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#" title="Instagram"><i class="fa fa-fw fa-instagram" aria-hidden="true"></i></a>
+            </li>
+          </ul>
         </nav>
-      <header>
+      </header>
     {{ content }}
     </main>
     {% include footer.html %}

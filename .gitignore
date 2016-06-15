@@ -13,6 +13,7 @@ stats
 assets/images/icons/*.png
 assets/images/icons/*.ico
 !assets/images/icons/*.src.png
+!assets/images/icons/*.src.ai
 
 # BOWER
 #

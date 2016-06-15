@@ -27,7 +27,6 @@ h4, h5, h6 {
 
 // Body text
 p {
-  font-size: 1.8rem;
   margin-top: 0;
   margin-bottom: 1.6rem;
 }
@@ -52,10 +51,10 @@ ul, ol {
 
 ::selection {
   color: #FFFFFF;
-  background-color: #FFDC00;
+  background-color: #333333;
 }
 
 ::moz-selection {
   color: #FFFFFF;
-  background-color: #FFDC00;
+  background-color: #333333;
 }

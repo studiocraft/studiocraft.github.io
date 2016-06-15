@@ -6,7 +6,7 @@ main {
   position: relative;
   padding-left:  1.6rem;
   padding-right: 1.6rem;
-  margin-bottom: -16rem;
+  margin-bottom: -10rem;
   margin-left:  auto;
   margin-right: auto;
   min-height: 100%;
@@ -27,16 +27,26 @@ header, section {
   }
 }
 
-section > nav {
-  margin-bottom: 12rem;
-}
+nav ul {
+  list-style: none;
+  display: block;
+  margin-bottom: 1rem;
+
+  > li {
+    display: inline;
+    margin-left: .4rem
+  }
+
+  > li:first-child {
+      margin-left: 0;
+    }
+  }
 
 footer, main::after {
-  height: 24rem;
+  height: 10rem;
 }
 
 footer {
-  height: 16rem;
   width: 100%;
   line-height: 1.4;
   padding-left:  1.6rem;

@@ -14,7 +14,7 @@ html {
 
 body {
   color: #333333;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   background-color: #111111;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -40,31 +40,37 @@ picture {
   display: block;
   min-width: 100%;
   margin: 0 auto; }
-  img::-moz-selection,
-  picture::-moz-selection {
-    background-color: transparent; }
-  img::selection,
-  picture::selection {
-    background-color: transparent; }
+  img ::-moz-selection,
+  picture ::-moz-selection {
+    background-color: #333333; }
+  img ::selection,
+  picture ::selection {
+    background-color: #333333; }
+  img ::moz-selection,
+  picture ::moz-selection {
+    background-color: #333333; }
   img.logo,
   picture.logo {
     max-width: 18rem;
     margin-bottom: 1rem; }
   img.bg,
   picture.bg {
-    min-height: 100%;
-    min-width: 152rem;
-    width: 100%;
-    height: auto;
+    height: 200%;
+    width: 200%;
     position: fixed;
-    top: 0;
-    left: 0;
-    opacity: .06; }
-    @media screen and (max-width: 152rem) {
-      img.bg,
-      picture.bg {
-        left: 50%;
-        margin-left: -76rem; } }
+    top: -50%;
+    left: -50%; }
+    img.bg img,
+    picture.bg img {
+      opacity: .06;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      min-width: 50%;
+      min-height: 50%; }
 
 hr {
   border: #FFDC00 solid 0;
@@ -93,7 +99,6 @@ h4, h5, h6 {
   font-size: 1rem; }
 
 p {
-  font-size: 1.8rem;
   margin-top: 0;
   margin-bottom: 1.6rem; }
 
@@ -111,21 +116,21 @@ ul, ol {
 
 ::-moz-selection {
   color: #FFFFFF;
-  background-color: #FFDC00; }
+  background-color: #333333; }
 
 ::selection {
   color: #FFFFFF;
-  background-color: #FFDC00; }
+  background-color: #333333; }
 
 ::moz-selection {
   color: #FFFFFF;
-  background-color: #FFDC00; }
+  background-color: #333333; }
 
 main {
   position: relative;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
-  margin-bottom: -16rem;
+  margin-bottom: -10rem;
   margin-left: auto;
   margin-right: auto;
   min-height: 100%; }
@@ -142,14 +147,20 @@ header, section {
       width: 50%;
       max-width: 42.334rem; } }
 
-section > nav {
-  margin-bottom: 12rem; }
+nav ul {
+  list-style: none;
+  display: block;
+  margin-bottom: 1rem; }
+  nav ul > li {
+    display: inline;
+    margin-left: 0.4rem; }
+  nav ul > li:first-child {
+    margin-left: 0; }
 
 footer, main::after {
-  height: 24rem; }
+  height: 10rem; }
 
 footer {
-  height: 16rem;
   width: 100%;
   line-height: 1.4;
   padding-left: 1.6rem;
