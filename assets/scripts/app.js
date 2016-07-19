@@ -19,21 +19,14 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        var toggles = document.querySelectorAll("a[data-toggle]");
-        for (i = 0; i < toggles.length; ++i) {
-          toggles[i].addEventListener("click", menuToggle, false);
-        }
-        function menuToggle() {
-          if( !isMenuAnimating ) {
-            isMenuAnimating = true;
-            scrollLock();
-            document.body.classList.toggle('nav-canvas--open');
+        gumshoe.init();
 
-            $('.nav-overlay').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
-              isMenuAnimating = false;
-            });
-          }
-        }
+        $(document).ready(function(){
+          var imgSrc = ['bg1','bg2'];
+          var randomBg = Math.floor(Math.random() * imgSrc.length);
+          var backgroundImg = imgSrc[randomBg];
+          $('.bg').addClass(backgroundImg);
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

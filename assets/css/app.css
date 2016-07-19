@@ -150,7 +150,7 @@ header, section {
 nav ul {
   list-style: none;
   display: block;
-  margin-bottom: 1rem; }
+  margin-bottom: 1.6rem; }
   nav ul > li {
     display: inline;
     margin-left: 0.4rem; }
@@ -169,6 +169,29 @@ footer {
     footer {
       width: 50%;
       max-width: 42.334rem; } }
+
+/* external css: flickity.css */
+.carousel {
+  background: #FAFAFA; }
+
+.carousel-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  background: #333; }
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s; }
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1; }
 
 .button,
 button {
