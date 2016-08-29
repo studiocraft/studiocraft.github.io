@@ -1,0 +1,27 @@
+- media: Google+
+  name: google-plus
+  url: https://plus.google.com/116957574136260524144/
+
+- media: LinkedIn
+  name: linkedin
+  url: https://linkedin.com/in/bryancolosky
+
+- media: Twitter
+  name: twitter
+  url: https://twitter.com/_bcolosky
+
+- media: Medium
+  name: medium
+  url: https://medium.com/@_bcolosky
+
+- media: GitHub
+  name: github
+  url: https://github.com/bryancolosky
+
+- media: Instagram
+  name: instagram
+  url:
+
+- media: Unsplash
+  name: unsplash
+  url:

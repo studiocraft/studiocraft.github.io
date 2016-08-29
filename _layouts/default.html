@@ -4,35 +4,17 @@
   {% include head.html %}
   </head>
   <body class="{{ page.slug }}">
-    <picture class="bg">
-      <source media="(min-width: 650px)" srcset="{{ site.baseurl }}/assets/images/bg.jpg">
-      <source media="(min-width: 465px)" srcset="{{ site.baseurl }}/assets/images/bg.jpg">
-      <img src="{{ site.baseurl }}/assets/images/bg.jpg">
-    </picture>
     <main id="content">
       <header>
-      <hr>
       <img class="logo" src="{{ site.baseurl }}/assets/svg/studiocraft-logo.svg">
-        <nav>
-          <ul data-gumshoe>
-            <li><a href="{{ site.baseurl }}/#urban">Urban</a></li>
-            <li><a href="{{ site.baseurl }}/#art">Art</a></li>
-            <li><a href="{{ site.baseurl }}/#furniture">Furniture</a></li>
-            <li><a href="{{ site.baseurl }}/#contact">Contact</a></li>
-          </ul>
+        <nav id="filters">
           <ul>
-            <li>
-              <a href="#" title="RSS"><i class="fa fa-fw fa-rss" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#" title="Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#" title="Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#" title="Instagram"><i class="fa fa-fw fa-instagram" aria-hidden="true"></i></a>
-            </li>
+            <li><a href="javascript:void(0)" data-filter="*"><i class="fa fa-fw fa-refresh" aria-hidden="true"></i></a></li>
+            <li><a href="javascript:void(0)" data-filter=".metal">Street</a></li>
+            <li><a href="javascript:void(0)" data-filter=".post-transition">Architecture</a></li>
+            <li><a href="javascript:void(0)" data-filter=".transition">Nature</a></li>
+            <li><a href="javascript:void(0)" data-filter=".alkali">Travel</a></li>
+            <li><a href="javascript:void(0)" data-filter=".alkaline-earth">Portraits</a></li>
           </ul>
         </nav>
       </header>

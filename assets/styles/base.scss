@@ -24,14 +24,14 @@ html {
 body {
   color: #333333;
   font-size: 1.6rem;
-  background-color: #111111;
+  background-color: #eeeeee;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
 a {
-  color: #FFDC00;
+  color: #333333;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
@@ -43,60 +43,22 @@ a {
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-    color: darken(#FFDC00, 6.667%);
+    color: darken(#333333, 6.667%);
     text-decoration: underline;
   }
   &:active,
   &:visited {
-    color: darken(#FFDC00, 6.667%);
+    color: darken(#333333, 3.667%);
     text-decoration: underline;
   }
 }
 
 // Images
-img,
-picture {
+img {
   display: block;
-  min-width: 100%;
-  margin: 0 auto;
-
-  ::selection {
-    background-color: #333333;
-  }
-
-  ::moz-selection {
-    background-color: #333333;
-  }
 
   &.logo {
-    max-width: 18rem;
-    margin-bottom: 1rem;
+    max-width: 48rem;
+    margin-bottom: 1.6rem;
   }
-
-  &.bg {
-    height: 200%;
-    width: 200%;
-    position: fixed;
-    top: -50%;
-    left: -50%;
-
-    img {
-      opacity: .06;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      min-width: 50%;
-      min-height: 50%;
-    }
-  }
-}
-
-//Horizontal Row
-hr {
-  border: #FFDC00 solid 0;
-  border-bottom-width: 4.2rem;
-  margin-bottom: 3.2rem;
 }

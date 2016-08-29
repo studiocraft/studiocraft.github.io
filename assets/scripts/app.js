@@ -19,14 +19,41 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        gumshoe.init();
 
-        $(document).ready(function(){
-          var imgSrc = ['bg1','bg2'];
-          var randomBg = Math.floor(Math.random() * imgSrc.length);
-          var backgroundImg = imgSrc[randomBg];
-          $('.bg').addClass(backgroundImg);
+        // init Isotope
+        var $grid = $('.grid').isotope({
+          itemSelector: '.element-item',
+          layoutMode: 'fitRows'
         });
+        // filter functions
+        var filterFns = {
+          // show if number is greater than 50
+          numberGreaterThan50: function() {
+            var number = $(this).find('.number').text();
+            return parseInt( number, 10 ) > 50;
+          },
+          // show if name ends with -ium
+          ium: function() {
+            var name = $(this).find('.name').text();
+            return name.match( /ium$/ );
+          }
+        };
+        // bind filter button click
+        $('#filters').on( 'click', 'a', function() {
+          var filterValue = $( this ).attr('data-filter');
+          // use filterFn if matches value
+          filterValue = filterFns[ filterValue ] || filterValue;
+          $grid.isotope({ filter: filterValue });
+        });
+        // change is-checked class on buttons
+        $('.button-group').each( function( i, buttonGroup ) {
+          var $buttonGroup = $( buttonGroup );
+          $buttonGroup.on( 'click', 'button', function() {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $( this ).addClass('is-checked');
+          });
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -36,30 +63,6 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
-        $("#contactForm").submit( function(e) {
-          e.preventDefault();
-          $.ajax({
-            url: "//formspree.io/hello@studiocraft.cc",
-            method: "POST",
-            data: $(this).serialize(),
-            dataType: "json",
-            beforeSend: function() {
-              $('#formSubmit').text('Sending ... ').prop('disabled', true);
-            },
-            success: function(){
-              $('#formSubmit').text('hello@studiocraft.cc').prop('disabled', false);
-              $('#success').html('<div class="alert alert-success alert-dismissible fade in" role="alert">');
-              $('#success > .alert-success').html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p>Your message was <strong>successfully sent</strong>.</p><p>Thank You!</p>').append('</div>');
-              $('#contactForm').trigger("reset");
-            },
-            error: function(){
-              $('#formSubmit').text('hello@studiocraft.cc').prop('disabled', false);
-              $('#fail').html('<div class="alert alert-danger alert-dismissible fade in" role="alert">');
-              $('#fail > .alert-danger').html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p>Your message <strong>failed to send</strong>.</p><p>Sorry about that, but please do try again.</p>').append('</div>');
-              $('#contactForm').trigger("reset");
-            }
-          });
-        });
 
       },
       finalize: function() {
