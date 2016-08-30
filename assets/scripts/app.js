@@ -21,10 +21,25 @@
         // JavaScript to be fired on all pages
 
         // init Isotope
-        var $grid = $('.grid').isotope({
-          itemSelector: '.element-item',
-          layoutMode: 'fitRows'
+        var $grid = $('.grid').imagesLoaded( function() {
+          $grid.masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            columnWidth: '.grid-sizer'
+          });
         });
+
+        var $imgLoad = imagesLoaded('.grid-item');
+        $imgLoad.on( 'always', function() {
+          console.log( $imgLoad.images.length + ' images loaded' );
+          // detect which image is broken
+          for ( var i = 0, len = $imgLoad.images.length; i < len; i++ ) {
+            var image = $imgLoad.images[i];
+            var result = image.isLoaded ? 'loaded' : 'broken';
+            console.log( 'image is ' + result + ' for ' + image.img.src );
+          }
+        });
+
         // filter functions
         var filterFns = {
           // show if number is greater than 50
@@ -45,15 +60,14 @@
           filterValue = filterFns[ filterValue ] || filterValue;
           $grid.isotope({ filter: filterValue });
         });
-        // change is-checked class on buttons
-        $('.button-group').each( function( i, buttonGroup ) {
-          var $buttonGroup = $( buttonGroup );
-          $buttonGroup.on( 'click', 'button', function() {
-            $buttonGroup.find('.is-checked').removeClass('is-checked');
-            $( this ).addClass('is-checked');
+        // change active class on buttons
+        $('li > a').each( function( i, nav ) {
+          var $nav = $( nav );
+          $nav.on( 'click', 'a', function() {
+            $nav.find('.active').removeClass('active');
+            $( this ).addClass('active');
           });
         });
-
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

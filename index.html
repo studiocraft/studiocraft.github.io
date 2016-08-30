@@ -4,38 +4,19 @@ title: Home
 slug: home
 ---
 <div class="grid">
-  <div class="element-item street " data-category="street">
-    <h3 class="name">Tellurium</h3>
-    <p class="symbol">Te</p>
-    <p class="number">52</p>
-    <p class="weight">127.6</p>
+  <div class="grid-sizer"></div>
+  {% for photo in site.data.photographs %}
+  <div class="grid-item" data-category="{{ photo.category | downcase }}">
+    <figure>
+      <div class="overlay {{ photo.category | downcase }}"></div>
+      <figcaption>
+        <h3 class="name">{{ photo.name | capitalize }}</h3>
+        <p class="symbol">{{ photo.symbol | capitalize | truncate: 2, ""  }}</p>
+        <p class="number">{{ photo.number }}</p>
+        <p class="year">{{ photo.year }}</p>
+      </figcaption>
+      <img src="https://source.unsplash.com/{{ photo.id }}/"/>
+    </figure>
   </div>
-  <div class="element-item architecture " data-category="architecture">
-    <h3 class="name">Tellurium</h3>
-    <p class="symbol">Te</p>
-    <p class="number">52</p>
-    <p class="weight">127.6</p>
-  </div>
-  <div class="element-item nature " data-category="nature">
-    <h3 class="name">Tellurium</h3>
-    <p class="symbol">Te</p>
-    <p class="number">52</p>
-    <p class="weight">127.6</p>
-  </div>
-  <div class="element-item travel " data-category="travel">
-    <h3 class="name">Tellurium</h3>
-    <p class="symbol">Te</p>
-    <p class="number">52</p>
-    <p class="weight">127.6</p>
-  </div>
-  <div class="element-item portrait " data-category="portrait">
-    <h3 class="name">Tellurium</h3>
-    <p class="symbol">Te</p>
-    <p class="number">52</p>
-    <p class="weight">127.6</p>
-  </div>
+  {% endfor %}
 </div>
-
-<h1 id="art"></h1>
-<h1 id="furniture"></h1>
-<h1 id="contact"></h1>

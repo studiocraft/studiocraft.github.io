@@ -1,666 +1,77 @@
-- name: astrologic
-  number: 01
-  symbol: At
-  id: CVWJYsKI
-  url: https://dl.dropboxusercontent.com/u/44758112/01_astrologic.jpg
+- name: vw
+  number: 39
+  symbol: VW
+  id: HXCnklQdqIA
+  url: https://hd.unsplash.com/photo-1468558395728-cf8ada5931df
   file-type: .jpg
   author: Bryan Colosky
-  subject: Cathedral of Our Lady of the Angels
-  camera: Nikon
-  location: Los Angeles, California
-  year: 2012
-
-- name: lacma
-  number: 02
-  symbol: Lc
-  id: QdxwICcW
-  url: https://dl.dropboxusercontent.com/u/44758112/02_lacma.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Los Angeles County Museum of Arts
-  camera: Nikon
-  location: Los Angeles, California
-  year: 2012
-
-- name: crows
-  number: 03
-  symbol: Cr
-  id: Wan5Wyln
-  url: https://dl.dropboxusercontent.com/u/44758112/03_crows.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Crows roost
-  camera: Holga 120N
-  location: Apple Valley, California
-  year: 2013
-
-- name: 04_highline
-  id: 7LBPJsOk
-  url: https://dl.dropboxusercontent.com/u/44758112/04_highline.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: The HighLine Park
-  camera: Nikon
-  location: New York City, New York
-  year: 2013
-
-- name: 05_brick
-  id: GsZzLG26
-  url: https://dl.dropboxusercontent.com/u/44758112/05_brick.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Masonry work in the Chelsea neighborhood
-  camera: Nikon
-  location: New York City, New York
-  year: 2013
-
-- name: 06_side-mirror
-  id: RgiMe0wy
-  url: https://dl.dropboxusercontent.com/u/44758112/06_side-mirror.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: 2002 Toyota 4Runner SR5
-  camera: Nikon
-  location: Apple Valley, California
-  year: 2013
-
-- name: 07_sierra-nevadas
-  id: 4G0VaUmu
-  url: https://dl.dropboxusercontent.com/u/44758112/07_sierra-nevadas.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Eastern Sierra Nevada Mountain Range
-  camera: Nikon
-  location: Bishop, California
-  year: 2013
-
-- name: 08_truck
-  id: kUBuj5FQ
-  url: https://dl.dropboxusercontent.com/u/44758112/08_truck.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Highway 395
-  camera: Nikon
-  location: California
-  year: 2013
-
-- name: 09_asian-statue
-  id: 3bimb3Cu
-  url: https://dl.dropboxusercontent.com/u/44758112/09_asian-statue.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Ancient southeast Asian artifact
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 10_joshua-frond
-  id: MZnF6rUP
-  url: https://dl.dropboxusercontent.com/u/44758112/10_joshua-frond.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Joshua tree
-  camera: Nikon
-  location: Apple Valley, California
-  year: 2013
-
-- name: 11_sunset
-  id: fV5M8pBS
-  url: https://dl.dropboxusercontent.com/u/44758112/11_sunset.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Sunset over desert hills
-  camera: Nikon
-  location: Apple Valley, California
-  year: 2013
-
-- name: 12_utilities
-  id: 9gIjl3Aq
-  url: https://dl.dropboxusercontent.com/u/44758112/12_utilities.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Electrical and utilities boxes on an at an outdoor theater
-  camera: Nikon
-  location: Apple Valley, California
-  year: 2013
-
-- name: 13_los-angeles
-  id: tb5XXSz3
-  url: https://dl.dropboxusercontent.com/u/44758112/13_los-angeles.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Landscape of Los Angeles from the foothills
-  camera: Nikon
-  location: Los Angeles, California
-  year: 2013
-
-- name: 14_chimney
-  id: oTLcnyKa
-  url: https://dl.dropboxusercontent.com/u/44758112/14_chimney.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Chimney in the Meat Packing District
-  camera: Nikon
-  location: New York City, New York
-  year: 2013
-
-- name: 15_liberty
-  id: wnv0u5UY
-  url: https://dl.dropboxusercontent.com/u/44758112/15_liberty.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Statue of Liberty
-  camera: Nikon
-  location: Hudson River, New York
-  year: 2013
-
-- name: 16_grand-central-station
-  id: L5MB01dS
-  url: https://dl.dropboxusercontent.com/u/44758112/16_grand-central-station.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: The Grand Central Terminal clock
-  camera: Nikon
-  location: New York City, New York
-  year: 2013
-
-- name: 17_citigroup
-  id: jZ1G7ZOo
-  url: https://dl.dropboxusercontent.com/u/44758112/17_citigroup.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Citigroup tower and Manhattan skyline at night
-  camera: Nikon
-  location: New York City, New York
-  year: 2013
-
-- name: 18_conde-nast
-  id: I067vZaF
-  url: https://dl.dropboxusercontent.com/u/44758112/18_cond%C3%A9-nast.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Citigroup tower and Manhattan skyline at night
-  camera: Nikon
-  location: New York City, New York
-  year: 2013
-
-- name: 19_tires
-  id:
-  url: https://dl.dropboxusercontent.com/u/44758112/19_tires.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Pile of tires in a scrap yard
+  subject: Volkswagon Beetles in a junkyard.
+  category: artifact
   camera: Nikon
   location: Hesperia, California
-  year: 2013
+  year: 2012
 
-- name: 20_icicles
-  id: le7mrAzx
-  url: https://dl.dropboxusercontent.com/u/44758112/20_icicles.jpg
+- name: plumbing
+  number: 88
+  symbol: PG
+  id: IjwH6O56C_A
+  url: https://hd.unsplash.com/photo-1472419040854-180f9a048b60
   file-type: .jpg
   author: Bryan Colosky
-  subject: Icicles forming on the roof cross beams
-  camera: Holga 120N
-  location: Mammoth, California
-  year: 2013
+  subject: Water Pump
+  category: street
+  camera: Nikon
+  location: Berlin, Germany
+  year: 2016
 
-- name: 21_culvert
-  id: oTw8xuML
-  url: https://dl.dropboxusercontent.com/u/44758112/21_culvert.jpg
+- name: culvert
+  number: 21
+  symbol: CV
+  id: fx8XIyqH6yE
+  url: https://hd.unsplash.com/photo-1472440672260-bf22aa43a1f3
   file-type: .jpg
   author: Bryan Colosky
-  subject: Storm culvert in the desert
+  subject: Storm Drain – Culvert
+  category: nature
   camera: Nikon
   location: Apple Valley, California
-  year: 2013
+  year: 2012
 
-- name: 22_metro-dc
-  id: pCPEibJA
-  url: https://dl.dropboxusercontent.com/u/44758112/22_metro-dc.jpg
+- name: disrepair
+  number: 90
+  symbol: DP
+  id: tfZGtxS81NY
+  url: https://hd.unsplash.com/photo-1472434659065-c2d584aa6ea8
   file-type: .jpg
   author: Bryan Colosky
-  subject: Underground in the Washington D.C. metro station
+  subject: Construction – Demolltion
+  category: architecture
   camera: Nikon
-  location: Washington, District of Columbia
-  year: 2013
+  location: Berlin, Germany
+  year: 2016
 
-- name: 23_jefferson-memorial
-  id: 7YsaR44r
-  url: https://dl.dropboxusercontent.com/u/44758112/23_jefferson-memorial.jpg
+- name: truck
+  number: 08
+  symbol: TK
+  id: YWFom01H5b8
+  url: https://hd.unsplash.com/photo-1468562767022-056ffeedc709
   file-type: .jpg
   author: Bryan Colosky
-  subject: Column detail at the Jefferson Memorial
+  subject: Cargo Truck
+  category: artifact
   camera: Nikon
-  location: Washington, District of Columbia
+  location: Adelanto, California
   year: 2013
 
-- name: 24_tidal-basin
-  id: 5FHkIvQz
-  url: https://dl.dropboxusercontent.com/u/44758112/24_tidal-basin.jpg
+- name: primate
+  number: 50
+  symbol: PM
+  id: snGxhdv_Y0M
+  url: https://hd.unsplash.com/photo-1469502601122-2cfab0232710
   file-type: .jpg
   author: Bryan Colosky
-  subject: The Jefferson Memorial from across the Tidal Basin
-  camera: Nikon
-  location: Washington, District of Columbia
-  year: 2013
-
-- name: 25_arlington-cemetery
-  id: KQm7OJQD
-  url: https://dl.dropboxusercontent.com/u/44758112/25_arlington-cemetery.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Rows of headstones at Arlington Cemetery
-  camera: Nikon
-  location: Washington, District of Columbia
-  year: 2013
-
-- name: 26_mojave-narrows
-  id: vhAM5VnD
-  url: https://dl.dropboxusercontent.com/u/44758112/26_mojave-narrows.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: The Mojave River
-  camera: Nikon
-  location: Apple Valley, California
-  year: 2013
-
-- name: 27_stardust
-  id: blQYjFxr
-  url: https://dl.dropboxusercontent.com/u/44758112/27_stardust.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: The Horse-head Nebula in the Museum of Natural History.
+  subject: Primate Skeleton at the Natural History Museum
+  category: travel
   camera: Nikon
   location: New York City, New York
   year: 2014
-
-- name: 28_dock-piles
-  id: A3XCsriQ
-  url: https://dl.dropboxusercontent.com/u/44758112/28_dock-piles.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Abandoned construction piles
-  camera: Nikon
-  location: Larchmont, New York
-  year: 2013
-
-- name: 29_branches
-  id: VdphI39j
-  url: https://dl.dropboxusercontent.com/u/44758112/29_branches.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Tree branches in the sunlight
-  camera: Nikon
-  location: New Rochelle, New York
-  year: 2013
-
-- name: 30_edifice-one
-  id: Y3be4tVt
-  url: https://dl.dropboxusercontent.com/u/44758112/30_edifice-one.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Building density from the HighLine Park
-  camera: Nikon
-  location: New York City, New York
-  year: 2014
-
-- name: 31_buddy
-  id: POPCKJkp
-  url: https://dl.dropboxusercontent.com/u/44758112/31_buddy.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: The biggest yellow lab I know
-  camera: Nikon
-  location: Wrightwood, California
-  year: 2013
-
-- name: 32_light-pole
-  id: zGnJd54O
-  url: https://dl.dropboxusercontent.com/u/44758112/32_light-pole.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Multi-colored lighting fixture at the carnival
-  camera: Nikon
-  location: Victorville, California
-  year: 2013
-
-- name: 33_carnival-swings
-  id: sKosuY9d
-  url: https://dl.dropboxusercontent.com/u/44758112/33_carnival-swings.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Carnival swings at night
-  camera: Nikon
-  location: Victorville, California
-  year: 2013
-
-- name: 34_ferris-wheel
-  id: RKL7RPqP
-  url: https://dl.dropboxusercontent.com/u/44758112/34_ferris-wheel.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Ferris wheel lighting at the carnival
-  camera: Nikon
-  location: Victorville, California
-  year: 2013
-
-- name: 35_light-bulbs
-  id: DGnCxPoS
-  url: https://dl.dropboxusercontent.com/u/44758112/35_light-bulbs.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Light bulbs on the overhang of the ticket booth at the carnival
-  camera: Nikon
-  location: Victorville, California
-  year: 2013
-
-- name: 36_street-lamps
-  id: nqwHf2ej
-  url: https://dl.dropboxusercontent.com/u/44758112/36_street-lamps.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: Gas Lamp installation at the Los Angeles County Museum of Art
-  camera: Nikon
-  location: Los Angeles, California
-  year: 2013
-
-- name: 37_himalaya
-  id: 53jBEYlr
-  url: https://dl.dropboxusercontent.com/u/44758112/37_himalaya.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject: The Himalaya attraction at the carnival
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 38_joshua-tree
-  id: dl5Cix5w
-  url: https://dl.dropboxusercontent.com/u/44758112/38_joshua-tree.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 39_vw
-  id: Ky9cnCWn
-  url: https://dl.dropboxusercontent.com/u/44758112/39_vw.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 40_junk-doors
-  id: z97uk1Qb
-  url: https://dl.dropboxusercontent.com/u/44758112/40_junk-doors.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 41_dirt
-  id: sR5QYZFS
-  url: https://dl.dropboxusercontent.com/u/44758112/41_dirt.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 42_logs
-  id: 6HLEbFjv
-  url: https://dl.dropboxusercontent.com/u/44758112/42_logs.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 43_rainbow-room
-  id: CrLebVK0
-  url: https://dl.dropboxusercontent.com/u/44758112/43_rainbow-room.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 44_interstate-east
-  id: uGUVdGWp
-  url: https://dl.dropboxusercontent.com/u/44758112/44_interstate-east.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 45_homeless
-  id: Dkf0bQqD
-  url: https://dl.dropboxusercontent.com/u/44758112/45_homeless.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 46_desert
-  id: NIrBxB0d
-  url: https://dl.dropboxusercontent.com/u/44758112/46_desert.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 47_native-totem
-  id: iYkEkPup
-  url: https://dl.dropboxusercontent.com/u/44758112/47_native-totem.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2014
-
-- name: 48_mother
-  id: cG8DGfZV
-  url: https://dl.dropboxusercontent.com/u/44758112/48_mother.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 49_empire-state
-  id: C9D163fa
-  url: https://dl.dropboxusercontent.com/u/44758112/49_empire-state.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 50_primate
-  id: PTmuNNNX
-  url: https://dl.dropboxusercontent.com/u/44758112/50_primate.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2014
-
-- name: 51_mammoth-lakes
-  id: Ur0jZbhU
-  url: https://dl.dropboxusercontent.com/u/44758112/51_mammoth-lakes.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 52_getty-gardens
-  id: RGEs3ARu
-  url: https://dl.dropboxusercontent.com/u/44758112/52_getty-gardens.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 53_urban-spring
-  id: 9iWR0oM4
-  url: https://dl.dropboxusercontent.com/u/44758112/53_urban-spring.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 54_cacti
-  id: MIZi7OeE
-  url: https://dl.dropboxusercontent.com/u/44758112/54_cacti.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2013
-
-- name: 55_pedestrian
-  id: nOIZuvOL
-  url: https://dl.dropboxusercontent.com/u/44758112/55_pedestrian.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2014
-
-- name: 56_edifice-two
-  id: zj6zBI8P
-  url: https://dl.dropboxusercontent.com/u/44758112/56_edifice-two.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2014
-
-- name: 57_air-conditioned
-  id: xTxnnwWB
-  url: https://dl.dropboxusercontent.com/u/44758112/57_air-conditioned.jpg
-  file-type: .jpg
-  author: Bryan Colosky
-  subject:
-  camera: Nikon
-  location:
-  year: 2014
-
-- name: 58_fire-escape
-  author: Bryan Colosky
-  subject:
-  location:
-  year: 2014
-  file-type: .jpg
-  id: eFgMZgU7
-  url: https://dl.dropboxusercontent.com/u/44758112/58_fire-escape.jpg
-  camera: Nikon
-  focal_length: 50
-  aperature: 4
-  exposure_time: 1/60"
-
-- name: 59_parents
-  author: Bryan Colosky
-  subject:
-  location:
-  year: 2013
-  file-type: .jpg
-  id: xVnBb1U5
-  url: https://dl.dropboxusercontent.com/u/44758112/59_parents.jpg
-  camera: Nikon
-  focal_length: 50
-  aperature: 4
-  exposure_time: 1/60"
-
-- name: 60_street-glow
-  author: Bryan Colosky
-  subject:
-  location:
-  year: 2014
-  file-type: .jpg
-  id: 3KXTcwYV
-  url: https://dl.dropboxusercontent.com/u/44758112/60_street-glow.jpg
-  camera: Nikon
-  focal_length: 50
-  aperature: 4
-  exposure_time: 1/60"
-
-- name: 61_rain
-  author: Bryan Colosky
-  subject:
-  location:
-  year: 2014
-  file-type: .jpg
-  id: LFceXAEo
-  url: https://dl.dropboxusercontent.com/u/44758112/61_rain.jpg
-  camera: Nikon
-  focal_length: 50
-  aperature: 4
-  exposure_time: 1/60"
-
-- name: 62_utilities-pole
-  author: Bryan Colosky
-  subject: Utilities pole outside my bedroom window
-  location: New Rochelle, NY
-  year: 2014
-  file-type: .jpg
-  id: zcgvjURq
-  url: https://dl.dropboxusercontent.com/u/44758112/62_utilities-pole.jpg
-  camera: Nikon
-  focal_length: 50
-  aperature: 4
-  exposure_time: 1/60"
-
-- name: 63_rockefeller-angel
-  author: Bryan Colosky
-  subject: The decorative trumpetting angels at Rockefeller Plaza during the winter holiday
-  location: New York City, New York
-  year: 2014
-  file-type: .jpg
-  id: i2LMrMyi
-  url: https://dl.dropboxusercontent.com/u/44758112/63_rockefeller-angel.jpg
-  camera: Nikon
-  focal_length: 50
-  aperature: 4
-  exposure_time: 1/60"
-
-- name: 64_rockefeller-tower
-  author: Bryan Colosky
-  subject: Rockefeller Tower from the plaza
-  location: New York City, New York
-  year: 2014
-  file-type: .jpg
-  id: pWW8JcDK
-  url: https://dl.dropboxusercontent.com/u/44758112/64_rockefeller-tower.jpg
-  camera: Nikon
-  focal_length: 50
-  aperature: 4
-  exposure_time: 1/60"
