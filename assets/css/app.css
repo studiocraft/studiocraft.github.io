@@ -160,22 +160,64 @@ footer {
     top: 0;
     bottom: 0;
     opacity: .95;
+    -webkit-transition: all 300ms;
     transition: all 300ms; }
   .grid-item > figure .overlay.street {
     background: #FFDC00; }
+  .grid-item > figure .overlay.street.architecture {
+    background: #FF851B; }
+  .grid-item > figure .overlay.street.nature {
+    background: #7FDBFF; }
+  .grid-item > figure .overlay.street.travel {
+    background: #B10DC9; }
+  .grid-item > figure .overlay.street.artifact {
+    background: #85144b; }
   .grid-item > figure .overlay.architecture {
     background: #CCFF00; }
+  .grid-item > figure .overlay.architecture.street {
+    background: #FF851B; }
+  .grid-item > figure .overlay.architecture.nature {
+    background: #2ECC40; }
+  .grid-item > figure .overlay.architecture.travel {
+    background: #001F3F; }
+  .grid-item > figure .overlay.architecture.artifact {
+    background: #3D9970; }
   .grid-item > figure .overlay.nature {
     background: #39CCCC; }
+  .grid-item > figure .overlay.nature.street {
+    background: #7FDBFF; }
+  .grid-item > figure .overlay.nature.architecture {
+    background: #2ECC40; }
+  .grid-item > figure .overlay.nature.travel {
+    background: #0074D9; }
+  .grid-item > figure .overlay.nature.artifact {
+    background: #01FF70; }
   .grid-item > figure .overlay.travel {
     background: #F012BE; }
+  .grid-item > figure .overlay.travel.street {
+    background: #B10DC9; }
+  .grid-item > figure .overlay.travel.architecture {
+    background: #001F3F; }
+  .grid-item > figure .overlay.travel.nature {
+    background: #0074D9; }
+  .grid-item > figure .overlay.travel.artifact {
+    background: #FF7F50; }
   .grid-item > figure .overlay.artifact {
     background: #0074D9; }
+  .grid-item > figure .overlay.artifact.street {
+    background: #85144b; }
+  .grid-item > figure .overlay.artifact.architecture {
+    background: #3D9970; }
+  .grid-item > figure .overlay.artifact.nature {
+    background: #01FF70; }
+  .grid-item > figure .overlay.artifact.travel {
+    background: #FF7F50; }
   .grid-item > figure:hover {
     cursor: -webkit-zoom-in;
     cursor: zoom-in; }
     .grid-item > figure:hover .overlay {
       opacity: .1;
+      -webkit-transition: all 300ms;
       transition: all 300ms; }
   .grid-item > figure img {
     display: block;
@@ -215,6 +257,7 @@ footer {
 
 .lazyloaded {
   opacity: 1;
+  -webkit-transition: opacity 300ms;
   transition: opacity 300ms; }
 
 .button,

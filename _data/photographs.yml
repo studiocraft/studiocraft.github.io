@@ -6,7 +6,7 @@
   file-type: .jpg
   author: Bryan Colosky
   subject: Volkswagon Beetles in a junkyard.
-  category: artifact
+  category: [street, artifact]
   camera: Nikon
   location: Hesperia, California
   year: 2012
@@ -19,7 +19,20 @@
   file-type: .jpg
   author: Bryan Colosky
   subject: Water Pump
-  category: street
+  category: [street]
+  camera: Nikon
+  location: Berlin, Germany
+  year: 2016
+
+- name: motorbike
+  number: 89
+  symbol: MB
+  id: qk2oIrmizLY
+  url: https://hd.unsplash.com/photo-1472435573769-1a76e67f0cd5
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Cafe Racer – Motorbike
+  category: [street, artifact]
   camera: Nikon
   location: Berlin, Germany
   year: 2016
@@ -32,7 +45,7 @@
   file-type: .jpg
   author: Bryan Colosky
   subject: Storm Drain – Culvert
-  category: nature
+  category: [street, nature]
   camera: Nikon
   location: Apple Valley, California
   year: 2012
@@ -45,7 +58,7 @@
   file-type: .jpg
   author: Bryan Colosky
   subject: Construction – Demolltion
-  category: architecture
+  category: [architecture, street]
   camera: Nikon
   location: Berlin, Germany
   year: 2016
@@ -58,7 +71,7 @@
   file-type: .jpg
   author: Bryan Colosky
   subject: Cargo Truck
-  category: artifact
+  category: [street, artifact]
   camera: Nikon
   location: Adelanto, California
   year: 2013
@@ -71,7 +84,33 @@
   file-type: .jpg
   author: Bryan Colosky
   subject: Primate Skeleton at the Natural History Museum
-  category: travel
+  category: [artifact, nature]
   camera: Nikon
   location: New York City, New York
   year: 2014
+
+- name: lips
+  number: 86
+  symbol: LP
+  id: 8Do3bv3YBac
+  url: https://hd.unsplash.com/photo-1470953137289-b6b13bb61919
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Partial Egyptian bust at the Met
+  category: [artifact]
+  camera: Nikon
+  location: New York City, New York
+  year: 2016
+
+- name: grass
+  number: 84
+  symbol: LP
+  id: OnWqRP3aAC8
+  url: https://hd.unsplash.com/photo-1470950752722-f8074943f11c
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Grass – Foxtail
+  category: [nature]
+  camera: Nikon
+  location: Biscayne, Miami
+  year: 2016

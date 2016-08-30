@@ -6,9 +6,9 @@ slug: home
 <div class="grid">
   <div class="grid-sizer"></div>
   {% for photo in site.data.photographs %}
-  <div class="grid-item" data-category="{{ photo.category | downcase }}">
+  <div class="grid-item" data-category="{% for category in photo.category %}{% if !forloop.last %}{{ category | downcase }}{% else %}{{ category | downcase | append:' '}}{% endif %}{% endfor %}">
     <figure>
-      <div class="overlay {{ photo.category | downcase }}"></div>
+      <div class="overlay {% for category in photo.category %}{% if !forloop.last %}{{ category | downcase }}{% else %}{{ category | downcase | append:' '}}{% endif %}{% endfor %}"></div>
       <figcaption>
         <h3 class="name">{{ photo.name | capitalize }}</h3>
         <p class="symbol">{{ photo.symbol | capitalize | truncate: 2, ""  }}</p>
