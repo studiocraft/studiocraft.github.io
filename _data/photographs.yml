@@ -1,8 +1,25 @@
+- name: chimney
+  number: 14
+  symbol: CM
+  id: BPoLDrDT20E
+  width: 4000
+  height: 6016
+  hd_url: https://hd.unsplash.com/photo-1468564868795-a17f9645aac5
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Meat Packing District Smokestack
+  category: [travel, architecture]
+  camera: Nikon
+  location: New York City, New York
+  year: 2013
+
 - name: vw
   number: 39
   symbol: VW
   id: HXCnklQdqIA
-  url: https://hd.unsplash.com/photo-1468558395728-cf8ada5931df
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1468558395728-cf8ada5931df
   file-type: .jpg
   author: Bryan Colosky
   subject: Volkswagon Beetles in a junkyard.
@@ -11,11 +28,28 @@
   location: Hesperia, California
   year: 2012
 
+- name: cobblestone
+  number: 89
+  symbol: VW
+  id: zm-yzbMS2ss
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1472419828593-f88b87080e24
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Cobblestone path.
+  category: [street, travel]
+  camera: Nikon
+  location: Berlin, Germany
+  year: 2016
+
 - name: plumbing
   number: 88
   symbol: PG
   id: IjwH6O56C_A
-  url: https://hd.unsplash.com/photo-1472419040854-180f9a048b60
+  width: 4000
+  height: 6016
+  hd_url: https://hd.unsplash.com/photo-1472419040854-180f9a048b60
   file-type: .jpg
   author: Bryan Colosky
   subject: Water Pump
@@ -28,7 +62,9 @@
   number: 89
   symbol: MB
   id: qk2oIrmizLY
-  url: https://hd.unsplash.com/photo-1472435573769-1a76e67f0cd5
+  width: 4000
+  height: 6016
+  hd_url: https://hd.unsplash.com/photo-1472435573769-1a76e67f0cd5
   file-type: .jpg
   author: Bryan Colosky
   subject: Cafe Racer – Motorbike
@@ -41,7 +77,9 @@
   number: 21
   symbol: CV
   id: fx8XIyqH6yE
-  url: https://hd.unsplash.com/photo-1472440672260-bf22aa43a1f3
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1472440672260-bf22aa43a1f3
   file-type: .jpg
   author: Bryan Colosky
   subject: Storm Drain – Culvert
@@ -50,11 +88,28 @@
   location: Apple Valley, California
   year: 2012
 
+- name: grass
+  number: 84
+  symbol: GS
+  width: 4000
+  height: 6016
+  id: OnWqRP3aAC8
+  hd_url: https://hd.unsplash.com/photo-1470950752722-f8074943f11c
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Grass – Foxtail
+  category: [nature]
+  camera: Nikon
+  location: Biscayne, Miami
+  year: 2016
+
 - name: disrepair
   number: 90
   symbol: DP
   id: tfZGtxS81NY
-  url: https://hd.unsplash.com/photo-1472434659065-c2d584aa6ea8
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1472434659065-c2d584aa6ea8
   file-type: .jpg
   author: Bryan Colosky
   subject: Construction – Demolltion
@@ -63,11 +118,43 @@
   location: Berlin, Germany
   year: 2016
 
+- name: fireworks
+  number: 80
+  symbol: FW
+  id: FQcWX807NPY
+  width: 4000
+  height: 6016
+  hd_url: https://hd.unsplash.com/photo-1470311814363-260c484d9114
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Fourth of July
+  category: [travel, architecture]
+  camera: Nikon
+  location: Brooklyn, New York
+  year: 2015
+
+- name: vines
+  number: 79
+  symbol: VN
+  id: BGQRp5bmjYk
+  width: 4000
+  height: 6016
+  hd_url: https://hd.unsplash.com/photo-1469500529277-30ea3bd61f8d
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Mangroves
+  category: [nature]
+  camera: Nikon
+  location: Viscaya Museum, Miami
+  year: 2016
+
 - name: truck
   number: 08
   symbol: TK
   id: YWFom01H5b8
-  url: https://hd.unsplash.com/photo-1468562767022-056ffeedc709
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1468562767022-056ffeedc709
   file-type: .jpg
   author: Bryan Colosky
   subject: Cargo Truck
@@ -76,11 +163,43 @@
   location: Adelanto, California
   year: 2013
 
+- name: air_conditioned
+  number: 57
+  symbol: AC
+  id: JFXQfoUNAhI
+  width: 4000
+  height: 6016
+  hd_url: https://hd.unsplash.com/photo-1469503666375-f7f5ad08455f
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Brick Wall
+  category: [architecture]
+  camera: Nikon
+  location: New York City, New York
+  year: 2013
+
+- name: light_pole
+  number: 32
+  symbol: LT
+  id: Bj0Daxa6CYw
+  width: 4000
+  height: 6016
+  hd_url: https://hd.unsplash.com/photo-1469501343085-78c3f47a4f63
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Carnival Light Pole
+  category: [artifact]
+  camera: Nikon
+  location: Victorville, California
+  year: 2013
+
 - name: primate
   number: 50
   symbol: PM
   id: snGxhdv_Y0M
-  url: https://hd.unsplash.com/photo-1469502601122-2cfab0232710
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1469502601122-2cfab0232710
   file-type: .jpg
   author: Bryan Colosky
   subject: Primate Skeleton at the Natural History Museum
@@ -93,7 +212,9 @@
   number: 86
   symbol: LP
   id: 8Do3bv3YBac
-  url: https://hd.unsplash.com/photo-1470953137289-b6b13bb61919
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1470953137289-b6b13bb61919
   file-type: .jpg
   author: Bryan Colosky
   subject: Partial Egyptian bust at the Met
@@ -102,15 +223,92 @@
   location: New York City, New York
   year: 2016
 
-- name: grass
+- name: algae
   number: 84
-  symbol: LP
-  id: OnWqRP3aAC8
-  url: https://hd.unsplash.com/photo-1470950752722-f8074943f11c
+  symbol: AG
+  width: 4000
+  height: 6016
+  id: lOrz_CyWizo
+  hd_url: https://hd.unsplash.com/photo-1472438940156-0c62241f917b
   file-type: .jpg
   author: Bryan Colosky
-  subject: Grass – Foxtail
+  subject: Algae
   category: [nature]
   camera: Nikon
-  location: Biscayne, Miami
+  location: Bürgerpark, Bremen
   year: 2016
+
+- name: sierra_nevadas
+  number: 07
+  symbol: SN
+  id: K2dqAWVw7aw
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1470953137289-b6b13bb61919
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Eastern Sierra Nevadas
+  category: [travel, nature]
+  camera: Nikon
+  location: Toms's Place, California
+  year: 2013
+
+- name: joshua_tree
+  number: 38
+  symbol: FG
+  id: bxLx4aaHlRs
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1469501931454-1f8ac03dc40e
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Joshua Tree Branches
+  category: [nature]
+  camera: Nikon
+  location: Quepos, Costa Rica
+  year: 2015
+
+- name: fog
+  number: 66
+  symbol: FG
+  id: Cdyq1KpaDBg
+  width: 4000
+  height: 6016
+  hd_url: https://hd.unsplash.com/photo-1468560011460-0ad7ebe921fe
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Costa Rica Rainforest
+  category: [travel, nature]
+  camera: Nikon
+  location: Quepos, Costa Rica
+  year: 2015
+
+- name: security
+  number: 76
+  symbol: TK
+  id: -i0MokaddmY
+  width: 4000
+  height: 6016
+  hd_url: https://hd.unsplash.com/photo-1468560510372-e56aa5e72424
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Security Cameras
+  category: [street, architecture]
+  camera: Nikon
+  location: Santo Domingo, Dominican Republic
+  year: 2016
+
+- name: getty_gardens
+  number: 52
+  symbol: GY
+  id: fxykquvkOzE
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1468560510372-e56aa5e72424
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Getty Gardens – Bushes
+  category: [nature, architecture]
+  camera: Nikon
+  location: Los Angeles, California
+  year: 2013

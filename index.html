@@ -7,15 +7,16 @@ slug: home
   <div class="grid-sizer"></div>
   {% for photo in site.data.photographs %}
   <div class="grid-item" data-category="{% for category in photo.category %}{% if !forloop.last %}{{ category | downcase }}{% else %}{{ category | downcase | append:' '}}{% endif %}{% endfor %}">
+    <div class="overlay {% for category in photo.category %}{% if !forloop.last %}{{ category | downcase }}{% else %}{{ category | downcase | append:' '}}{% endif %}{% endfor %}"></div>
     <figure>
-      <div class="overlay {% for category in photo.category %}{% if !forloop.last %}{{ category | downcase }}{% else %}{{ category | downcase | append:' '}}{% endif %}{% endfor %}"></div>
+      <img src="https://source.unsplash.com/{{ photo.id }}/{{ photo.width | divided_by:8 }}x{{ photo.height | divided_by:8 }}" width="{{ photo.width | divided_by:8 }}" height="{{ photo.height | divided_by:8 }}" data-action="zoom"/>
       <figcaption>
-        <h3 class="name">{{ photo.name | capitalize }}</h3>
+        <h3 class="name">{{ photo.name | downcase }}</h3>
         <p class="symbol">{{ photo.symbol | capitalize | truncate: 2, ""  }}</p>
-        <p class="number">{{ photo.number }}</p>
+        <!-- <p class="number">{{ photo.number }}</p> -->
+        <p class="number">{{ photo.category }}</p>
         <p class="year">{{ photo.year }}</p>
       </figcaption>
-      <img src="https://source.unsplash.com/{{ photo.id }}/"/>
     </figure>
   </div>
   {% endfor %}

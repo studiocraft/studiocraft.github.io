@@ -36,10 +36,48 @@ a {
     text-decoration: underline; }
 
 img {
-  display: block; }
+  display: block;
+  width: 100%; }
   img.logo {
     max-width: 48rem;
     margin-bottom: 1.6rem; }
+
+img[data-action="zoom"] {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in; }
+
+.zoom-img,
+.zoom-img-wrap {
+  position: relative;
+  z-index: 666;
+  transition: all 300ms; }
+
+img.zoom-img {
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out; }
+
+.zoom-overlay {
+  z-index: 420;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  filter: "alpha(opacity=0)";
+  opacity: 0;
+  transition: opacity 300ms; }
+
+.zoom-overlay-open .zoom-overlay {
+  filter: "alpha(opacity=100)";
+  opacity: 1; }
+
+.zoom-overlay-open,
+.zoom-overlay-transitioning {
+  cursor: default; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
@@ -122,15 +160,13 @@ footer, main::after {
 
 footer {
   width: 100%;
-  line-height: 1.4;
-  padding-left: 1.6rem;
-  padding-right: 1.6rem; }
+  padding: 1.6rem; }
 
 /* ---- isotope ---- */
 .grid {
   position: relative;
-  margin-left: auto;
-  margin-right: auto; }
+  margin-left: -.8rem;
+  margin-right: -.8rem; }
 
 /* clear fix */
 .grid:after {
@@ -145,111 +181,113 @@ footer {
 /* ---- .grid-item ---- */
 .grid-item {
   position: relative;
-  float: left; }
+  float: left;
+  border: solid .8rem transparent; }
 
 .grid-item > * {
   margin: 0;
   padding: 0; }
 
-.grid-item > figure {
+.grid-item {
   position: relative; }
-  .grid-item > figure .overlay {
+  .grid-item .overlay {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    opacity: .95;
-    -webkit-transition: all 300ms;
+    opacity: .9;
     transition: all 300ms; }
-  .grid-item > figure .overlay.street {
+  .grid-item .overlay.street {
     background: #FFDC00; }
-  .grid-item > figure .overlay.street.architecture {
+  .grid-item .overlay.street.architecture {
     background: #FF851B; }
-  .grid-item > figure .overlay.street.nature {
+  .grid-item .overlay.street.nature {
     background: #7FDBFF; }
-  .grid-item > figure .overlay.street.travel {
+  .grid-item .overlay.street.travel {
     background: #B10DC9; }
-  .grid-item > figure .overlay.street.artifact {
+  .grid-item .overlay.street.artifact {
     background: #85144b; }
-  .grid-item > figure .overlay.architecture {
+  .grid-item .overlay.architecture {
     background: #CCFF00; }
-  .grid-item > figure .overlay.architecture.street {
+  .grid-item .overlay.architecture.street {
     background: #FF851B; }
-  .grid-item > figure .overlay.architecture.nature {
+  .grid-item .overlay.architecture.nature {
     background: #2ECC40; }
-  .grid-item > figure .overlay.architecture.travel {
+  .grid-item .overlay.architecture.travel {
     background: #001F3F; }
-  .grid-item > figure .overlay.architecture.artifact {
+  .grid-item .overlay.architecture.artifact {
     background: #3D9970; }
-  .grid-item > figure .overlay.nature {
+  .grid-item .overlay.nature {
     background: #39CCCC; }
-  .grid-item > figure .overlay.nature.street {
+  .grid-item .overlay.nature.street {
     background: #7FDBFF; }
-  .grid-item > figure .overlay.nature.architecture {
+  .grid-item .overlay.nature.architecture {
     background: #2ECC40; }
-  .grid-item > figure .overlay.nature.travel {
+  .grid-item .overlay.nature.travel {
     background: #0074D9; }
-  .grid-item > figure .overlay.nature.artifact {
+  .grid-item .overlay.nature.artifact {
     background: #01FF70; }
-  .grid-item > figure .overlay.travel {
+  .grid-item .overlay.travel {
     background: #F012BE; }
-  .grid-item > figure .overlay.travel.street {
+  .grid-item .overlay.travel.street {
     background: #B10DC9; }
-  .grid-item > figure .overlay.travel.architecture {
+  .grid-item .overlay.travel.architecture {
     background: #001F3F; }
-  .grid-item > figure .overlay.travel.nature {
+  .grid-item .overlay.travel.nature {
     background: #0074D9; }
-  .grid-item > figure .overlay.travel.artifact {
+  .grid-item .overlay.travel.artifact {
     background: #FF7F50; }
-  .grid-item > figure .overlay.artifact {
-    background: #0074D9; }
-  .grid-item > figure .overlay.artifact.street {
+  .grid-item .overlay.artifact {
+    background: #FF4136; }
+  .grid-item .overlay.artifact.street {
     background: #85144b; }
-  .grid-item > figure .overlay.artifact.architecture {
+  .grid-item .overlay.artifact.architecture {
     background: #3D9970; }
-  .grid-item > figure .overlay.artifact.nature {
+  .grid-item .overlay.artifact.nature {
     background: #01FF70; }
-  .grid-item > figure .overlay.artifact.travel {
+  .grid-item .overlay.artifact.travel {
     background: #FF7F50; }
-  .grid-item > figure:hover {
-    cursor: -webkit-zoom-in;
-    cursor: zoom-in; }
-    .grid-item > figure:hover .overlay {
-      opacity: .1;
-      -webkit-transition: all 300ms;
+  .grid-item:hover .overlay {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    transition: opacity 300ms; }
+  .grid-item figure {
+    color: #CCC; }
+    .grid-item figure img {
+      display: block;
+      width: 100%;
+      height: 100%;
       transition: all 300ms; }
-  .grid-item > figure img {
-    display: block;
-    width: 100%;
-    z-index: -10; }
-  .grid-item > figure figcaption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0; }
-    .grid-item > figure figcaption .name {
+    .grid-item figure figcaption {
       position: absolute;
-      left: 1.6rem;
-      bottom: 3.2rem;
-      font-weight: normal; }
-    .grid-item > figure figcaption .symbol {
-      position: absolute;
-      left: 1.6rem;
+      left: 0;
+      right: 0;
       top: 0;
-      font-size: 4em;
-      font-weight: bold;
-      color: white; }
-    .grid-item > figure figcaption .number {
-      position: absolute;
-      right: 1.6rem;
-      top: 1.6rem; }
-    .grid-item > figure figcaption .year {
-      position: absolute;
-      left: 1.6rem;
       bottom: 0;
-      font-size: 80%; }
+      transition: all 300ms; }
+      .grid-item figure figcaption .name {
+        position: absolute;
+        left: 1.6rem;
+        bottom: 3.2rem;
+        font-weight: normal; }
+      .grid-item figure figcaption .symbol {
+        position: absolute;
+        left: 1.6rem;
+        top: 0;
+        font-size: 4em;
+        font-weight: bold;
+        color: white; }
+      .grid-item figure figcaption .number {
+        position: absolute;
+        right: 1.6rem;
+        top: 1.6rem; }
+      .grid-item figure figcaption .year {
+        position: absolute;
+        left: 1.6rem;
+        bottom: 0;
+        font-size: 80%; }
 
 .lazyload,
 .lazyloading {
@@ -257,7 +295,6 @@ footer {
 
 .lazyloaded {
   opacity: 1;
-  -webkit-transition: opacity 300ms;
   transition: opacity 300ms; }
 
 .button,
