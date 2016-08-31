@@ -312,3 +312,33 @@
   camera: Nikon
   location: Los Angeles, California
   year: 2013
+
+- name: getty_gardens
+  number: 52
+  symbol: GY
+  id: fxykquvkOzE
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1468560510372-e56aa5e72424
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Getty Gardens – Bushes
+  category: [nature, architecture]
+  camera: Nikon
+  location: Los Angeles, California
+  year: 2013
+
+- name: mushrooms
+  number: 72
+  symbol: MU
+  id: o6yY1oLFp7Y
+  width: 6016
+  height: 4000
+  hd_url: https://hd.unsplash.com/photo-1468560510372-e56aa5e72424
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Mushrooms
+  category: [nature, artifact]
+  camera: Nikon
+  location: Quepos, Costa Rica
+  year: 2015
