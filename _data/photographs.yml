@@ -148,6 +148,21 @@
   location: Viscaya Museum, Miami
   year: 2016
 
+- name: arlington_cemetery
+  number: AL
+  symbol: LP
+  id: iQRta5oOiPk
+  width: 4000
+  height: 6016
+  hd_url: https://hd.unsplash.com/photo-1472439366426-380c39fe066d
+  file-type: .jpg
+  author: Bryan Colosky
+  subject: Headstones at Arlington Cemetery – Fall
+  category: [travel, artifact]
+  camera: Nikon
+  location: Washington, DC
+  year: 2014
+
 - name: truck
   number: 08
   symbol: TK
@@ -203,7 +218,7 @@
   file-type: .jpg
   author: Bryan Colosky
   subject: Primate Skeleton at the Natural History Museum
-  category: [artifact, nature]
+  category: [artifact, travel]
   camera: Nikon
   location: New York City, New York
   year: 2014
@@ -313,20 +328,20 @@
   location: Los Angeles, California
   year: 2013
 
-- name: getty_gardens
-  number: 52
-  symbol: GY
-  id: fxykquvkOzE
+- name: ridge
+  number: 77
+  symbol: RG
+  id: kc-jOMbAP6E
   width: 6016
   height: 4000
-  hd_url: https://hd.unsplash.com/photo-1468560510372-e56aa5e72424
+  hd_url: https://hd.unsplash.com/photo-1468774419483-2cd1e8f4e001
   file-type: .jpg
   author: Bryan Colosky
-  subject: Getty Gardens – Bushes
-  category: [nature, architecture]
+  subject: Mountain Ridge
+  category: [nature, travel]
   camera: Nikon
-  location: Los Angeles, California
-  year: 2013
+  location: Paradise, California
+  year: 2015
 
 - name: mushrooms
   number: 72
