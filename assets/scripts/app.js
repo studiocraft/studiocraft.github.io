@@ -21,12 +21,21 @@
         // JavaScript to be fired on all pages
 
         // init Isotope
-        var $grid = $('.grid').imagesLoaded( function() {
-          $grid.masonry({
+        var $grid = $('.grid').masonry({
             itemSelector: '.grid-item',
             percentPosition: true,
-            columnWidth: '.grid-sizer'
-          });
+            columnWidth: '.grid-sizer',
+            getSortData: {
+              name: '.name',
+              symbol: '.symbol',
+              number: '.number parseInt',
+              year: '.year parseInt',
+              category: '[data-category]'
+            }
+        });
+
+        $grid.imagesLoaded().progress( function() {
+          $grid.masonry();
         });
 
         var $imgLoad = imagesLoaded('.grid-item');
@@ -61,9 +70,9 @@
           $grid.isotope({ filter: filterValue });
         });
         // change active class on buttons
-        $('li > a').each( function( i, nav ) {
+        $('#filters ul').each( function( i, nav ) {
           var $nav = $( nav );
-          $nav.on( 'click', 'a', function() {
+          $nav.on( 'click', 'li > a', function() {
             $nav.find('.active').removeClass('active');
             $( this ).addClass('active');
           });

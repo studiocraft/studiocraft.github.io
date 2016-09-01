@@ -1,4 +1,5 @@
 * {
+  margin: 0;
   box-sizing: border-box; }
 
 html,
@@ -129,7 +130,8 @@ ul, ol {
   background-color: #333333; }
 
 main {
-  position: relative;
+  padding-top: 12.2rem;
+  padding-bottom: 0;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
   margin-bottom: -10rem;
@@ -151,16 +153,26 @@ nav ul {
   nav ul > li:first-child {
     margin-left: 0; }
 
-header {
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem; }
-
-footer, main::after {
+footer,
+main::after {
   height: 10rem; }
 
 footer {
   width: 100%;
   padding: 1.6rem; }
+
+.navigation-main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.6rem;
+  padding-top: 2.4rem;
+  background-color: #EEE;
+  z-index: 420; }
+  .navigation-main nav > ul {
+    margin: 0; }
 
 /* ---- isotope ---- */
 .grid {
@@ -265,8 +277,17 @@ footer {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
     transition: opacity 300ms; }
+  .grid-item:hover figure {
+    color: #111; }
+    .grid-item:hover figure img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: all 300ms; }
+    .grid-item:hover figure figcaption {
+      z-index: 0; }
   .grid-item figure {
-    color: #CCC; }
+    color: #111; }
     .grid-item figure img {
       display: block;
       width: 100%;
@@ -295,6 +316,10 @@ footer {
         position: absolute;
         right: 1.6rem;
         top: 1.6rem; }
+      .grid-item figure figcaption .category {
+        position: absolute;
+        right: 1.6rem;
+        top: 3.6rem; }
       .grid-item figure figcaption .year {
         position: absolute;
         left: 1.6rem;

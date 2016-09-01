@@ -1,9 +1,9 @@
 // Layout
 //
 // Styles for managing the structural hierarchy of the site.
-
 main {
-  position: relative;
+  padding-top: 12.2rem;
+  padding-bottom: 0;
   padding-left:  1.6rem;
   padding-right: 1.6rem;
   margin-bottom: -10rem;
@@ -32,12 +32,8 @@ nav ul {
     }
   }
 
-header {
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
-}
-
-footer, main::after {
+footer,
+main::after {
   height: 10rem;
 }
 
@@ -46,8 +42,23 @@ footer {
   padding: 1.6rem;
 }
 
-/* ---- isotope ---- */
+.navigation-main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.6rem;
+  padding-top: 2.4rem;
+  background-color: #EEE;
+  z-index: 420;
 
+  nav > ul {
+    margin: 0;
+  }
+}
+
+/* ---- isotope ---- */
 .grid {
   position: relative;
   margin-left: -.8rem;
@@ -153,10 +164,25 @@ footer {
       transform: translate3d(0,0,0);
       transition: opacity 300ms;
     }
+
+    figure {
+      color: #111;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all 300ms;
+      }
+
+      figcaption {
+        z-index: 0;
+      }
+    }
   }
 
   figure {
-    color: #CCC;
+    color: #111;
 
     img {
       display: block;
@@ -193,6 +219,11 @@ footer {
         position: absolute;
         right: 1.6rem;
         top: 1.6rem;
+      }
+      .category {
+          position: absolute;
+          right: 1.6rem;
+          top: 3.6rem;
       }
 
       .year {

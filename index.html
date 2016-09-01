@@ -5,16 +5,17 @@ slug: home
 ---
 <div class="grid">
   <div class="grid-sizer"></div>
-  {% for photo in site.data.photographs %}
-  <div class="grid-item" data-category="{% for category in photo.category %}{% if !forloop.last %}{{ category | downcase }}{% else %}{{ category | downcase | append:' '}}{% endif %}{% endfor %}">
+  {% for photo in site.data.photographs limit:null %}
+  <div class="grid-item"  itemscope itemtype="http://schema.org/MediaObject" data-category="{% for category in photo.category %}{% if !forloop.last %}{{ category | downcase }}{% else %}{{ category | downcase | append:' '}}{% endif %}{% endfor %}">
     <div class="overlay {% for category in photo.category %}{% if !forloop.last %}{{ category | downcase }}{% else %}{{ category | downcase | append:' '}}{% endif %}{% endfor %}"></div>
-    <figure>
-      <img src="https://source.unsplash.com/{{ photo.id }}/{{ photo.width | divided_by:8 }}x{{ photo.height | divided_by:8 }}" width="{{ photo.width | divided_by:8 }}" height="{{ photo.height | divided_by:8 }}" data-action="zoom"/>
-      <figcaption>
-        <h3 class="name">{{ photo.name | downcase }}</h3>
-        <p class="symbol">{{ photo.symbol | capitalize | truncate: 2, ""  }}</p>
-        <!-- <p class="number">{{ photo.number }}</p> -->
-        <p class="number">{{ photo.category }}</p>
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <img src="https://source.unsplash.com/{{ photo.id }}/{{ photo.width | divided_by:8 }}x{{ photo.height | divided_by:8 }}" width="{{ photo.width | divided_by:8 }}" height="{{ photo.height | divided_by:8 }}"
+      data-original="{{ photo.hd_url }}" itemprop="contentUrl" data-action="zoom"/>
+      <figcaption itemprop="caption description">
+        <h3 itemprop="name" class="name">{{ photo.name | downcase }}</h3>
+        <p itemprop="symbol" class="symbol">{{ photo.symbol | capitalize | truncate: 2, ""  }}</p>
+        <p itemprop="number" class="number">{{ photo.number }}</p>
+        <p itemprop="category" class="category">{{ photo.category }}</p>
         <p class="year">{{ photo.year }}</p>
       </figcaption>
     </figure>

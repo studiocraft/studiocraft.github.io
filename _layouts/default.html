@@ -4,22 +4,11 @@
   {% include head.html %}
   </head>
   <body class="{{ page.slug }}">
+    {% include navbar.html %}
     <main id="content">
-      <header>
-      <img class="logo" src="{{ site.baseurl }}/assets/svg/studiocraft-logo.svg">
-        <nav id="filters">
-          <ul>
-            <li><a href="javascript:void(0)" data-filter="*" class="active"><i class="fa fa-fw fa-refresh" aria-hidden="true"></i></a></li>
-            <li><a href="javascript:void(0)" data-filter="[data-category~='street']">Street</a></li>
-            <li><a href="javascript:void(0)" data-filter="[data-category~='architecture']">Architecture</a></li>
-            <li><a href="javascript:void(0)" data-filter="[data-category~='nature']">Nature</a></li>
-            <li><a href="javascript:void(0)" data-filter="[data-category~='travel']">Travel</a></li>
-            <li><a href="javascript:void(0)" data-filter="[data-category~='artifact']">Artifact</a></li>
-          </ul>
-        </nav>
-      </header>
     {{ content }}
     </main>
     {% include footer.html %}
+    {% include scripts.html %}
   </body>
 </html>
