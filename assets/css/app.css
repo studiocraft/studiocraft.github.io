@@ -43,6 +43,13 @@ img {
     max-width: 48rem;
     margin-bottom: 1.6rem; }
 
+.logo {
+  margin: 0;
+  font-size: 7.2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none; }
+
 img[data-action="zoom"] {
   cursor: pointer;
   cursor: -webkit-zoom-in;
@@ -130,7 +137,7 @@ ul, ol {
   background-color: #333333; }
 
 main {
-  padding-top: 12.2rem;
+  padding-top: 12.6rem;
   padding-bottom: 0;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
