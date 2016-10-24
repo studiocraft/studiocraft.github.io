@@ -3,22 +3,95 @@ layout: default
 title: Home
 slug: home
 ---
-<div class="grid">
-  <div class="grid-sizer"></div>
-  {% for photo in site.data.photographs limit:null %}
-  <div class="grid-item"  itemscope itemtype="http://schema.org/MediaObject" data-category="{% for category in photo.category %}{% if !forloop.last %}{{ category | downcase }}{% else %}{{ category | downcase | append:' '}}{% endif %}{% endfor %}">
-    <div class="overlay {% for category in photo.category %}{% if !forloop.last %}{{ category | downcase }}{% else %}{{ category | downcase | append:' '}}{% endif %}{% endfor %}"></div>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <img src="https://source.unsplash.com/{{ photo.id }}/{{ photo.width | divided_by:8 }}x{{ photo.height | divided_by:8 }}" width="{{ photo.width | divided_by:8 }}" height="{{ photo.height | divided_by:8 }}"
-      data-original="{{ photo.hd_url }}" itemprop="contentUrl" data-action="zoom"/>
-      <figcaption itemprop="caption description">
-        <h3 itemprop="name" class="name">{{ photo.name | downcase }}</h3>
-        <p itemprop="symbol" class="symbol">{{ photo.symbol | capitalize | truncate: 2, ""  }}</p>
-        <p itemprop="number" class="number">{{ photo.number }}</p>
-        <p itemprop="category" class="category">{{ photo.category }}</p>
-        <p class="year">{{ photo.year }}</p>
-      </figcaption>
-    </figure>
+<section class="ph3 ph4-ns pv4 pv6-ns bg-white" id="strategy">
+  <h2 class="f1 mv0 measure-narrow lh-title wow animated fadeInUp">Strategy</h2>
+  <p class="f4 measure-wide lh-copy wow animated fadeIn">{{ site.title }}'s focus is on design and technology as a broader approaches to experience, product performance and consumer perception.</p>
+  <p class="measure lh-copy wow animated fadeIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <ul class="list pl0 mv4 measure-wide cf mid-gray wow animated fadeIn">
+    <label class="db f6 mv1 tracked light-silver b ttu">Services</label>
+    <li class="fl-ns w-50-ns"><small>Brand and identity planning</small></li>
+    <li class="fl-ns w-50-ns"><small>Stakeholder interviews</small></li>
+    <li class="fl-ns w-50-ns"><small>User scenarios and persona development</small></li>
+    <li class="fl-ns w-50-ns"><small>User research and surveys</small></li>
+    <li class="fl-ns w-50-ns"><small>Information architecture</small></li>
+  </ul>
+</section>
+<section class="ph3 ph4-ns pv4 pv6-ns bg-near-white" id="design">
+  <h2 class="f1 mv0 measure-narrow lh-title wow animated fadeInUp">Design</h2>
+  <p class="f4 measure-wide lh-copy wow animated fadeIn">An iterative approach ensures that client goals are realized at every stage of the creative process.</p>
+  <p class="measure lh-copy wow animated fadeIn">{{ site.title }} strives to create work that is distinct, effective, inspirational and forward-thinking.</p>
+  <ul class="list pl0 mv4 measure-wide cf mid-gray wow animated fadeIn">
+    <label class="db f6 mv1 tracked light-silver b ttu">Services</label>
+    <li class="fl-ns w-50-ns"><small>Visual design</small></li>
+    <li class="fl-ns w-50-ns"><small>Branding and identity collateral</small></li>
+    <li class="fl-ns w-50-ns"><small>Style guides</small></li>
+    <li class="fl-ns w-50-ns"><small>UX pattern libraries</small></li>
+    <li class="fl-ns w-50-ns"><small>User centered design</small></li>
+    <li class="fl-ns w-50-ns"><small>Photography and video</small></li>
+    <li class="fl-ns w-50-ns"><small>Custom typography and icons</small></li>
+  </ul>
+</section>
+<section class="ph3 ph4-ns pv4 pv6-ns bg-white" id="technology">
+  <h2 class="f1 mv0 measure-narrow lh-title wow animated fadeInUp">Technology</h2>
+  <p class="f4 measure-wide lh-copy wow animated fadeIn">{{ site.title }} takes an agnostic approach towards technology to best fit your needs.</p>
+  <p class="measure lh-copy wow animated fadeIn">Turn your ideas and designs into functional, reliable products and services.</p>
+  <ul class="list pl0 mv4 measure-wide cf mid-gray wow animated fadeIn">
+    <label class="db f6 mv1 tracked light-silver b ttu">Services</label>
+    <li class="fl-ns w-50-ns"><small>Responsive development</small></li>
+    <li class="fl-ns w-50-ns"><small>Front-end engineering</small></li>
+    <li class="fl-ns w-50-ns"><small>Rapid prototyping</small></li>
+    <li class="fl-ns w-50-ns"><small>Pattern library development</small></li>
+    <li class="fl-ns w-50-ns"><small>Technical consulting</small></li>
+    <li class="fl-ns w-50-ns"><small>E-commerce consulting</small></li>
+    <li class="fl-ns w-50-ns"><small>Geographical information systems</small></li>
+  </ul>
+  <div class="cf mv2">
+    <ul class="list fl w-third pl0 mid-gray wow animated fadeIn">
+      <label class="db f6 mv3 tracked light-silver b ttu">Devices</label>
+      <li class="dib mh0"><i class="fa fa-fw fa-lg fa-mobile"></i></li>
+      <li class="dib mh0"><i class="fa fa-fw fa-lg fa-tablet"></i></li>
+      <li class="dib mh0"><i class="fa fa-fw fa-lg fa-desktop"></i></li>
+    </ul>
+    <ul class="list fl w-third pl0 mid-gray wow animated fadeIn">
+      <label class="db f6 mv3 tracked light-silver b ttu">Browsers</label>
+      <li class="dib mh0"><i class="fa fa-fw fa-lg fa-chrome"></i></li>
+      <li class="dib mh0"><i class="fa fa-fw fa-lg fa-safari"></i></li>
+      <li class="dib mh0"><i class="fa fa-fw fa-lg fa-firefox"></i></li>
+      <li class="dib mh0"><i class="fa fa-fw fa-lg fa-internet-explorer"></i></li>
+    </ul>
+    <ul class="list fl w-third cf mid-gray wow animated fadeIn">
+      <label class="db f6 mv3 tracked light-silver b ttu">Code</label>
+      <li class="dib mh0"><i class="fa fa-fw fa-lg fa-html5"></i></li>
+      <li class="dib mh0"><i class="fa fa-fw fa-lg fa-css3"></i></li>
+      <li class="dib mh0"><i class="fa fa-fw fa-lg fa-wordpress"></i></li>
+    </ul>
   </div>
-  {% endfor %}
-</div>
+</section>
+<section class="ph3 ph4-ns pv4 pv6-ns near-white bg-blue tc">
+  <h2 class="f1 mv0 lh-title wow animated fadeInUp">Get a Quote</h2>
+  <h3 class="f3 normal lh-subtitle wow animated fadeIn">Want to work with {{ site.title }}?</h3>
+  <a class="grow no-underline br-pill ba bw1 ph4 pv3 mv2 dib near-white b ttu" href="mailto:info@studiocraft.cc">info@studiocraft.cc</a>
+</section>
+<section class="near-white bg-near-black dt-ns w-100" id="contact">
+  <div class="db dtc-ns w-100 w-40-ns ph3 ph4-ns pv4 pv6-ns">
+    <h2 class="f2 mt0 lh-title wow animated fadeInUp">{{ site.title }}</h2>
+    <address class="fs-normal mb4 wow animated fadeIn">
+      <label class="db f6 mv1 mb0 tracked silver b ttu">Contact</label>
+      <ul class="list pl0 lh-copy">
+        <li><a class="link underline-hover mid-gray" href="mailto:hello@studiocraft.cc"><abbr title="Email"><i class="fa fa-fw fa-envelope"></i></abbr>hello@studiocraft.cc</a></li>
+        <li><a class="link underline-hover mid-gray" href="tel:760-265-1232"><abbr title="Phone"><i class="fa fa-fw fa-phone"></i></abbr>(760) 265-1232</a></li>
+        <li><a class="link underline-hover mid-gray" href="#"><abbr title="Location"><i class="fa fa-fw fa-map-marker"></i></abbr>New York, NY</a></li>
+      </ul>
+    </address>
+    <address class="fs-normal mb4 wow animated fadeIn">
+      <label class="f6 mv1 mb0 tracked silver b ttu">Founder &amp; Creative Director</label>
+      <ul class="list pl0 lh-copy">
+        <li><span>Bryan Colosky</span></li>
+        <li><a class="link underline-hover mid-gray" href="mailto:bryan.colosky@studiocraft.cc"><abbr title="Email"><i class="fa fa-fw fa-envelope"></i></abbr>bryan.colosky@studiocraft.cc</a></li>
+      </ul>
+    </address>
+  </div>
+  <div class="db dn dtc-ns w-100 w-60-ns relative">
+    <div id="map" class="absolute absolute--fill wow animated fadeIn" style="background-color:transparent"></div>
+  </div>
+</section>

@@ -19,67 +19,57 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-
-        // init Isotope
-        var $grid = $('.grid').masonry({
-            itemSelector: '.grid-item',
-            percentPosition: true,
-            columnWidth: '.grid-sizer',
-            getSortData: {
-              name: '.name',
-              symbol: '.symbol',
-              number: '.number parseInt',
-              year: '.year parseInt',
-              category: '[data-category]'
-            }
-        });
-
-        $grid.imagesLoaded().progress( function() {
-          $grid.masonry();
-        });
-
-        var $imgLoad = imagesLoaded('.grid-item');
-        $imgLoad.on( 'always', function() {
-          console.log( $imgLoad.images.length + ' images loaded' );
-          // detect which image is broken
-          for ( var i = 0, len = $imgLoad.images.length; i < len; i++ ) {
-            var image = $imgLoad.images[i];
-            var result = image.isLoaded ? 'loaded' : 'broken';
-            console.log( 'image is ' + result + ' for ' + image.img.src );
-          }
-        });
-
-        // filter functions
-        var filterFns = {
-          // show if number is greater than 50
-          numberGreaterThan50: function() {
-            var number = $(this).find('.number').text();
-            return parseInt( number, 10 ) > 50;
-          },
-          // show if name ends with -ium
-          ium: function() {
-            var name = $(this).find('.name').text();
-            return name.match( /ium$/ );
-          }
-        };
-        // bind filter button click
-        $('#filters').on( 'click', 'a', function() {
-          var filterValue = $( this ).attr('data-filter');
-          // use filterFn if matches value
-          filterValue = filterFns[ filterValue ] || filterValue;
-          $grid.isotope({ filter: filterValue });
-        });
-        // change active class on buttons
-        $('#filters ul').each( function( i, nav ) {
-          var $nav = $( nav );
-          $nav.on( 'click', 'li > a', function() {
-            $nav.find('.active').removeClass('active');
-            $( this ).addClass('active');
-          });
-        });
+        new WOW().init();
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+        function initMap() {
+          var styles =[
+            { "featureType":"water","elementType":"geometry","stylers":[{"color":"#222222"}]
+            },
+            { "featureType":"landscape","elementType":"geometry","stylers":[{"color":"#111111"}]
+            },
+            { "featureType":"road","elementType":"geometry","stylers":[{"color":"#111111"},{"lightness":-35}]
+            },
+            { "featureType":"poi","elementType":"geometry","stylers":[{"color":"#222222"},{"lightness":10}]
+            },
+            { "featureType":"transit","elementType":"geometry","stylers":[{"color":"#222222"},{"lightness":5}]
+            },
+            { "elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]
+            },
+            { "elementType":"labels.text.fill","stylers":[{"visibility":"simple"},{"color": "#111111"},{"lightness": 50}]
+            },
+            { "featureType":"administrative","elementType":"geometry","stylers":[{"color":"#222222"}]
+            },
+            { "elementType":"labels.icon","stylers":[{"visibility":"off"}]
+            },
+            { "featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#111111"},{"lightness":-10}]
+          }];
+
+          var myLatLng = { lat: 40.7714867, lng: -73.9623121};
+
+          var styledMap = new google.maps.StyledMapType(styles, {name: "Studiocraft"});
+
+          var mapOptions = {
+            center: myLatLng,
+            backgroundColor: 'transparent',
+            disableDefaultUI: true,
+            zoomControl: false,
+            zoomControlOptions: {
+              position: google.maps.ControlPosition.LEFT_BOTTOM
+            },
+            zoom: 13,
+            scrollwheel: false,
+            draggable: true
+          };
+
+          var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+          map.mapTypes.set('map_style', styledMap);
+          map.setMapTypeId('map_style');
+          }
+
+          google.maps.event.addDomListener(window, 'load', initMap);
       }
     },
     // Home page
@@ -90,103 +80,6 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
-        // $(document).ready(function() {
-        //   var playlist = [
-        //     {
-        //       url : "assets/music/jupiter.mp3",
-        //       title : "The Planets - Jupiter",
-        //       author : "Gustav Holst",
-        //     },
-        //     {
-        //       url : "assets/music/lakme.mp3",
-        //       title : "Lakmé - Sous le Dôme Épais",
-        //       author : "Léo Delibes",
-        //     }];
-        //
-        //   var aud = $('#jukebox audio').get(0);
-        //   aud.pos = -1;
-        //
-        //   $("a[data-control='play']").click(function() {
-        //     if (aud.pos < 0) {
-        //       $("a[data-control='next']").trigger('click');
-        //     } else {
-        //       aud.play();
-        //     }
-        //   });
-        //
-        //   $('a[data-control="pause"]').click(function() {
-        //     aud.pause();
-        //   });
-        //
-        //   $('input[data-control="mute"]').on('change', function() {
-        //     if( $('#jukebox audio').prop('muted') )
-        //     {
-        //       $('#jukebox audio').prop('muted', false);
-        //       $(this).find("i").toggleClass("fa-volume-off fa-volume-up");
-        //     } else {
-        //       $('#jukebox audio').prop('muted', true);
-        //       $(this).find("i").toggleClass("fa-volume-off fa-volume-up");
-        //     }
-        //   });
-        //
-        //   $('#jukebox audio').on('play', function() {
-        //     $('[data-control="volume"]').removeClass('hide').addClass('fade in');
-        //   });
-        //
-        //   $('#jukebox audio').on('pause', function() {
-        //     $('[data-control="volume"]').addClass('hide').removeClass('fade in');
-        //   });
-        //
-        //   $('input[type="range"]').on('change', function() {
-        //     var value = $(this).prop("value");
-        //     $('#jukebox audio').volume = (value / 100);
-        //   });
-        //
-        //   $('a[data-control="next"]').click(function() {
-        //     aud.pause();
-        //     aud.pos++;
-        //     if (aud.pos == playlist.length) aud.pos = 0;
-        //     aud.setAttribute('src', playlist[aud.pos].url);
-        //
-        //     $('[data-info="title"]').html(playlist[aud.pos].title);
-        //     $('[data-info="author"]').html(playlist[aud.pos].author);
-        //       aud.load();
-        //   });
-        //
-        //   $('a[data-control="previous"]').click(function() {
-        //     aud.pause();
-        //     aud.pos--;
-        //     if (aud.pos < 0) aud.pos = playlist.length - 1;
-        //     aud.setAttribute('src', playlist[aud.pos].url);
-        //     $('[data-info="title"]').html(playlist[aud.pos].title);
-        //     $('[data-info="author"]').html(playlist[aud.pos].author);
-        //       aud.load();
-        //   });
-        //
-        //   aud.addEventListener('progress', function() {
-        //     var percentLoaded = Math.round(parseInt(((aud.buffered.end(0) / aud.duration) * 100), 10));
-        //     $('.load-progress').css('width', percentLoaded + '%');
-        //   });
-        //
-        //   aud.addEventListener('timeupdate', function() {
-        //     var percentPlayed = Math.round(aud.currentTime / aud.duration * 100);
-        //     $('.play-progress').css('width', percentPlayed + '%');
-        //   });
-        //
-        //   aud.addEventListener('canplay', function() {
-        //     $('a[data-control="play"]').trigger('click');
-        //   });
-        //
-        //   aud.addEventListener('ended', function() {
-        //     $('a[data-control="next"]').trigger('click');
-        //   });
-        //
-        //   $('[data-info="title"]').html(playlist[0].title);
-        //
-        //   $('[data-info="author"]').html(playlist[0].author);
-        //
-        //   aud.load();
-        // });
       }
     },
   };

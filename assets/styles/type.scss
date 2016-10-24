@@ -46,15 +46,3 @@ ul, ol {
   margin: 0;
   padding: 0;
 }
-
-// Selection Highlight
-
-::selection {
-  color: #FFFFFF;
-  background-color: #333333;
-}
-
-::moz-selection {
-  color: #FFFFFF;
-  background-color: #333333;
-}
