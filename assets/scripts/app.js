@@ -58,15 +58,29 @@
             zoomControlOptions: {
               position: google.maps.ControlPosition.LEFT_BOTTOM
             },
-            zoom: 13,
+            zoom: 12,
             scrollwheel: false,
             draggable: true
           };
+
+          function setMarkers(map) {
+            var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              icon:  {
+                path: google.maps.SymbolPath.CIRCLE,
+                strokeWeight: 5,
+                strokeColor: '#FFD700',
+                scale: 7
+              },
+            });
+          }
 
           var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
           map.mapTypes.set('map_style', styledMap);
           map.setMapTypeId('map_style');
+          setMarkers(map);
           }
 
           google.maps.event.addDomListener(window, 'load', initMap);
@@ -80,6 +94,28 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        $("#mc-embedded-subscribe-form").submit(function(e) {
+          e.preventDefault();
+          $.ajax({
+            type: 'GET',
+            url:  $(this).attr('action'),
+            data: $(this).serialize(),
+            cache: false,
+            dataType: "jsonp",
+            jsonp: "c",
+            contentType: "application/json; charset=utf-8",
+            success: function(data){
+              if (data.result != "success") {
+                $("#mc_response").addClass('animated fadeInUp').html('<p>' + data.msg + '</p>');
+              } else {
+                $("#mc_response").addClass('animated fadeInUp').html('<h1>Thank You.</h1><p>' + data.msg + '</p>');
+              }
+            },
+            error: function(err){
+              $("#mc_response").addClass('animated fadeInUp').html('<p>' + data.msg + '</p>');
+            }
+          });
+        });
       }
     },
   };
