@@ -23,6 +23,12 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+      }
+    },
+    // Home page
+    'home': {
+      init: function() {
+        // JavaScript to be fired on the home page
         function initMap() {
           var styles =[
             { "featureType":"water","elementType":"geometry","stylers":[{"color":"#222222"}]
@@ -84,13 +90,6 @@
           }
 
           google.maps.event.addDomListener(window, 'load', initMap);
-      }
-    },
-    // Home page
-    'home': {
-      init: function() {
-        // JavaScript to be fired on the home page
-
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
@@ -101,18 +100,18 @@
             url:  $(this).attr('action'),
             data: $(this).serialize(),
             cache: false,
-            dataType: "jsonp",
-            jsonp: "c",
-            contentType: "application/json; charset=utf-8",
+            dataType: 'jsonp',
+            jsonp: 'c',
+            contentType: 'application/json; charset=utf-8',
             success: function(data){
-              if (data.result != "success") {
-                $("#mc_response").addClass('animated fadeInUp').html('<p>' + data.msg + '</p>');
+              if (data.result != 'success') {
+                $('#mc_response').addClass('animated fadeInUp').html('<p>' + data.msg + '</p>');
               } else {
-                $("#mc_response").addClass('animated fadeInUp').html('<h1>Thank You.</h1><p>' + data.msg + '</p>');
+                $('#mc_response').addClass('animated fadeInUp').html('<h1>Thank You.</h1><p>' + data.msg + '</p>');
               }
             },
             error: function(err){
-              $("#mc_response").addClass('animated fadeInUp').html('<p>' + data.msg + '</p>');
+              $('#mc_response').addClass('animated fadeInUp').html('<p>' + data.msg + '</p>');
             }
           });
         });
