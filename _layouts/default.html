@@ -7,7 +7,9 @@
   </head>
   <body class="{{ page.slug }} w-100 sans-serif dark-gray">
     <main id="content" class="w-100">
+    {% unless page.layout == 'page' %}
     {% include header.html %}
+    {% endunless %}
     {{ content }}
     {% include footer.html %}
     </main>
