@@ -1,0 +1,69 @@
+- name: Logen Plastik
+  id: 1
+  demographics:
+    location: Denmark
+    sex: male
+    relationship_status: Single
+    age-group: 25 - 34
+  education_industry:
+    degree: Certificate
+    experience: 15
+    industry: Fabrication
+  digital_profile:
+    hardware:
+      device: mobile
+      type: android
+      device: laptop
+      type: windows
+    internet_use:
+      protocol: wifi
+      youtube: true
+      facebook: true
+  quote: Always looking out for the little guy.
+  persona:
+- name: Inje T. Mold
+  id: 9
+  demographics:
+    location: Italy
+    sex: female
+    relationship_status: Single
+    age-group: 35 - 44
+  education_industry:
+    degree: BA
+    experience: 15
+    industry: Graphic Arts
+  digital_profile:
+    hardware:
+      device: mobile
+      type: android
+      device: laptop
+      type: windows
+    internet_use:
+      protocol: wifi
+      youtube: true
+      facebook: true
+  quote: Knows her pixels. Quite affectionate and outgoing.
+  persona:
+- name: Stepan M. Hertz
+  id: 3
+  demographics:
+    location: Austria
+    sex: male
+    relationship_status: Married
+    age-group: 45 - 65
+  education_industry:
+    degree: Phd MD
+    experience: 30
+    industry: Medicine
+  digital_profile:
+    hardware:
+      device: mobile
+      type: android
+      device: laptop
+      type: windows
+    internet_use:
+      protocol: wifi
+      youtube: true
+      facebook: true
+  quote: Passionately cares for his patients, but balances his time with family.
+  persona:
