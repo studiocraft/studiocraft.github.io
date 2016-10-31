@@ -27,17 +27,17 @@ slug: strategy
   <cite class="fs-normal silver"><a class="dib link blue underline-hover b ttu" href="strategy.html">U.S. Bureau of Labor Statistics<i class="fa fa-fw fa-long-arrow-right"></i></a></cite>
 </section>
 <section class="ph3 ph4-ns pv4 pv6-ns tc tl-ns">
-  <div class="cf w-100" data-flickity='{ "wrapAround": true }'>
-    <center class="cf w-100">
+  <div class="w-100" data-flickity='{ "wrapAround": true }'>
+    <center class="cf ph5-ns w-100">
       <img src="https://s-media-cache-ak0.pinimg.com/originals/cd/be/fb/cdbefb5cf55dc544400ca73e0cb20785.jpg" class="db br-100 ba bw3 center b--near-white bg-white w-4 h4 h5-l w5-l o-80 fl-l" title="Dieter Rams">
-      <blockquote class="fl tl-l w-100 ma0 mh5-l measure-wide">
+      <blockquote class="fl-l tl-l center ma0 mh5-l measure-wide">
         <h1 class="f1 f-5-l mv0 lh-title tracked-tight wow animated fadeInDown" data-action="cursor">Less but better</h1>
-        <h2 class="f3 f2-l mv0 lh-title wow animated fadeInUp">Good design is thorough, down to the last detail.</h2>
+        <h2 class="f3 f2-l mv1 lh-title wow animated fadeInUp">Good design is thorough, down to the last detail.</h2>
       </blockquote>
     </center>
-    <center class="cf w-100">
+    <center class="cf ph5-ns w-100">
       <img src="{{ site.baseurl }}assets/images/avatar.png" class="db br-100 ba bw3 center b--near-white bg-white w-4 h4 h5-l w5-l o-80 fl-l" title="Bryan Colosky">
-      <blockquote class="fl tl-l w-100 ma0 mh5-l measure-wide">
+      <blockquote class="fl-l tl-l center ma0 mh5-l measure-wide">
         <h1 class="f1 f-5-l mv0 lh-title tracked-tight wow animated fadeInDown" data-action="cursor">Context is king</h1>
         <h2 class="f3 f2-l mv0 lh-title wow animated fadeInUp">The context of our experience makes it unique.</h2>
       </blockquote>
@@ -57,43 +57,51 @@ slug: strategy
   <div class="cf w-100" data-flickity='{ "wrapAround": true }'>
     {% for person in site.data.personas %}
     <article class="w-100 ph5-ns cf">
-      <center class="w-100 w-50-l tc fl">
+      <center class="w-100 w-50-m w-third-l tc fl">
         <figure class="mv2 ph4-ns ma0-ns">
           <img src="https://randomuser.me/api/portraits/lego/{{ person.id }}.jpg" class="br-100 ba bw3 b--white bg-white w-3 h3 h4-ns w4-ns o-80" title="{{ person.name }}">
           <figcaption class="mv2 measure-wide lh-copy wow animated fadeIn">
-            <h2 class="f3 f2-l mv2 lh-title tracked-tight wow animated fadeInUp">{{ person.name }}</h2>
-            <h3 class="f4 f3-l lh-title tracked-tight measure">{{ person.quote }}</h3>
+            <ul class="list pa0 mv2 mv3-ns cf measure-wide wow animated fadeInUp">
+              <li class="fl-ns w-50-ns"><abbr title="Location"><i class="fa fa-fw fa-globe" aria-hidden="true"></i></abbr><small>{{ person.demographics.location | capitalize }}</small></li>
+              <li class="fl-ns w-50-ns"><abbr title="Age Group"><i class="fa fa-fw fa-calendar-o" aria-hidden="true"></i></abbr><small>{{ person.demographics.birthdate | date: "%B %Y" }}</small></li>
+              <li class="fl-ns w-100-ns"><small>{{ person.education_industry.industry }}</small></li>
+            </ul>
           </figcaption>
         </figure>
       </center>
-      <aside class="dn w-100 db-l w-50-l measure-wide fl">
-        <ul class="list pa0 mv2 mv3-ns center measure-wide wow animated fadeInUp">
-          <label class="db mv1 tracked mid-gray b ttu"><small>Demographics</small></label>
-          <li class="dib mr2"><abbr title="Country"><i class="fa fa-fw fa-globe" aria-hidden="true"></i></abbr><small>{{ person.demographics.location }}</small></li>
-          <li class="dib mr2"><abbr title="Gender"><i class="fa fa-fw fa-{{ person.demographics.sex }}" aria-hidden="true"></i></abbr><small>{{ person.demographics.sex }}</small></li>
-          <li class="dib mr2"><abbr title="DOB"><i class="fa fa-fw fa-calendar-o" aria-hidden="true"></i></abbr><small>{{ person.demographics.age-group }}</small></li>
-          <li class="dib mr2"><abbr title="DOB"><i class="fa fa-fw fa-calendar-o" aria-hidden="true"></i></abbr><small>{{ person.demographics.relationship_status }}</small></li>
-        </ul>
-        <ul class="list pa0 mv2 mv3-ns center measure-wide wow animated fadeInUp">
-          <label class="db mv1 tracked mid-gray b ttu"><small>Education and Industry</small></label>
-          <li class="dib mr2"><abbr title="Education"><i class="fa fa-fw fa-graduation-cap" aria-hidden="true"></i></abbr><small>{{ person.education_industry.degree }}</small></li>
-          <li class="dib mr2"><abbr title="Industry"><i class="fa fa-fw fa-industry" aria-hidden="true"></i></abbr><small>{{ person.education_industry.industry }}</small></li>
-        </ul>
-        <ul class="list pa0 mv2 mv3-ns center measure-wide wow animated fadeInUp">
-          <label class="db mv1 tracked mid-gray b ttu"><small>Devices</small></label>
-          <li class="dib mr2"><abbr title="Smart Phone"><i class="fa fa-fw fa-mobile" aria-hidden="true"></i></abbr><small></small></li>
-          <li class="dib mr2"><abbr title="{{ person.digital_profile.hardware.type }}"><i class="fa fa-fw fa-android" aria-hidden="true"></i></abbr><small>Android</small></li>
-          <li class="dib mr2"><abbr title="Tablet"><i class="fa fa-fw fa-laptop" aria-hidden="true"></i></abbr><small></small></li>
-          <li class="dib mr2"><abbr title="Operating System"><i class="fa fa-fw fa-windows" aria-hidden="true"></i></abbr><small>Windows</small></li>
-        </ul>
-        <ul class="list pa0 mv2 mv3-ns center measure-wide wow animated fadeInUp">
-          <label class="db mv1 tracked mid-gray b ttu"><small>Internet Use</small></label>
-          <li class="dib mr2"><abbr title="Wifi"><i class="fa fa-fw fa-wifi" aria-hidden="true"></i></abbr><small></small></li>
-          <li class="dib mr2"><abbr title="YouTube"><i class="fa fa-fw fa-youtube-play" aria-hidden="true"></i></abbr><small>YouTube</small></li>
-          <li class="dib mr2"><abbr title="Social Media"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i></abbr><small>Facebook</small></li>
-        </ul>
-      </aside>
-      <p class="tl ma0 pa0 lh-copy">{{ person.persona }}</p>
+      <div class="w-100 w-two-thirds-l fl">
+        <h2 class="f3 f2-l mv2 lh-title tracked-tight wow animated fadeInUp">{{ person.name }}</h2>
+        <aside class="cf mv3-ns measure-wide tc tl-ns">
+          <ul class="fl list pa0 ma0 mv1-ns w-100 w-50-ns wow animated fadeInUp">
+            <label class="db mv1 tracked mid-gray b ttu"><small>Demographics</small></label>
+            {% if person.demographics.spouse != nul %}
+            <li class="fl-ns w-50-ns"><small>{{ person.demographics.spouse | capitalize }} {{ person.demographics.sex | capitalize }}</small></li>
+            {% endif %}
+            {% if person.demographics.children != null %}
+            <li class="fl-ns w-50-ns"><small>{{ person.demographics.children | capitalize }} Children</small></li>
+            {% endif %}
+          </ul>
+          <ul class="fl list pa0 ma0 mv1-ns w-100 w-50-ns wow animated fadeInUp">
+            <label class="db mv1 tracked mid-gray b ttu"><small>Education</small></label>
+            <li class="fl-ns w-50-ns"><small>{{ person.education_industry.degree }}</small></li>
+            <li class="fl-ns w-50-ns"><small>{{ person.education_industry.degree }}</small></li>
+          </ul>
+          <ul class="fl list pa0 ma0 mv1-ns w-100 w-50-ns wow animated fadeInUp">
+            <label class="db mv1 tracked mid-gray b ttu"><small>Devices</small></label>
+            <li class="dib mr2"><small>Mobile</small></li>
+            <li class="dib mr2"><abbr title="{{ person.digital_profile.hardware.type }}"><i class="fa fa-fw fa-android" aria-hidden="true"></i></abbr></li>
+            <li class="dib mr2"><small>Laptop</small></li>
+            <li class="dib mr2"><abbr title="Operating System"><i class="fa fa-fw fa-windows" aria-hidden="true"></i></abbr></li>
+          </ul>
+          <ul class="fl list pa0 ma0 mv1-ns w-100 w-50-ns wow animated fadeInUp">
+            <label class="db mv1 tracked mid-gray b ttu"><small>Internet Use</small></label>
+            <li class="dib mr2"><abbr title="Wifi"><i class="fa fa-fw fa-wifi" aria-hidden="true"></i></abbr><small></small></li>
+            <li class="dib mr2"><abbr title="YouTube"><i class="fa fa-fw fa-youtube-play" aria-hidden="true"></i></abbr><small>YouTube</small></li>
+            <li class="dib mr2"><abbr title="Social Media"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i></abbr><small>Facebook</small></li>
+          </ul>
+        </aside>
+        <p class="tl f6 pa0 lh-copy measure">{{ person.persona }}</p>
+      </div>
     </article>
     {% endfor %}
   </div>

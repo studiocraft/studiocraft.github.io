@@ -181,8 +181,8 @@
           labels: ['Women', 'Men'],
           hideHover: 'auto',
           barColors: ['#FF725C', '#357EDD'],
-          grid: false,
-          axes: false,
+          grid: true,
+          axes: true,
           gridTextColor: '#F4F4F4',
           resize: true
         });
