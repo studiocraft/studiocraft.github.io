@@ -7,23 +7,32 @@
   position: absolute;
   -webkit-transform: translate(10%, -10%);
       -ms-transform: translate(10%, -10%);
-          transform: translate(10%, -10%); }
+          transform: translate(10%, -10%);
+}
 
 @-webkit-keyframes blinking {
   0% {
-    opacity: 0; }
+    opacity: 0;
+  }
   50% {
-    opacity: 1; }
+    opacity: 1;
+  }
   100% {
-    opacity: 0; } }
+    opacity: 0;
+  }
+}
 
 @keyframes blinking {
   0% {
-    opacity: 0; }
+    opacity: 0;
+  }
   50% {
-    opacity: 1; }
+    opacity: 1;
+  }
   100% {
-    opacity: 0; } }
+    opacity: 0;
+  }
+}
 
 
 
