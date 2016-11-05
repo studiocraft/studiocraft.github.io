@@ -39,7 +39,22 @@
             targets[i].addEventListener("click", smoothScroll, false);
           }
         }
-        scroller();
+
+        window.onload = function(event) {
+          event.preventDefault();
+          var windowElement = $('html');
+          var bodyElement = $('body');
+          var loaderOverlay = document.getElementById('loaderOverlay');
+          if (loaderOverlay && loaderOverlay.parentNode && loaderOverlay.parentNode.nodeType === 1) {
+            setTimeout(function() {
+              loaderOverlay.parentNode.removeChild(loaderOverlay);
+              loaderOverlay = null;
+              windowElement.removeClass('overflow-hidden');
+              bodyElement.addClass('animated fadeInBig');
+              scroller();
+            }, 1500);
+          }
+        };
 
       },
       finalize: function() {
