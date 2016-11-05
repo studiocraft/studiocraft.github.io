@@ -19,18 +19,8 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        new WOW().init();
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-        function scroller() {
-          var targets = document.querySelectorAll('[data-scroll]');
-          for (i = 0; i < targets.length; ++i) {
-            targets[i].addEventListener("click", smoothScroll, false);
-          }
-        }
-
-        function smoothScroll() {
+        function smoothScroll(event) {
+          event.preventDefault();
           if(location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -43,7 +33,18 @@
           }
         }
 
+        function scroller() {
+          var targets = document.querySelectorAll('[data-scroll]');
+          for (i = 0; i < targets.length; ++i) {
+            targets[i].addEventListener("click", smoothScroll, false);
+          }
+        }
         scroller();
+
+      },
+      finalize: function() {
+        // JavaScript to be fired on all pages, after page specific JS is fired
+        new WOW().init();
       }
     },
     // Home page
