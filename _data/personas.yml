@@ -3,25 +3,33 @@
   demographics:
     location: Denmark
     sex: male
+    birthdate: 1988-11-29 7:15:00 -0500
     spouse: single
     children: 0
-    birthdate: 1988-11-29 7:15:00 -0500
-  education_industry:
-    degree: Certificate
+    languages: [english, spanish]
+  profession:
+    title: Fabrication Technician
     experience: 15
-    industry: Fabrication Technician
+  education:
+  - degree: Associate
+    area_of_study: Engineering
+  - degree: Certificate
+    area_of_study: Mechanical Engineering
   digital_profile:
     hardware:
-      device: mobile
+    - device: mobile
       type: android
-      device: laptop
+    - device: laptop
       type: windows
     internet_use:
       protocol: wifi
+      email: true
       youtube: true
       facebook: true
+      twitter: true
+      pintrest: false
   persona: Always looking out for the little guy. He is comfortable using a computer and refers to himself as an intermediate Internet user. He is connected via a T1 connection at work and dial-up at home. He uses email extensively and uses the web about 1.5 hours during his work day.
-- name: Inje T. Mold
+- name: Injé L. Mold
   id: 9
   demographics:
     location: Italy
@@ -29,38 +37,48 @@
     spouse: single
     children: 0
     birthdate: 1976-01-17 23:50:00 -0500
-  education_industry:
-    degree: BA
+    languages: [english, french]
+  profession:
+    title: Graphic Artist
     experience: 15
-    industry: Graphic Arts
+  education:
+  - degree: BA
+    area_of_study: Graphic Arts
+  - degree: MFA
+    area_of_study: Digital Communication
   digital_profile:
     hardware:
-      device: mobile
-      type: android
-      device: laptop
-      type: windows
+    - device: desktop
+      type: apple
+    - device: laptop
+      type: apple
     internet_use:
       protocol: wifi
       youtube: true
       facebook: true
-  persona: Knows her pixels. Quite affectionate and outgoing. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-- name: Stepan M. Hertz
+  persona: Knows her pixels. Quite affectionate and outgoing. She is extremely comfortable using a computer, and considers herself very tech savvy. Predominately works with Adobe products and software. She is connected via a T1 connection at work and wifi at home. She uses email extensively and uses the web 6 or more hours during her workday.
+- name: Stepan N. Hertz
   id: 3
   demographics:
     location: Austria
     sex: male
+    birthdate: 1964-10-11 06:50:00 -0500
     spouse: married
     children: 3
-    birthdate: 1964-10-11 06:50:00 -0500
-  education_industry:
-    degree: Phd MD
+    languages: [english, german, austrian, french]
+  profession:
+    title: Pediatrician
     experience: 30
-    industry: Medicine
+  education:
+  - degree: Phd
+    area_of_study: Psychology
+  - degree: MD
+    area_of_study: Medicine
   digital_profile:
     hardware:
-      device: mobile
-      type: android
-      device: laptop
+    - device: mobile
+      type: apple
+    - device: laptop
       type: windows
     internet_use:
       protocol: wifi
