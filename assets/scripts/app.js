@@ -363,9 +363,9 @@
               "move": {
                 "enable": true,
                 "speed": 1,
-                "direction": "none",
+                "direction": "left",
                 "random": true,
-                "straight": false,
+                "straight": true,
                 "out_mode": "out",
                 "bounce": false,
                 "attract": {
