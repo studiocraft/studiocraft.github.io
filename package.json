@@ -21,6 +21,7 @@
     "gulp-csscomb": "latest",
     "gulp-favicons": "latest",
     "gulp-jshint": "latest",
+    "gulp-modernizr": "latest",
     "gulp-cssnano": "latest",
     "gulp-rename": "latest",
     "gulp-ruby-sass": "latest",

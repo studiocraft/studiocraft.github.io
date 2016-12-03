@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     stylestats = require('gulp-stylestats'),
     cssnano = require('gulp-cssnano'),
     jshint = require('gulp-jshint'),
+    modernizr = require('gulp-modernizr'),
     stylish = require('jshint-stylish'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -159,6 +160,33 @@ gulp.task('js', ['scripts'], function() {
         });
 });
 
+// Modernizr Task
+//
+
+var mdrnzr = (function() {
+    return {
+        compile: function(config) {
+            gulp.src('./assets/{js,css}/' + config.src + '.{js,css}')
+                .pipe(modernizr(config.rename + '.js'))
+                .pipe(gulp.dest('./assets/' + config.dest))
+                .pipe(uglify())
+                .pipe(rename(config.rename + '.min.js'))
+                .pipe(gulp.dest('./dist/' + config.dest));
+
+            return this;
+        }
+    };
+}());
+
+gulp.task('modernizr', ['js', 'css'], function() {
+    return mdrnzr
+        .compile({
+            src: 'main',
+            rename: 'modernizr.custom',
+            dest: 'js'
+        });
+});
+
 // Favicons Task
 //
 
@@ -208,4 +236,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['sass', 'scripts', 'watch']);
-gulp.task('build', ['css', 'js', 'icons']);
+gulp.task('build', ['modernizr', 'icons']);
