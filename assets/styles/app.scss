@@ -6,6 +6,20 @@
 // // Components
 // @import 'buttons';
 // @import 'overlay';
+[data-media='bg-video'] {
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  // background-image: url('/assets/images/poster.jpg');
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 [data-action='cursor'] {
   &::after {

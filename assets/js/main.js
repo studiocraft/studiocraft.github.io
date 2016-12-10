@@ -305,6 +305,12 @@
       },
       finalize: function() {
         // JavaScript to be fired on the Design page, after the init JS
+
+        $(window).on("load", function() {
+          var media = $('#autoplay > video');
+          media.get(0).play();
+        });
+
         $(window).on("load", function() {
           particlesJS("particles-js", {
             "particles": {
