@@ -68,26 +68,16 @@
         // JavaScript to be fired on the home page
         function initMap() {
           var styles =[
-            { "featureType":"water","elementType":"geometry","stylers":[{"color":"#222222"}]
-            },
-            { "featureType":"landscape","elementType":"geometry","stylers":[{"color":"#111111"}]
-            },
-            { "featureType":"road","elementType":"geometry","stylers":[{"color":"#111111"},{"lightness":-35}]
-            },
-            { "featureType":"poi","elementType":"geometry","stylers":[{"color":"#222222"},{"lightness":10}]
-            },
-            { "featureType":"transit","elementType":"geometry","stylers":[{"color":"#222222"},{"lightness":5}]
-            },
-            { "elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]
-            },
-            { "elementType":"labels.text.fill","stylers":[{"visibility":"simple"},{"color": "#111111"},{"lightness": 50}]
-            },
-            { "featureType":"administrative","elementType":"geometry","stylers":[{"color":"#222222"}]
-            },
-            { "elementType":"labels.icon","stylers":[{"visibility":"off"}]
-            },
-            { "featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#111111"},{"lightness":-10}]
-          }];
+            {"featureType":"water","elementType":"geometry","stylers":[{"color":"#222222"}]},
+            {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#111111"}]},
+            {"featureType":"road","elementType":"geometry","stylers":[{"color":"#111111"},{"lightness":-35}]},
+            {"featureType":"poi","elementType":"geometry","stylers":[{"color":"#222222"},{"lightness":10}]},
+            {"featureType":"transit","elementType":"geometry","stylers":[{"color":"#222222"},{"lightness":5}]},
+            {"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},
+            {"elementType":"labels.text.fill","stylers":[{"visibility":"simple"},{"color": "#111111"},{"lightness": 50}]},
+            {"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#222222"}]},
+            {"elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+            {"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#111111"},{"lightness":-10}]}];
 
           var myLatLng = { lat: 40.7714867, lng: -73.9623121};
 
@@ -227,7 +217,7 @@
         new Morris.Donut({
           element: 'internetPenetration_in',
           data: [
-            {label: "Users", value: 462124989	},
+            {label: "Users", value: 462124989  },
             {label: "Non-Users", value: 864676587}
           ],
           colors: ['#001b44','#FF4136'],
@@ -239,7 +229,7 @@
         new Morris.Donut({
           element: 'internetPenetration_cn',
           data: [
-            {label: "Users", value: 721434547	},
+            {label: "Users", value: 721434547  },
             {label: "Non-Users", value: 660888785}
           ],
           colors: ['#001b44','#FF4136'],
@@ -263,8 +253,8 @@
         new Morris.Donut({
           element: 'internetPenetration_us',
           data: [
-            {label: "Users", value: 286942362		},
-            {label: "Non-Users", value: 37176425	}
+            {label: "Users", value: 286942362    },
+            {label: "Non-Users", value: 37176425  }
           ],
           colors: ['#001b44','#FF4136'],
           formatter: function (value, data) {
@@ -305,6 +295,23 @@
       },
       finalize: function() {
         // JavaScript to be fired on the Design page, after the init JS
+
+        setInterval(function() {
+
+          // var targets = document.querySelectorAll('[data-scroll]');
+          // for (i = 0; i < targets.length; ++i) {
+          //   targets[i].addEventListener("click", smoothScroll, false);
+          // }
+
+          function r(el, deg) {
+            el.setAttribute('transform', 'rotate('+ deg +' 50 50)');
+          }
+
+          var d = new Date();
+          r(sec, 6*d.getSeconds());
+          r(min, 6*d.getMinutes());
+          r(hour, 30*(d.getHours()%12) + d.getMinutes()/2);
+        }, 1000);
 
         $(window).on("load", function() {
           var media = $('#autoplay > video');

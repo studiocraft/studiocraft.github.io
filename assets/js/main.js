@@ -227,7 +227,7 @@
         new Morris.Donut({
           element: 'internetPenetration_in',
           data: [
-            {label: "Users", value: 462124989	},
+            {label: "Users", value: 462124989  },
             {label: "Non-Users", value: 864676587}
           ],
           colors: ['#001b44','#FF4136'],
@@ -239,7 +239,7 @@
         new Morris.Donut({
           element: 'internetPenetration_cn',
           data: [
-            {label: "Users", value: 721434547	},
+            {label: "Users", value: 721434547  },
             {label: "Non-Users", value: 660888785}
           ],
           colors: ['#001b44','#FF4136'],
@@ -263,8 +263,8 @@
         new Morris.Donut({
           element: 'internetPenetration_us',
           data: [
-            {label: "Users", value: 286942362		},
-            {label: "Non-Users", value: 37176425	}
+            {label: "Users", value: 286942362    },
+            {label: "Non-Users", value: 37176425  }
           ],
           colors: ['#001b44','#FF4136'],
           formatter: function (value, data) {
@@ -305,6 +305,16 @@
       },
       finalize: function() {
         // JavaScript to be fired on the Design page, after the init JS
+
+        setInterval(function() {
+          function r(el, deg) {
+            el.setAttribute('transform', 'rotate('+ deg +' 50 50)');
+          }
+          var d = new Date();
+          r(sec, 6*d.getSeconds());
+          r(min, 6*d.getMinutes());
+          r(hour, 30*(d.getHours()%12) + d.getMinutes()/2);
+        }, 1000);
 
         $(window).on("load", function() {
           var media = $('#autoplay > video');
