@@ -296,22 +296,21 @@
       finalize: function() {
         // JavaScript to be fired on the Design page, after the init JS
 
-        setInterval(function() {
-
-          // var targets = document.querySelectorAll('[data-scroll]');
-          // for (i = 0; i < targets.length; ++i) {
-          //   targets[i].addEventListener("click", smoothScroll, false);
-          // }
-
+        function clock() {
           function r(el, deg) {
             el.setAttribute('transform', 'rotate('+ deg +' 50 50)');
           }
-
           var d = new Date();
+
           r(sec, 6*d.getSeconds());
           r(min, 6*d.getMinutes());
           r(hour, 30*(d.getHours()%12) + d.getMinutes()/2);
-        }, 1000);
+        }
+        var clocks = document.querySelectorAll('[data-clock]');
+        for (i = 0; i < clocks.length; ++i) {
+          clock(clocks[i]);
+        }
+        setInterval(clock, 1000);
 
         $(window).on("load", function() {
           var media = $('#autoplay > video');
