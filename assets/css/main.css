@@ -1,0 +1,45 @@
+[data-media='bg-video'] {
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+[data-action='cursor']::after {
+  content: '_';
+  display: inline;
+  line-height: inherit;
+  -webkit-animation: blinking 1s infinite;
+          animation: blinking 1s infinite;
+  position: absolute;
+  -webkit-transform: translate(10%, -10%);
+      -ms-transform: translate(10%, -10%);
+          transform: translate(10%, -10%); }
+
+@-webkit-keyframes blinking {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes blinking {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+
+
+/*# sourceMappingURL=app.css.map */

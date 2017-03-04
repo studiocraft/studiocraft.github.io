@@ -1,0 +1,247 @@
+// Layout
+//
+// Styles for managing the structural hierarchy of the site.
+main {
+  padding-top: 12.6rem;
+  padding-bottom: 0;
+  padding-left:  1.6rem;
+  padding-right: 1.6rem;
+  margin-bottom: -10rem;
+  margin-left:  auto;
+  margin-right: auto;
+  min-height: 100%;
+}
+
+main::after {
+  content: "";
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: block;
+  margin-bottom: 1.6rem;
+
+  > li {
+    display: inline;
+    margin-left: .4rem
+  }
+
+  > li:first-child {
+      margin-left: 0;
+    }
+  }
+
+footer,
+main::after {
+  height: 10rem;
+}
+
+footer {
+  width: 100%;
+  padding: 1.6rem;
+}
+
+.navigation-main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.6rem;
+  padding-top: 2.4rem;
+  background-color: #EEE;
+  z-index: 420;
+
+  nav > ul {
+    margin: 0;
+  }
+}
+
+/* ---- isotope ---- */
+.grid {
+  position: relative;
+  margin-left: -.8rem;
+  margin-right: -.8rem;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 100%;
+}
+
+@media (min-width: 450px) {
+  .grid-sizer,
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 960px) {
+  .grid-sizer,
+  .grid-item {
+    width: 33.333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-sizer,
+  .grid-item {
+    width: 25%;
+  }
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  position: relative;
+  float: left;
+  border: solid .8rem transparent;
+}
+
+.grid-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-item {
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .9;
+    transition: all 300ms;
+  }
+
+  .overlay.street                { background: #FFDC00} // Yellow
+  .overlay.street.architecture   { background: #FF851B} // Orange
+  .overlay.street.nature         { background: #7FDBFF} // Aqua
+  .overlay.street.travel         { background: #B10DC9} // Purple
+  .overlay.street.artifact       { background: #85144b} // Maroon
+
+
+  .overlay.architecture          { background: #CCFF00} // Chartreuse
+  .overlay.architecture.street   { background: #FF851B} // Orange
+  .overlay.architecture.nature   { background: #2ECC40} // Green
+  .overlay.architecture.travel   { background: #001F3F} // Navy
+  .overlay.architecture.artifact { background: #3D9970} // Olive
+
+
+  .overlay.nature                { background: #39CCCC} // Teal
+  .overlay.nature.street         { background: #7FDBFF} // Aqua
+  .overlay.nature.architecture   { background: #2ECC40} // Green
+  .overlay.nature.travel         { background: #0074D9} // Blue
+  .overlay.nature.artifact       { background: #01FF70} // Lime
+
+  .overlay.travel                { background: #F012BE} // Fuschia
+  .overlay.travel.street         { background: #B10DC9} // Purple
+  .overlay.travel.architecture   { background: #001F3F} // Navy
+  .overlay.travel.nature         { background: #0074D9} // Blue
+  .overlay.travel.artifact       { background: #FF7F50} // Coral
+
+
+  .overlay.artifact              { background: #FF4136} // Red
+  .overlay.artifact.street       { background: #85144b} // Maroon
+  .overlay.artifact.architecture { background: #3D9970} // Olive
+  .overlay.artifact.nature       { background: #01FF70} // Lime
+  .overlay.artifact.travel       { background: #FF7F50} // Coral
+
+  &:hover {
+
+    .overlay {
+      opacity: 0;
+      transform: translate3d(0,0,0);
+      transition: opacity 300ms;
+    }
+
+    figure {
+      color: #111;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all 300ms;
+      }
+
+      figcaption {
+        z-index: 0;
+      }
+    }
+  }
+
+  figure {
+    color: #111;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: all 300ms;
+    }
+
+    figcaption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all 300ms;
+
+      .name {
+        position: absolute;
+        left: 1.6rem;
+        bottom: 3.2rem;
+        font-weight: normal;
+      }
+
+      .symbol {
+        position: absolute;
+        left: 1.6rem;
+        top: 0;
+        font-size: 4em;
+        font-weight: bold;
+        color: white;
+      }
+
+      .number {
+        position: absolute;
+        right: 1.6rem;
+        top: 1.6rem;
+      }
+      .category {
+          position: absolute;
+          right: 1.6rem;
+          top: 3.6rem;
+      }
+
+      .year {
+        position: absolute;
+        left: 1.6rem;
+        bottom: 0;
+        font-size: 80%;
+      }
+    }
+  }
+}
+
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
