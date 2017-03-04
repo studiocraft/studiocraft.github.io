@@ -162,77 +162,7 @@ slug: strategy
     <cite class="fs-normal silver"><a class="dib link blue underline-hover b ttu" href="strategy.html">U.S. Bureau of Labor Statistics<i class="fa fa-fw fa-long-arrow-right"></i></a></cite>
   </figure>
 </section>
-<section class="ph3 ph4-ns pv4 pv6-ns bg-light-red">
-  <div class="cf w-100" data-flickity='{ "wrapAround": true }'>
-    {% for person in site.data.personas %}
-    <article class="w-100 ph5-ns cf">
-      <center class="w-100 w-third-l fl">
-        <figure class="mv2 ph4-ns ma0-ns">
-          <img src="https://randomuser.me/api/portraits/lego/{{ person.id }}.jpg" class="br-100 ba bw3 b--white bg-white w-3 h3 h4-ns w4-ns o-80" title="{{ person.name }}">
-          <figcaption class="mv2 measure-wide lh-copy wow animated fadeIn">
-            <ul class="list pa0 mv2 mv3-ns cf measure-wide wow animated fadeInUp">
-              <li class="fl-ns w-50-ns"><abbr title="Location"><i class="fa fa-fw fa-globe" aria-hidden="true"></i></abbr><small>{{ person.demographics.location | capitalize }}</small></li>
-              <li class="fl-ns w-50-ns"><abbr title="Age Group"><i class="fa fa-fw fa-calendar-o" aria-hidden="true"></i></abbr><small>{{ person.demographics.birthdate | date: "%b %Y" }}</small></li>
-              <li class="fl-ns w-100-ns"><small>{{ person.profession.title }}</small></li>
-            </ul>
-          </figcaption>
-        </figure>
-      </center>
-      <div class="w-100 w-two-thirds-l fl">
-        <h2 class="f3 f2-m f1-l mv2 lh-title tracked-tight tc tl-l wow animated fadeInUp">{{ person.name }}</h2>
-        <aside class="cf dn db-ns mv3-ns mw6 tc tl-l">
-          {% if person.demographics %}
-          <ul class="fl list pa0 ma0 mv1-ns w-100 w-50-ns wow animated fadeInUp">
-            <label class="db mv1 tracked mid-gray b ttu"><small>Demographics</small></label>
-            {% if person.demographics.spouse != null %}
-            <li class="fl-ns w-50-ns"><small>{{ person.demographics.spouse | capitalize }} {{ person.demographics.sex | capitalize }}</small></li>
-            {% endif %}
-            {% if person.demographics.children != null %}
-            <li class="fl-ns w-50-ns"><small>{{ person.demographics.children | capitalize }} Children</small></li>
-            {% endif %}
-            {% if person.demographics.languages != null %}
-            <li class="fl-ns w-100-ns">
-              {% for language in person.demographics.languages %}
-              {% if forloop.last %}
-              <small><small>{{ language | capitalize }}</small></small>
-              {% else %}
-              <small><small>{{ language | capitalize | append: ','}}</small></small>
-              {% endif %}
-              {% endfor %}
-            </li>
-            {% endif %}
-          </ul>
-          {% endif %}
-          {% if person.education %}
-          <ul class="fl list pa0 ma0 mv1-ns w-100 w-50-ns wow animated fadeInUp">
-            <label class="db mv1 tracked mid-gray b ttu"><small>Education</small></label>
-            {% for item in person.education %}
-            <li class="fl-ns w-100-ns"><small>{{ item.degree }} <small>{{ item.area_of_study }}</small></small></li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-          {% if person.digital_profile %}
-          <ul class="fl list pa0 ma0 mv1-ns w-100 w-50-ns wow animated fadeInUp">
-            <label class="db mv1 tracked mid-gray b ttu"><small>Devices</small></label>
-            {% for item in person.digital_profile.hardware %}
-            <li class="dib mr2"><small>{{ item.device | capitalize }}</small></li>
-            <li class="dib mr2"><abbr title="{{ item.type }}"><i class="fa fa-fw fa-{{ item.type }}" aria-hidden="true"></i></abbr></li>
-            {% endfor %}
-          </ul>
-          <ul class="fl list pa0 ma0 mv1-ns w-100 w-50-ns wow animated fadeInUp">
-            <label class="db mv1 tracked mid-gray b ttu"><small>Internet Use</small></label>
-            <li class="dib mr2"><abbr title="Wifi"><i class="fa fa-fw fa-wifi" aria-hidden="true"></i></abbr><small></small></li>
-            <li class="dib mr2"><abbr title="YouTube"><i class="fa fa-fw fa-youtube-play" aria-hidden="true"></i></abbr><small>YouTube</small></li>
-            <li class="dib mr2"><abbr title="Social Media"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i></abbr><small>Facebook</small></li>
-          </ul>
-          {% endif %}
-        </aside>
-        <p class="tl pa0 center mh0-l lh-copy measure measure-wide-l"><small>{{ person.persona }}</small></p>
-      </div>
-    </article>
-    {% endfor %}
-  </div>
-</section>
+
 <section class="ph3 ph4-ns pv4 pv6-ns near-white bg-near-black">
   <figure class="ma0">
     <div id="appRevenue" class="h5 mv2 mv4-ns"></div>
