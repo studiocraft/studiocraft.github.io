@@ -19,10 +19,7 @@
   line-height: inherit;
   -webkit-animation: blinking 1s infinite;
           animation: blinking 1s infinite;
-  position: absolute;
-  -webkit-transform: translate(10%, -10%);
-      -ms-transform: translate(10%, -10%);
-          transform: translate(10%, -10%); }
+  position: absolute; }
 
 @-webkit-keyframes blinking {
   0% {

@@ -12,9 +12,9 @@
       </span>
     </div>
     <main id="content" class="w-100">
-    {% unless page.layout == 'page' %}
+    {% if page.layout == 'default' %}
     {% include header.html %}
-    {% endunless %}
+    {% endif %}
     {{ content }}
     {% include footer.html %}
     </main>
