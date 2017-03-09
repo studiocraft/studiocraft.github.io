@@ -6,4 +6,6 @@ layout: general
 slug: tos
 sitemap:
   exclude: true
+permalink: "/terms-of-use.html"
+overview: Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the website (the "Service") operated by ("we", "us", or "our").
 ---

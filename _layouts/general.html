@@ -1,13 +1,26 @@
 ---
-layout: default
+layout: page
 ---
+{% for page in site.pages %}
+{% assign title = page.title %}
 
-<header class="w-100 ph3 ph4-ns pv5 pv6-ns bg-yellow">
-  <nav class="wow animated fadeIn">
-    <ul class="list pa0 mv0">
-      <li class="dib mr2"><i class="fa fa-fw fa-long-arrow-left"></i><a class="link underline-hover dark-gray b ttu" href="{{ site.url }}">{{ site.title }}</a></li>
-    </ul>
-  </nav>
-  <h1 class="f1 f-subheadline-m f-headline-l lh-title mv1 mv3-ns tracked-tight" data-action="cursor">{{ page.title }}</h1>
-</header>
-{{ content }}
+  {% if page.layout == "general" %}
+  {% assign sitemap = page.sitemap.exclude %}
+    {% if sitemap == true %}
+      {% case title %}
+      {% when 'Terms of Use' %}
+      <section class="ph3 ph4-ns pv4 pv6-ns bg-near-white dark-gray">
+        <article>
+          <label class="db tracked mv1 light-silver b ttu wow animated fadeInUp">Last updated: <time>{{ site.time | date: "%B %d, %Y" }}</time></label>
+          <h2 class="f2 f1-ns lh-title tracked-tight wow animated fadeInDown">Overview</h2>
+          <p class="measure lh-copy wow animated fadeIn">{{ page.overview }}</p>
+          <p class="lh-copy measure-wide wow animated fadeIn">Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service. By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</p>
+          <h3 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Termination</h3>
+          <p class="lh-copy measure-wide wow animated fadeIn">We may terminate or suspend access to the Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+          <p class="lh-copy measure-wide ttu wow animated fadeIn">ALL PROVISIONS OF THE TERMS WHICH BY THEIR NATURE SHOULD SURVIVE TERMINATION SHALL SURVIVE TERMINATION, INCLUDING, WITHOUT LIMITATION, OWNERSHIP PROVISIONS, WARRANTY DISCLAIMERS, INDEMNITY AND LIMITATIONS OF LIABILITY.</p>
+        </article>
+      </section>
+      {% endcase %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
