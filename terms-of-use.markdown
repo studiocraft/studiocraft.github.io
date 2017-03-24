@@ -4,6 +4,7 @@ date: 2017-03-04 07:20:00 Z
 permalink: "/terms-of-use.html"
 position: 5
 slug: tos
+layout: general
 sitemap:
   exclude: true
   overview: |
