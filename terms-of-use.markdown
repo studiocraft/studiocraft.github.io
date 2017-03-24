@@ -2,7 +2,7 @@
 title: Terms of Use
 date: 2017-03-04 07:20:00 Z
 permalink: "/terms-of-use.html"
-position: 4
+position: 5
 slug: tos
 sitemap:
   exclude: true

@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 date: 2017-03-09 01:30:00 Z
-position: 3
+position: 4
 layout: general
 slug: privacy
 sitemap:
