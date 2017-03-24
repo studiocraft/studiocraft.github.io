@@ -7,7 +7,8 @@ slug: tos
 layout: general
 sitemap:
   exclude: true
-  overview: |
+
+overview: |
   Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the {{ site.url }} website (the "Service") operated by {{ site.title }} ("we", "us", or "our").
 
   Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
