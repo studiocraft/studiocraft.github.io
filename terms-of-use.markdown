@@ -7,7 +7,6 @@ slug: tos
 layout: general
 sitemap:
   exclude: true
-
 overview: |
   Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the {{ site.url }} website (the "Service") operated by {{ site.title }} ("we", "us", or "our").
 
@@ -15,3 +14,4 @@ overview: |
 
   By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
 ---
+
