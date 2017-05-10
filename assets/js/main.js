@@ -79,7 +79,7 @@
             {"elementType":"labels.icon","stylers":[{"visibility":"off"}]},
             {"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#111111"},{"lightness":-10}]}];
 
-          var myLatLng = { lat: 40.7714867, lng: -73.9623121};
+          var myLatLng = { lat: 40.661329, lng: -73.9482107};
 
           var styledMap = new google.maps.StyledMapType(styles, {name: "Studiocraft"});
 
