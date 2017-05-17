@@ -11,7 +11,8 @@
           transform: translateX(-50%) translateY(-50%);
   background-position: center right;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+}
 
 [data-action='cursor']::after {
   content: '_';
@@ -19,23 +20,32 @@
   line-height: inherit;
   -webkit-animation: blinking 1s infinite;
           animation: blinking 1s infinite;
-  position: absolute; }
+  position: absolute;
+}
 
 @-webkit-keyframes blinking {
   0% {
-    opacity: 0; }
+    opacity: 0;
+  }
   50% {
-    opacity: 1; }
+    opacity: 1;
+  }
   100% {
-    opacity: 0; } }
+    opacity: 0;
+  }
+}
 
 @keyframes blinking {
   0% {
-    opacity: 0; }
+    opacity: 0;
+  }
   50% {
-    opacity: 1; }
+    opacity: 1;
+  }
   100% {
-    opacity: 0; } }
+    opacity: 0;
+  }
+}
 
 
 
