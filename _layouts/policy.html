@@ -1,0 +1,101 @@
+---
+layout: page
+---
+{% assign title = page.title %}
+<section class="ph3 ph4-ns pv4 pv6-ns bg-near-white dark-gray">
+  <article>
+    <header class="wow animated fadeInDown">
+      <label class="db tracked mv1 light-silver b ttu wow animated fadeInUp"><small>Last updated: <time>{{ site.time | date: "%B %d, %Y" }}</time></small></label>
+      <h1 class="f2 f1-ns lh-title tracked-tight">Overview</h1>
+    </header>
+    <p class="measure lh-copy wow animated fadeIn">{{ page.overview }}</p>
+
+    {% case title %}
+
+    {% when 'Terms of Use' %}
+    {% if page.termination %}
+      <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Termination</h2>
+      <p class="lh-copy measure-wide wow animated fadeIn">{{ page.termination }}</p>
+    {% endif %}
+
+    {% when 'Privacy Policy' %}
+    {% if page.information-collection-and-use %}
+    <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Information Collection And Use</h2>
+    <p class="lh-copy measure-wide wow animated fadeIn">{{ page.information-collection-and-use }}</p>
+    {% endif %}
+    {% if page.log-data %}
+    <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Log Data</h2>
+    <p class="lh-copy measure-wide wow animated fadeIn">{{ page.ilog-data }}</p>
+    {% endif %}
+
+    {% when 'MIT License' %}
+    {% if page.information-collection-and-use %}
+    <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Information Collection And Use</h2>
+    <p class="lh-copy measure-wide wow animated fadeIn">{{ page.information-collection-and-use }}</p>
+    {% endif %}
+
+    {% endcase %}
+
+    <p class="lh-copy measure-wide ttu wow animated fadeIn">{{ page.notice }}</p>
+  </article>
+</section>
+
+<!-- {% for page in site.pages %}
+
+{% assign title = page.title %}
+
+  {% if page.layout == "general" %}
+  {% assign sitemap = page.sitemap.exclude %}
+    {% if sitemap == true %}{% assign policies = page.filename %}{% endif %}
+    {% for policy in policies %}
+    {{ policy }} -->
+    <!-- {% case title %}
+    {% when 'Terms of Use' %}
+      <section class="ph3 ph4-ns pv4 pv6-ns bg-near-white dark-gray">
+        <article>
+          <header class="wow animated fadeInDown">
+            <label class="db tracked mv1 light-silver b ttu wow animated fadeInUp"><small>Last updated: <time>{{ site.time | date: "%B %d, %Y" }}</time></small></label>
+            <h1 class="f2 f1-ns lh-title tracked-tight">Overview</h1>
+          </header>
+          <p class="measure lh-copy wow animated fadeIn">{{ page.overview | newline_to_br }}</p>
+          <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Termination</h2>
+          <p class="lh-copy measure-wide wow animated fadeIn">{{ page.termination | newline_to_br }}</p>
+        </article>
+      </section>
+      {% when 'Privacy Policy' %}
+      <section class="ph3 ph4-ns pv4 pv6-ns bg-near-white dark-gray">
+        <article>
+          <header class="wow animated fadeInDown">
+            <label class="db tracked mv1 light-silver b ttu wow animated fadeInUp"><small>Last updated: <time>{{ site.time | date: "%B %d, %Y" }}</time></small></label>
+            <h1 class="f2 f1-ns lh-title tracked-tight">Overview</h1>
+          </header>
+          <p class="measure lh-copy wow animated fadeIn">{{ page.overview | newline_to_br }}</p>
+          <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Information Collection And Use</h2>
+          <p class="lh-copy measure-wide wow animated fadeIn">{{ page.information-collection-and-use | newline_to_br }}</p>
+          <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Log Data</h2>
+          <p class="lh-copy measure-wide wow animated fadeIn">{{ page.log-data | newline_to_br }}</p>
+          <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Communications</h2>
+          <p class="lh-copy measure-wide wow animated fadeIn">{{ page.communications | newline_to_br }}</p>
+          <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Cookies</h2>
+          <p class="lh-copy measure-wide wow animated fadeIn">{{ page.cookies | newline_to_br }}</p>
+          <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Security</h2>
+          <p class="lh-copy measure-wide wow animated fadeIn">{{ page.security | newline_to_br }}</p>
+          <h2 class="f3 f2-ns lh-title tracked-tight wow animated fadeInDown">Changes To This Privacy Policy</h2>
+          <p class="lh-copy measure-wide ttu wow animated fadeIn">{{ page.notice | newline_to_br }}</p>
+        </article>
+      </section>
+      {% when 'MIT License' %}
+      <section class="ph3 ph4-ns pv4 pv6-ns bg-near-white dark-gray">
+        <article>
+          <header class="wow animated fadeInDown">
+            <label class="db tracked mv1 light-silver b ttu wow animated fadeInUp"><small>Last updated: <time>{{ site.time | date: "%B %d, %Y" }}</time></small></label>
+            <h1 class="f2 f1-ns lh-title tracked-tight">Overview</h1>
+          </header>
+          <p class="measure lh-copy wow animated fadeIn">{{ page.overview | newline_to_br }}</p>
+        </article>
+      </section>
+      {% endcase %} -->
+
+    <!-- {% endfor %}
+  {% endif %}
+{% endfor %} -->
