@@ -1,25 +1,34 @@
-{% if page.layout == 'page' %}
+<!-- {% if page.layout == 'page' %}
 {% include contact.html %}
-{% endif %}
-<footer class="w-100 tc tl-ns ph3 ph4-ns pv4 pv6-ns wow animated fadeInUp">
-  <ul class="list pl0 lh-copy">
-    <li class="dib mr2">
-      <a class="link underline-hover dark-gray b ttu" href="#">LinkedIn</a>
-    </li>
-    <li class="dib mr2">
-      <a class="link underline-hover dark-gray b ttu" href="#">Twitter</a>
-    </li>
-    <li class="dib mr2">
-      <a class="link underline-hover dark-gray b ttu" href="#">GitHub</a>
-    </li>
-  </ul>
+{% endif %} -->
+<footer class="w-100 cf {% if page.title == 'Home' %}tc{% endif %} ph3 ph4-ns pv4 pv6-ns wow animated fadeInUp">
+  <nav class="wow animated fadeIn">
+    <ul class="f4 list pa0 mv4 lh-copy">
+      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#work" data-scroll>Work</a></li>
+      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#services" data-scroll>Services</a></li>
+      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#about" data-scroll>About</a></li>
+      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#contact" data-scroll>Contact</a></li>
+      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#news" data-scroll>News</a></li>
+    </ul>
+    <ul class="list pl0 lh-copy">
+      <li class="dib mr2">
+        <a class="link underline-hover dark-gray b ttu" href="#">LinkedIn</a>
+      </li>
+      <li class="dib mr2">
+        <a class="link underline-hover dark-gray b ttu" href="#">Twitter</a>
+      </li>
+      <li class="dib mr2">
+        <a class="link underline-hover dark-gray b ttu" href="#">GitHub</a>
+      </li>
+    </ul>
+  </nav>
   <ul class="list pl0 lh-copy">
     <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="{{ site.baseurl }}/terms-of-use.html"><small>Terms of Use</small></a></li>
     <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="{{ site.baseurl }}/privacy-policy.html"><small>Privacy Policy</small></a></li>
     <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="{{ site.baseurl }}/license.html"><small>MIT License</small></a></li>
     <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="{{ site.baseurl }}/sitemap.html"><small>Sitemap</small></a></li>
   </ul>
-  <small class="w-100 db measure mv2 lh-copy">Copyright<i class="fa fa-fw fa-copyright"></i>{{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</small>
-  <small class="w-100 db measure mv4">Made in Brooklyn, NY.</small>
+  <small class="w-100 db mv2 lh-copy">Copyright<i class="fa fa-fw fa-copyright"></i>{{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</small>
+  <small class="w-100 db mv2 lh-copy">Made in Brooklyn, NY.</small>
   <a class="db link underline-hover gray" href="#content" data-scroll><small>Back to Top</small></a>
 </footer>
