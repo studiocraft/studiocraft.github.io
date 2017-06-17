@@ -30,7 +30,7 @@ collections:
         path: ""
         type: news
       values:
-        layout: post
+        layout: news
 
 port: 3001
 url: http://studiocraft.cc
