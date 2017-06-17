@@ -13,10 +13,20 @@ overview: |
   Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
 
   By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
+termination: 'We may terminate or suspend access to the Service immediately, without
+  prior notice or liability, for any reason whatsoever, including without limitation
+  if you breach the Terms.
 
-termination: |
-  We may terminate or suspend access to the Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
+'
+notice: 'ALL PROVISIONS OF THE TERMS WHICH BY THEIR NATURE SHOULD SURVIVE TERMINATION
+  SHALL SURVIVE TERMINATION, INCLUDING, WITHOUT LIMITATION, OWNERSHIP PROVISIONS,
+  WARRANTY DISCLAIMERS, INDEMNITY AND LIMITATIONS OF LIABILITY.
 
+<<<<<<< HEAD
 notice:
   ALL PROVISIONS OF THE TERMS WHICH BY THEIR NATURE SHOULD SURVIVE TERMINATION SHALL SURVIVE TERMINATION, INCLUDING, WITHOUT LIMITATION, OWNERSHIP PROVISIONS, WARRANTY DISCLAIMERS, INDEMNITY AND LIMITATIONS OF LIABILITY.'
+=======
+'
+>>>>>>> b1aec30999110d02e174c9a6eb36c66f9a03845f
 ---
+
