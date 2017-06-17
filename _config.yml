@@ -3,6 +3,35 @@ author: Bryan Colosky
 year: 2016
 about: a user-centric independent design consultancy focusing on simplicity. Our creative process blends visual design, user experience, and content strategy to create relevant, brand-driven experiences that bring brands closer to their customers.
 
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:path/
+    defaults:
+    - scope:
+        path: ""
+        type: posts
+      values:
+        layout: posts
+  projects:
+    output: true
+    permalink: /:collection/:path/
+    defaults:
+    - scope:
+        path: ""
+        type: projects
+      values:
+        layout: project
+  news:
+    output: true
+    permalink: /:collection/:path/
+    defaults:
+    - scope:
+        path: ""
+        type: news
+      values:
+        layout: post
+
 port: 3001
 url: http://studiocraft.cc
 baseurl:

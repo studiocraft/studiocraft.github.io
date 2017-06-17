@@ -56,16 +56,6 @@
           }
         };
 
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-        new WOW().init();
-      }
-    },
-    // Home page
-    'home': {
-      init: function() {
-        // JavaScript to be fired on the home page
         function initMap() {
           var styles =[
             {"featureType":"water","elementType":"geometry","stylers":[{"color":"#222222"}]},
@@ -117,6 +107,18 @@
           }
 
           google.maps.event.addDomListener(window, 'load', initMap);
+
+      },
+      finalize: function() {
+        // JavaScript to be fired on all pages, after page specific JS is fired
+        new WOW().init();
+      }
+    },
+    // Home page
+    'home': {
+      init: function() {
+        // JavaScript to be fired on the home page
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

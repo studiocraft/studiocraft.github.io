@@ -3,83 +3,83 @@ title: Home
 layout: default
 slug: home
 services:
-  - name: Web &amp; Interactive Design
-    slug: web-interactive-design
-    icon: code
-    description: |
-      We focus on design and technology as a broader approach to user experience, product performance and consumer perception. A website is a necessary tool for nearly every business and organization. Our interactive design approach focuses on usability, impact, and achieving results.
   - name: Branding &amp; Strategy
     slug: branding-strategy
     icon: rocket
     description: |
       An iterative approach ensures that our clients' goals are realized at every stage of the creative process. By looking at the your goals and budget, we’ll create a strategy to reach your users across all digital mediums that articulates who you are, what you do, and why it matters.
+
+  - name: Web &amp; Interactive Design
+    slug: web-interactive-design
+    icon: code
+    description: |
+      We focus on design and technology as a broader approach to user experience, product performance and consumer perception. A website is a necessary tool for nearly every business and organization. Our interactive design approach focuses on usability, impact, and achieving results.
+
   - name: Technology Consulting
     slug: technology-consulting
     icon: microchip
     description: |
       Technology can solve real business problems by enabling new user experiences that promote growth and innovation. Studiocraft takes an agnostic approach towards technology to best fit the needs of you and your customer. The best-planned experience is wasted without a top-notch implementation.
 ---
-<center class="tc tl-ns ph3 ph4-ns pv4 pv6-ns bg-white" id="work">
-  <header class="wow animated fadeInDown">
-    <h1 class="f3 mb5 f2-ns lh-title tracked-tight">Current Work</h1>
-  </header>
-  <div class="cf">
-    <article class="fl w-100 w-50-l ph3 ph4-ns pv3 pv4-ns bg-animate bg-near-white hover-bg-white">
-      <header class="wow animated fadeInUp">
-        <label class="db mv1 tracked light-silver b ttu"><small>Web &amp; Interactive Design</small></label>
-        <a class="dib no-underline hover-blue dark-gray" href="{{ site.baseurl }}/web-interactive-design.html">
-          <h1 class="mv2 f4 f3-ns lh-title">Periodic Table of Elements</h1>
-        </a>
-      </header>
-      <p class="dn db-l measure lh-copy wow animated fadeIn">We focus on design and technology as a broader approach to user experience, product performance and consumer perception.</p>
-      <a class="db link blue underline-hover b ttu mv4" href="{{ site.baseurl }}/web-interactive-design.html">View Full Project<i class="fa fa-fw fa-long-arrow-right"></i></a>
-    </article>
-    <article class="fl w-100 w-50-l ph3 ph4-ns pv3 pv4-ns bg-animate bg-light-gray hover-bg-white">
-      <header class="wow animated fadeInUp">
-        <label class="db mv1 tracked light-silver b ttu"><small>Branding &amp; Strategy</small></label>
-        <a class="dib no-underline hover-blue dark-gray" href="{{ site.baseurl }}/web-interactive-design.html">
-          <h1 class="f4 mv2 f3-ns lh-title">Ray and Charles Eames</h1>
-        </a>
-      </header>
-      <figure class="mw5 mw6-ns center pt4">
-        <div class="aspect-ratio aspect-ratio--1x1 mb4">
-          <div class="aspect-ratio--object cover" style="background:url(http://mrmrs.io/photos/001.jpg) center;"></div>
-        </div>
-      </figure>
-      <p class="dn db-l measure lh-copy wow animated fadeIn">We focus on design and technology as a broader approach to user experience, product performance and consumer perception.</p>
-      <a class="db link blue underline-hover b ttu mv4" href="{{ site.baseurl }}/web-interactive-design.html">View Full Project<i class="fa fa-fw fa-long-arrow-right"></i></a>
-    </article>
-  </div>
-  <footer class="db mt5">
-    <a class="dim no-underline br-pill ba bw1 ph4 pv3 dib near-black b ttu tracked" href="{{ site.baseurl }}/about.html">Project Archive</a>
-  </footer>
-</center>
 
-<center class="cf tl-ns ph3 ph4-ns pv4 pv6-ns bg-yellow" id="services">
+<section class="tc tl-ns ph3 ph4-m ph6-l pv4 pv6-ns bg-white" id="work">
   <header class="wow animated fadeInDown">
-    <h1 class="f3 mb5 f2-ns lh-title tracked-tight">General Services</h1>
+    <h1 class="f4 mb5 f3-ns lh-title normal">Current Work</h1>
+  </header>
+
+  {% for project in site.projects limit:2 %}
+  <center class="dt relative w-100 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'washed-yellow', 'washed-blue' %}">
+    <figure class="dt-row dtc-l v-mid w-50 bg-transparent o-80">
+      <img src="https://source.unsplash.com/random" class="db w-100" alt="night sky over water">
+    </figure>
+    <article class="dtc w-50 v-mid ph3 ph4-ns pv3 pv4-ns tl-ns">
+      <header class="wow animated fadeInUp">
+        {% for category in post.categories %}
+        <label class="db mv1 tracked light-silver b ttu"><small>{{ category }}</small></label>
+        {% endfor %}
+        <a class="dib no-underline hover-blue dark-gray" href="{{ site.baseurl }}{{ post.url }}">
+          <h1 class="mv2 f2 f1-l lh-title tracked-tight">{{ project.title }}</h1>
+        </a>
+      </header>
+      <p class="dn dtc-l measure lh-copy wow animated fadeIn">{{ project.excerpt }}</p>
+      <a class="db link blue underline-hover b ttu mv4" href="{{ site.baseurl }}{{ project.url }}">View Full Project<i class="fa fa-fw fa-long-arrow-right"></i></a>
+    </article>
+  </center>
+  {% endfor %}
+
+  <footer class="db mt5">
+    <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-blue b ttu tracked" href="{{ site.baseurl }}/about.html">Project Archive</a>
+  </footer>
+</section>
+
+<center class="cf tl-ns ph3 ph4-m ph6-l pv4 pv6-ns bg-white" id="services">
+  <header class="wow animated fadeInDown">
+    <h1 class="f4 mb5 f3-ns lh-title normal">General Services</h1>
   </header>
   <div class="cf">
-  {% for service in page.services %}
-    <article class="fl ma0 relative w-100 w-third-l tl-ns ph3 ph4-ns pv3 pv4-ns bg-animate {% cycle 'bg-white', 'bg-near-white' %} hover-bg-light-gray">
+  {% for service in page.services limit:2 %}
+    <article class="fl ma0 relative w-100 w-50-l tl-ns ph4 pv4 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'yellow', 'light-green' %}">
       <header class="db w-100 wow animated fadeInUp">
-        <h1 class="mv2 f4 f3-ns lh-title">
-          <a class="dib no-underline hover-dark-pink dark-gray" href="{{ site.baseurl }}/web-interactive-design.html">{{ service.name }}</a>
-        </h1>
+      <a class="dib no-underline hover-dark-pink dark-gray" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">
+        <h1 class="mv2 f2 f1-l lh-title tracked-tight">{{ service.name }}</h1>
+      </a>
       </header>
-      <a class="dib link dark-pink underline-hover b ttu mv4" href="{{ site.baseurl }}/web-interactive-design.html">More<i class="fa fa-fw fa-long-arrow-right"></i></a>
-      <p class="measure dn db-ns lh-copy wow animated fadeIn">{{ service.description }}</p>
+      <a class="dib link dark-pink underline-hover b ttu" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">More<i class="fa fa-fw fa-long-arrow-right"></i></a>
+      <p class="dn db-l measure lh-copy wow animated fadeIn">{{ service.description }}</p>
     </article>
   {% endfor %}
   </div>
+  <footer class="db mt5">
+    <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-dark-pink b ttu tracked" href="{{ site.baseurl }}/about.html">Get Started</a>
+  </footer>
 </center>
 
-<section id="about" class="ph3 ph4-ns pv4 pv6-ns bg-washed-green" data-flickity='{ "wrapAround": true }'>
+<section id="about" class="ph3 ph4-m ph6-l pv4 pv6-ns bg-washed-green" data-flickity='{ "wrapAround": true }'>
   <center class="w-100">
     <header class="wow animated fadeInDown">
       <h1 class="f2 f1-ns lh-title tracked-tight">About</h1>
     </header>
-    <p class="f4 f3-ns measure lh-copy wow animated fadeIn">{{ site.title }} is {{ site.about }}</p>
+    <p class="f4 f3-ns measure lh-copy wow animated fadeIn">{{ site.title }} is an independent design studio &amp; consultancy.</p>
     <a class="dim no-underline br-pill ba bw1 ph4 pv3 mv2 dib dark-gray b ttu tracked" href="{{ site.baseurl }}/about.html">Our Story</a>
   </center>
   <center class="w-100">
@@ -93,7 +93,28 @@ services:
 
 {% include contact.html %}
 {% include location.html %}
-{% include subscribe.html %}
+<center class="cf tl-ns ph4 pv4 bg-white" id="services">
+  <header class="wow animated fadeInDown">
+    <h1 class="f4 mb5 f3-ns lh-title normal">Latest News</h1>
+  </header>
+  <div class="cf">
+  {% for service in page.services limit:3 %}
+    <article class="fl ma0 relative w-50 w-third-l tl-ns ph4 pv4 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'lightest-blue', 'light-yellow' %}">
+      <header class="db w-100 wow animated fadeInUp">
+      <a class="dib no-underline hover-light-red dark-gray" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">
+        <h1 class="mv2 f4 f3-l lh-title tracked-tight">{{ service.name }}</h1>
+      </a>
+      </header>
+      <p class="measure lh-copy wow animated fadeIn">{{ service.description }}</p>
+      <a class="dib link light-red underline-hover b ttu" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">Read More<i class="fa fa-fw fa-long-arrow-right"></i></a>
+    </article>
+  {% endfor %}
+  </div>
+  <footer class="db mv5 tc">
+    <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-light-red b ttu tracked" href="{{ site.baseurl }}/about.html">View All News</a>
+  </footer>
+  {% include subscribe.html %}
+</center>
 
 <!-- <section class="ph3 ph4-ns pv4 pv6-ns bg-white" id="strategy">
   <h2 class="f2 f1-ns lh-title tracked-tight wow animated fadeInDown">Strategy</h2>

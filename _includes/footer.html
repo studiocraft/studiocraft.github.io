@@ -1,14 +1,13 @@
 <!-- {% if page.layout == 'page' %}
 {% include contact.html %}
 {% endif %} -->
-<footer class="w-100 cf {% if page.title == 'Home' %}tc{% endif %} ph3 ph4-ns pv4 pv6-ns wow animated fadeInUp">
+<footer class="w-100 cf {% if page.title == 'Home' %}tc{% endif %} ph3 ph4-m ph6-l pv4 pv6-ns wow animated fadeInUp">
   <nav class="wow animated fadeIn">
     <ul class="f4 list pa0 mv4 lh-copy">
-      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#work" data-scroll>Work</a></li>
-      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#services" data-scroll>Services</a></li>
-      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#about" data-scroll>About</a></li>
-      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#contact" data-scroll>Contact</a></li>
-      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#news" data-scroll>News</a></li>
+      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="{% if page.slug == 'home' %}{{ site.url }}#work{% else %}{{ site.url }}/work.html{% endif %}" data-scroll>Work</a></li>
+      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="{{ site.url }}#services" data-scroll>Services</a></li>
+      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="{{ site.url }}#about" data-scroll>About</a></li>
+      <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="{{ site.url }}#contact" data-scroll>Contact</a></li>
     </ul>
     <ul class="list pl0 lh-copy">
       <li class="dib mr2">
