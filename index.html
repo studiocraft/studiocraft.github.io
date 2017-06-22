@@ -2,45 +2,175 @@
 title: Home
 layout: default
 slug: home
+services:
+- name: Branding &amp; Strategy
+  slug: branding-strategy
+  icon: rocket
+  description: 'An iterative approach ensures that our clients'' goals are realized
+    at every stage of the creative process. By looking at the your goals and budget,
+    we’ll create a strategy to reach your users across all digital mediums that articulates
+    who you are, what you do, and why it matters.
+
+'
+- name: Web &amp; Interactive Design
+  slug: web-interactive-design
+  icon: code
+  description: 'We focus on design and technology as a broader approach to user experience,
+    product performance and consumer perception. A website is a necessary tool for
+    nearly every business and organization. Our interactive design approach focuses
+    on usability, impact, and achieving results.
+
+'
+- name: Technology Consulting
+  slug: technology-consulting
+  icon: microchip
+  description: 'Technology can solve real business problems by enabling new user experiences
+    that promote growth and innovation. Studiocraft takes an agnostic approach towards
+    technology to best fit the needs of you and your customer. The best-planned experience
+    is wasted without a top-notch implementation.
+
+'
 ---
 
-<!-- <section class="ph3 ph4-ns pv4 pv6-ns bg-white" id="graphicDesign">
-  <h2 class="f2 f1-ns lh-title tracked-tight wow animated fadeInDown">Graphic Design</h2>
-  <h3 class="f4 f3-ns normal measure-narrow lh-copy wow animated fadeIn">{{ site.title }} focuses on design and technology as a broader approach to experience, product performance and consumer perception.</h3>
-  <a class="dib link blue underline-hover b ttu mv4" href="{{ site.baseurl }}/strategy.html">Graphic Design Archive<i class="fa fa-fw fa-long-arrow-right"></i></a>
+<section class="tc tl-ns ph3 ph4-m ph6-l pv4 pv6-ns bg-white" id="work">
+
+  <header class="wow animated fadeInDown">
+    <h1 class="f4 mb5 f3-ns lh-title normal">Current Work</h1>
+  </header>
+
+  {% for project in site.projects limit:2 %}
+  <center class="dt relative w-100 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'washed-yellow', 'washed-blue' %}">
+    <figure class="dt-row dtc-l v-mid w-50 bg-transparent o-80">
+      <img src="https://source.unsplash.com/random" class="db w-100" alt="night sky over water">
+    </figure>
+    <article class="dtc w-50 v-mid ph3 ph4-ns pv3 pv4-ns tl-ns">
+      <header class="wow animated fadeInUp">
+        {% for category in post.categories %}
+        <label class="db mv1 tracked light-silver b ttu"><small>{{ category }}</small></label>
+        {% endfor %}
+        <a class="dib no-underline hover-blue dark-gray" href="{{ site.baseurl }}{{ post.url }}">
+          <h1 class="mv2 f2 f1-l lh-title tracked-tight">{{ project.title }}</h1>
+        </a>
+      </header>
+      <p class="dn dtc-l measure lh-copy wow animated fadeIn">{{ project.excerpt }}</p>
+      <a class="db link blue underline-hover b ttu mv4" href="{{ site.baseurl }}{{ project.url }}">View Full Project<i class="fa fa-fw fa-long-arrow-right"></i></a>
+    </article>
+  </center>
+  {% endfor %}
+
+  <footer class="db mt5">
+    <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-blue b ttu tracked" href="{{ site.baseurl }}/about.html">Project Archive</a>
+  </footer>
+</section>
+
+<center class="cf tl-ns ph3 ph4-m ph6-l pv4 pv6-ns bg-white" id="services">
+  <header class="wow animated fadeInDown">
+    <h1 class="f4 mb5 f3-ns lh-title normal">General Services</h1>
+  </header>
+  <div class="cf">
+  {% for service in page.services limit:2 %}
+    <article class="fl ma0 relative w-100 w-50-l tl-ns ph4 pv4 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'yellow', 'light-green' %}">
+      <header class="db w-100 wow animated fadeInUp">
+      <a class="dib no-underline hover-dark-pink dark-gray" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">
+        <h1 class="mv2 f2 f1-l lh-title tracked-tight">{{ service.name }}</h1>
+      </a>
+      </header>
+      <a class="dib link dark-pink underline-hover b ttu" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">More<i class="fa fa-fw fa-long-arrow-right"></i></a>
+      <p class="dn db-l measure lh-copy wow animated fadeIn">{{ service.description }}</p>
+    </article>
+  {% endfor %}
+  </div>
+  <footer class="db mt5">
+    <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-dark-pink b ttu tracked" href="{{ site.baseurl }}/about.html">Get Started</a>
+  </footer>
+</center>
+
+<section id="about" class="ph3 ph4-m ph6-l pv4 pv6-ns bg-washed-green" data-flickity='{ "wrapAround": true }'>
+  <center class="w-100">
+    <header class="wow animated fadeInDown">
+      <h1 class="f2 f1-ns lh-title tracked-tight">About</h1>
+    </header>
+    <p class="f4 f3-ns measure lh-copy wow animated fadeIn">{{ site.title }} is an independent design studio &amp; consultancy.</p>
+    <a class="dim no-underline br-pill ba bw1 ph4 pv3 mv2 dib dark-gray b ttu tracked" href="{{ site.baseurl }}/about.html">Our Story</a>
+  </center>
+  <center class="w-100">
+    <header class="wow animated fadeInDown">
+      <h1 class="f2 f1-ns lh-title tracked-tight">People</h1>
+    </header>
+    <p class="f4 f3-ns measure lh-copy wow animated fadeIn">{{ site.title }} is {{ site.about }}</p>
+    <a class="dim no-underline br-pill ba bw1 ph4 pv3 mv2 dib dark-gray b ttu tracked" href="{{ site.baseurl }}/about.html">Meet the Team</a>
+  </center>
+</section>
+
+{% include contact.html %}
+{% include location.html %}
+<center class="cf tl-ns ph4 pv4 bg-white" id="services">
+  <header class="wow animated fadeInDown">
+    <h1 class="f4 mb5 f3-ns lh-title normal">Latest News</h1>
+  </header>
+  <div class="cf">
+  {% for service in page.services limit:3 %}
+    <article class="fl ma0 relative w-50 w-third-l tl-ns ph4 pv4 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'lightest-blue', 'light-yellow' %}">
+      <header class="db w-100 wow animated fadeInUp">
+      <a class="dib no-underline hover-light-red dark-gray" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">
+        <h1 class="mv2 f4 f3-l lh-title tracked-tight">{{ service.name }}</h1>
+      </a>
+      </header>
+      <p class="measure lh-copy wow animated fadeIn">{{ service.description }}</p>
+      <a class="dib link light-red underline-hover b ttu" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">Read More<i class="fa fa-fw fa-long-arrow-right"></i></a>
+    </article>
+  {% endfor %}
+  </div>
+  <footer class="db mv5 tc">
+    <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-light-red b ttu tracked" href="{{ site.baseurl }}/about.html">View All News</a>
+  </footer>
+  {% include subscribe.html %}
+</center>
+
+<!-- <section class="ph3 ph4-ns pv4 pv6-ns bg-white" id="strategy">
+  <h2 class="f2 f1-ns lh-title tracked-tight wow animated fadeInDown">Strategy</h2>
+  <p class="f4 f3-ns measure-narrow lh-copy wow animated fadeIn">{{ site.title }} focuses on design and technology as a broader approach to experience, product performance and consumer perception.</p>
+  <a class="dib link blue underline-hover b ttu mv4" href="{{ site.baseurl }}/strategy.html">More<i class="fa fa-fw fa-long-arrow-right"></i></a>
   <p class="measure lh-copy wow animated fadeIn">{{ site.title }} combines new tools with traditional research expertise to develop a deep understanding of the user's wants and needs, and to guide strategy, design and technology decisions.</p>
   <ul class="list pa0 mv4 measure-wide cf mid-gray wow animated fadeInUp">
     <label class="db mv1 tracked light-silver b ttu"><small>Services</small></label>
-    <li class="fl-ns w-50-ns"><small>Logos and wordsmarks</small></li>
-    <li class="fl-ns w-50-ns"><small>Custom typography and icons</small></li>
-    <li class="fl-ns w-50-ns"><small>Style guides</small></li>
-    <li class="fl-ns w-50-ns"><small>Branding and identity collateral</small></li>
+    <li class="fl-ns w-50-ns"><small>Stakeholder interviews</small></li>
+    <li class="fl-ns w-50-ns"><small>Brand identity and planning</small></li>
+    <li class="fl-ns w-50-ns"><small>Customer research and surveys</small></li>
+    <li class="fl-ns w-50-ns"><small>User personas and pathways</small></li>
+    <li class="fl-ns w-50-ns"><small>Usability and accesibility audits</small></li>
+    <li class="fl-ns w-50-ns"><small>User journeys and flows</small></li>
+    <li class="fl-ns w-50-ns"><small>Sitemaps and wireframes</small></li>
   </ul>
 </section>
-<section class="ph3 ph4-ns pv4 pv6-ns bg-near-white" id="webDesign">
-  <h2 class="f2 f1-ns lh-title tracked-tight wow animated fadeInDown">Web Design</h2>
-  <h3 class="f4 f3-ns normal measure-narrow lh-copy wow animated fadeIn">{{ site.title }} strives to create work that is distinct, effective, inspirational and forward-thinking.</h3>
-  <a class="dib link blue underline-hover b ttu mv4" href="{{ site.baseurl }}/design.html">Web Design Archive<i class="fa fa-fw fa-long-arrow-right"></i></a>
+<section class="ph3 ph4-ns pv4 pv6-ns bg-near-white" id="design">
+  <h2 class="f2 f1-ns lh-title tracked-tight wow animated fadeInDown">Design</h2>
+  <p class="f4 f3-ns measure-narrow lh-copy wow animated fadeIn">{{ site.title }} strives to create work that is distinct, effective, inspirational and forward-thinking.</p>
+  <a class="dib link blue underline-hover b ttu mv4" href="{{ site.baseurl }}/design.html">More<i class="fa fa-fw fa-long-arrow-right"></i></a>
   <p class="measure lh-copy wow animated fadeIn">An iterative approach ensures that our clients' goals are realized at every stage of the creative process. {{ site.title }} builds an understanding of all the inputs and outputs of your project to create a concise and engaging approach to design.</p>
   <ul class="list pa0 mv4 measure-wide cf mid-gray wow animated fadeInUp">
     <label class="db mv1 tracked light-silver b ttu"><small>Services</small></label>
-    <li class="fl-ns w-50-ns"><small>UX pattern libraries</small></li>
+    <li class="fl-ns w-50-ns"><small>Logos and wordmarks</small></li>
+    <li class="fl-ns w-50-ns"><small>Custom typography and icons</small></li>
+    <li class="fl-ns w-50-ns"><small>Styleguides</small></li>
+    <li class="fl-ns w-50-ns"><small>UX pattern and component libraries</small></li>
     <li class="fl-ns w-50-ns"><small>Photography and video</small></li>
   </ul>
 </section>
 <section class="ph3 ph4-ns pv4 pv6-ns bg-white" id="technology">
-  <h2 class="f2 f1-ns lh-title tracked-tight wow animated fadeInDown">Technology Planning</h2>
-  <h3 class="f4 f3-ns normal measure-narrow lh-copy wow animated fadeIn">{{ site.title }} takes an agnostic approach towards technology to best fit your needs. We believe that technology can solve real problems by enabling new user experiences that promote growth and innovation.</h3>
-  <a class="dib link blue underline-hover b ttu mv4" href="{{ site.baseurl }}/technology.html">Technology Services<i class="fa fa-fw fa-long-arrow-right"></i></a>
+  <h2 class="f2 f1-ns lh-title tracked-tight wow animated fadeInDown">Technology</h2>
+  <p class="f4 f3-ns measure-narrow lh-copy wow animated fadeIn">{{ site.title }} takes an agnostic approach towards technology to best fit your needs. We believe that technology can solve real problems by enabling new user experiences that promote growth and innovation.</p>
+  <a class="dib link blue underline-hover b ttu mv4" href="{{ site.baseurl }}/technology.html">More<i class="fa fa-fw fa-long-arrow-right"></i></a>
   <p class="measure lh-copy wow animated fadeIn">We build across and for all devices, focusing on a client's entire digital ecosystem with context, mobile and user center design at its core to turn your ideas and designs into functional, reliable products and services.</p>
   <ul class="list pa0 mv4 measure-wide cf mid-gray wow animated fadeInUp">
     <label class="db mv1 tracked light-silver b ttu"><small>Services</small></label>
     <li class="fl-ns w-50-ns"><small>Pattern library development</small></li>
     <li class="fl-ns w-50-ns"><small>Web animation development</small></li>
     <li class="fl-ns w-50-ns"><small>Front-end engineering</small></li>
+    <li class="fl-ns w-50-ns"><small>CMS consulting</small></li>
   </ul>
-  <div class="cf mw8">
-    <ul class="list fl w-100 w-50-m w-25-l pa0 mv4 mid-gray wow animated fadeInUp">
+  <div class="cf mv4 mv0-ns mw8">
+    <ul class="list fl w-100 w-50-m w-25-l pa0 mv2 mid-gray wow animated fadeInUp">
       <label class="db mv3 tracked light-silver b ttu"><small>Devices</small></label>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-mobile"></i></li>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-tablet"></i></li>
@@ -49,7 +179,7 @@ slug: home
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-apple"></i></li>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-android"></i></li>
     </ul>
-    <ul class="list fl w-100 w-50-m w-25-l pa0 mv4 mid-gray wow animated fadeInUp">
+    <ul class="list fl w-100 w-50-m w-25-l pa0 mv2 mid-gray wow animated fadeInUp">
       <label class="db mv3 tracked light-silver b ttu"><small>Browsers</small></label>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-chrome"></i></li>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-safari"></i></li>
@@ -58,14 +188,14 @@ slug: home
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-opera"></i></li>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-edge"></i></li>
     </ul>
-    <ul class="list fl w-100 w-50-m w-25-l pa0 mv4 mid-gray wow animated fadeInUp">
+    <ul class="list fl w-100 w-50-m w-25-l pa0 mv2 mid-gray wow animated fadeInUp">
       <label class="db mv3 tracked light-silver b ttu"><small>Code</small></label>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-html5"></i></li>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-css3"></i></li>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-jsfiddle"></i></li>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-codepen"></i></li>
     </ul>
-    <ul class="list fl w-100 w-50-m w-25-l pa0 mv4 mid-gray wow animated fadeInUp">
+    <ul class="list fl w-100 w-50-m w-25-l pa0 mv2 mid-gray wow animated fadeInUp">
       <label class="db mv3 tracked light-silver b ttu"><small>SCM</small></label>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-git"></i></li>
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-github"></i></li>
@@ -73,51 +203,5 @@ slug: home
       <li class="dib mh0"><i class="fa fa-fw fa-lg fa-gitlab"></i></li>
     </ul>
   </div>
-</section> -->
-{% include contact.html %}
-<section class="dt-ns w-100 near-white bg-near-black" id="contact">
-  <div class="db dtc-ns w-100 w-40-ns ph3 ph4-ns pv4 pv6-ns">
-    <h2 class="f4 f3-ns mv0 lh-title tracked-tight wow animated fadeInDown" data-action="cursor">{{ site.title }}</h2>
-    <address class="fs-normal mv4 wow animated fadeInUp">
-      <label class="db mv1 tracked silver b ttu"><small>Contact</small></label>
-      <ul class="list pa0 mv0 lh-copy">
-        <li><a class="link underline-hover mid-gray" href="mailto:hello@studiocraft.cc"><abbr title="Email" aria-hidden="true"><i class="fa fa-fw fa-envelope"></i></abbr>hello@studiocraft.cc</a></li>
-        <!-- <li><a class="link underline-hover mid-gray" href="tel:760-265-1232"><abbr title="Phone"><i class="fa fa-fw fa-phone" aria-hidden="true"></i></abbr>(760) 265-1232</a></li> -->
-        <li><a class="link underline-hover mid-gray" href="https://goo.gl/maps/ePAZK239wrC2" target="_blank"><abbr title="Location"><i class="fa fa-fw fa-globe" aria-hidden="true"></i></abbr>New York, NY</a></li>
-      </ul>
-    </address>
-    <address class="fs-normal mv4 wow animated fadeInUp">
-      <label class="db mv1 tracked silver b ttu"><small>Founder &amp; Creative Director</small></label>
-      <ul class="list pa0 mv0 lh-copy">
-        <li><span>Bryan Colosky</span></li>
-        <li><a class="link underline-hover mid-gray" href="mailto:bryan.colosky@studiocraft.cc"><abbr title="Email"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></abbr>bryan.colosky@studiocraft.cc</a></li>
-      </ul>
-    </address>
-    <address class="fs-normal mv4 wow animated fadeInUp">
-      <label class="db mv1 tracked silver b ttu"><small>Partner</small></label>
-      <ul class="list pa0 mv0 lh-copy">
-        <li><span>Melda Kahraman</span></li>
-        <li><a class="link underline-hover mid-gray" href="mailto:melda.kahraman@studiocraft.cc"><abbr title="Email"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></abbr>melda.kahraman@studiocraft.cc</a></li>
-      </ul>
-    </address>
-  </div>
-  <div class="dn dtc-ns w-100 w-60-ns relative">
-    <div id="map" class="absolute absolute--fill wow animated fadeIn" style="background-color:transparent"></div>
-  </div>
 </section>
-<section class="ph3 ph4-ns pv4 pv5-ns near-black bg-near-white">
-    <h2 class="f2 f1-ns mv0 lh-title tracked-tight wow animated fadeInDown">Enter your Email</h2>
-    <h3 class="f4 f3-ns mv2 normal lh-copy wow animated fadeIn">Receive {{ site.title }} updates, news, and research surveys.</h3>
-    <div id="mc_response"></div>
-    <div id="mc_embed_signup">
-      <form class="wow animated fadeInUp" action="http://studiocraft.us13.list-manage.com/subscribe/post-json?u=53d65332ef68bfdcc203b272f&amp;id=da5d8d18d8&amp;c=?" method="GET" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-          <div class="mc-field-group input-group">
-            <label class="dn" for="mce-EMAIL">Email</label>
-            <input type="email" value="" name="EMAIL" class="required w5 email w-third-ns input-reset dib mv3 br-pill ba ph4 pv3 outline-0 b--light-silver" id="mce-EMAIL" placeholder="Email">
-          </div>
-        </div>
-        <input type="submit" class="input-reset mv3 ph4 pv3 outline-0 mh2 br-pill ba bw1 b ttu b--dark-gray dark-gray bg-transparent dim" value="Subscribe">
-      </form>
-    </div>
-</section>
+{% include contact.html %} -->

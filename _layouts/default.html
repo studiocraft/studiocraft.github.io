@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-hidden">
+<html lang="en" class="overflow-hidden tk-proxima-nova">
   <head>
   {% include meta.html %}
   {% include css/css.html %}
   {% include js/js.html %}
   </head>
-  <body class="{{ page.slug }} w-100 tk-proxima-nova dark-gray">
-    <div class="fixed absolute--fill bg-white z-9999" id="loaderOverlay">
-      <span class="db right-0 ma3">
-        <i class="fa fa-circle-o-notch fa-spin fa-lg fa-fw"></i>
+  <body class="{{ page.slug }} w-100 dark-gray">
+    <center class="fixed absolute--fill bg-yellow z-9999" id="loaderOverlay">
+      <span class="dib center ma4">
+        <i class="fa fa-circle-o-notch fa-spin fa-lg fa-fw"></i>Loading
       </span>
-    </div>
+    </center>
     <main id="content" class="w-100">
     {% if page.layout == 'default' %}
     {% include header.html %}

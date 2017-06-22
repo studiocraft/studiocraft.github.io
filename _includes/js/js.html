@@ -1,6 +1,6 @@
 {% include js/vendor-js.html %}
 {% if site.github %}
-<script src="{{ site.baseurl }}dist/js/main.min.js"></script>
+<script src="{{ site.url }}/dist/js/main.min.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -10,5 +10,5 @@
   ga('send', 'pageview');
 </script>
 {% else %}
-<script src="{{ site.baseurl }}assets/js/main.js"></script>
+<script src="{{ site.url }}/assets/js/main.js"></script>
 {% endif %}

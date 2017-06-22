@@ -36,6 +36,8 @@
     opacity: 1; }
   100% {
     opacity: 0; } }
+.flickity-page-dots {
+  position: relative; }
 
 
 

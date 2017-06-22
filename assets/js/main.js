@@ -56,16 +56,6 @@
           }
         };
 
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-        new WOW().init();
-      }
-    },
-    // Home page
-    'home': {
-      init: function() {
-        // JavaScript to be fired on the home page
         function initMap() {
           var styles =[
             {"featureType":"water","elementType":"geometry","stylers":[{"color":"#222222"}]},
@@ -79,7 +69,7 @@
             {"elementType":"labels.icon","stylers":[{"visibility":"off"}]},
             {"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#111111"},{"lightness":-10}]}];
 
-          var myLatLng = { lat: 40.7714867, lng: -73.9623121};
+          var myLatLng = { lat: 40.661329, lng: -73.9482107};
 
           var styledMap = new google.maps.StyledMapType(styles, {name: "Studiocraft"});
 
@@ -117,6 +107,18 @@
           }
 
           google.maps.event.addDomListener(window, 'load', initMap);
+
+      },
+      finalize: function() {
+        // JavaScript to be fired on all pages, after page specific JS is fired
+        new WOW().init();
+      }
+    },
+    // Home page
+    'home': {
+      init: function() {
+        // JavaScript to be fired on the home page
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
