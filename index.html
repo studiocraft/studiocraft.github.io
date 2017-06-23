@@ -33,12 +33,11 @@ services:
 ---
 
 <section class="tc tl-ns ph3 ph4-m ph6-l pv4 pv6-ns bg-white" id="work">
-
   <header class="wow animated fadeInDown">
     <h1 class="f4 mb5 f3-ns lh-title normal">Current Work</h1>
   </header>
-
   {% for project in site.projects limit:2 %}
+  {% cycle 'near-white', 'light-gray' %}
   <center class="dt relative w-100 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'washed-yellow', 'washed-blue' %}">
     <figure class="dt-row dtc-l v-mid w-50 bg-transparent o-80">
       <img src="https://source.unsplash.com/random" class="db w-100" alt="night sky over water">
@@ -57,8 +56,7 @@ services:
     </article>
   </center>
   {% endfor %}
-
-  <footer class="db mt5">
+  <footer class="db mv5">
     <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-blue b ttu tracked" href="{{ site.baseurl }}/about.html">Project Archive</a>
   </footer>
 </section>
@@ -80,7 +78,7 @@ services:
     </article>
   {% endfor %}
   </div>
-  <footer class="db mt5">
+  <footer class="db mv5">
     <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-dark-pink b ttu tracked" href="{{ site.baseurl }}/about.html">Get Started</a>
   </footer>
 </center>
@@ -91,7 +89,7 @@ services:
       <h1 class="f2 f1-ns lh-title tracked-tight">About</h1>
     </header>
     <p class="f4 f3-ns measure lh-copy wow animated fadeIn">{{ site.title }} is an independent design studio &amp; consultancy.</p>
-    <a class="dim no-underline br-pill ba bw1 ph4 pv3 mv2 dib dark-gray b ttu tracked" href="{{ site.baseurl }}/about.html">Our Story</a>
+    <a class="no-underline br-pill ba bw1 ph4 pv3 mv2 dib dark-gray b ttu tracked hover-light-green" href="{{ site.baseurl }}/about.html">Our Story</a>
   </center>
   <center class="w-100">
     <header class="wow animated fadeInDown">
@@ -104,13 +102,13 @@ services:
 
 {% include contact.html %}
 {% include location.html %}
-<center class="cf tl-ns ph4 pv4 bg-white" id="services">
+<center class="cf tl-ns ph4 pv4 bg-white" id="news">
   <header class="wow animated fadeInDown">
     <h1 class="f4 mb5 f3-ns lh-title normal">Latest News</h1>
   </header>
   <div class="cf">
   {% for service in page.services limit:3 %}
-    <article class="fl ma0 relative w-50 w-third-l tl-ns ph4 pv4 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'lightest-blue', 'light-yellow' %}">
+    <article class="fl ma0 relative w-50 w-third-l tl-ns ph4 pv4 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'washed-blue', 'washed-yellow' %}">
       <header class="db w-100 wow animated fadeInUp">
       <a class="dib no-underline hover-light-red dark-gray" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">
         <h1 class="mv2 f4 f3-l lh-title tracked-tight">{{ service.name }}</h1>
@@ -124,8 +122,8 @@ services:
   <footer class="db mv5 tc">
     <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-light-red b ttu tracked" href="{{ site.baseurl }}/about.html">View All News</a>
   </footer>
-  {% include subscribe.html %}
 </center>
+{% include subscribe.html %}
 
 <!-- <section class="ph3 ph4-ns pv4 pv6-ns bg-white" id="strategy">
   <h2 class="f2 f1-ns lh-title tracked-tight wow animated fadeInDown">Strategy</h2>
