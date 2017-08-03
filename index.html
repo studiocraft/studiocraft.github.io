@@ -32,52 +32,54 @@ services:
 '
 ---
 
-<section class="tc tl-ns ph3 ph4-m ph6-l pv4 pv6-ns bg-white" id="work">
+<!-- <center class="tc tl-ns ph3 ph4-m ph6-l pv4 pv6-ns bg-white" id="work">
   <header class="wow animated fadeInDown">
     <h1 class="f4 mb5 f3-ns lh-title normal">Current Work</h1>
   </header>
-  {% for project in site.projects limit:2 %}
-  {% cycle 'near-white', 'light-gray' %}
-  <center class="dt relative w-100 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'washed-yellow', 'washed-blue' %}">
-    <figure class="dt-row dtc-l v-mid w-50 bg-transparent o-80">
-      <img src="https://source.unsplash.com/random" class="db w-100" alt="night sky over water">
-    </figure>
-    <article class="dtc w-50 v-mid ph3 ph4-ns pv3 pv4-ns tl-ns">
-      <header class="wow animated fadeInUp">
-        {% for category in post.categories %}
-        <label class="db mv1 tracked light-silver b ttu"><small>{{ category }}</small></label>
-        {% endfor %}
-        <a class="dib no-underline hover-blue dark-gray" href="{{ site.baseurl }}{{ post.url }}">
-          <h1 class="mv2 f2 f1-l lh-title tracked-tight">{{ project.title }}</h1>
-        </a>
-      </header>
-      <p class="dn dtc-l measure lh-copy wow animated fadeIn">{{ project.excerpt }}</p>
-      <a class="db link blue underline-hover b ttu mv4" href="{{ site.baseurl }}{{ project.url }}">View Full Project<i class="fa fa-fw fa-long-arrow-right"></i></a>
-    </article>
-  </center>
-  {% endfor %}
-  <footer class="db mv5">
+  <section class="cf">
+    {% for project in site.projects limit:3 %}
+    {% capture layout %}{% cycle 'left', 'right', 'full' %}{% endcapture %}
+    <center class="fl dt w-100 {% if forloop.index == 1 %}mb3 w-60-ns{% else %} w-20-ns{% endif %} relative bg-animate bg-{{ project.skin.bg }}">
+      <figure class="dt-row {% if layout == 'left' %}dtc-ns{% endif %} v-mid w-50 bg-transparent o-70">
+        <img src="https://source.unsplash.com/random" class="db w-100" alt="night sky over water">
+      </figure>
+      <article class="dtc w-50 v-mid ph4 ph5-ns pv4 pv5-ns tl-ns">
+        <header class="wow animated fadeInUp">
+          {% for category in post.categories %}
+          <label class="db mv1 tracked light-silver b ttu"><small>{{ category }}</small></label>
+          {% endfor %}
+          <a class="dib no-underline hover-{{ project.skin.link-color }} {{ project.skin.color }}" href="{{ site.baseurl }}{{ post.url }}">
+            <h1 class="mv2 f3 f2-m f1-l lh-title tracked-tight">{{ project.title }}</h1>
+          </a>
+        </header>
+        <p class="dn dtc-l measure lh-copy wow animated fadeIn">{{ project.excerpt }}</p>
+        <a class="db link {{ project.skin.link-color }} underline-hover b ttu" href="{{ site.baseurl }}{{ project.url }}">View Full Project<i class="fa fa-fw fa-long-arrow-right"></i></a>
+      </article>
+    </center>
+    {% endfor %}
+  </section>
+  <footer class="db w-100 mt5">
     <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-blue b ttu tracked" href="{{ site.baseurl }}/about.html">Project Archive</a>
   </footer>
-</section>
+</center> -->
 
-<center class="cf tl-ns ph3 ph4-m ph6-l pv4 pv6-ns bg-white" id="services">
+<center class="cf tl-ns ph3 ph4-ns pv4 pv6-ns bg-white" id="services">
   <header class="wow animated fadeInDown">
     <h1 class="f4 mb5 f3-ns lh-title normal">General Services</h1>
   </header>
-  <div class="cf">
-  {% for service in page.services limit:2 %}
-    <article class="fl ma0 relative w-100 w-50-l tl-ns ph4 pv4 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'yellow', 'light-green' %}">
+  <center class="dt vh-50 vh-75-l">
+  {% for service in page.services limit:3 %}
+    <article class="dtc v-mid ma0 relative w-100 w-third-ns tl-ns ph4 ph5-l pv4 pv5-l bg-animate bg-{% cycle 'near-white', 'light-gray' %}">
       <header class="db w-100 wow animated fadeInUp">
       <a class="dib no-underline hover-dark-pink dark-gray" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">
-        <h1 class="mv2 f2 f1-l lh-title tracked-tight">{{ service.name }}</h1>
+        <h1 class="mv2 f3 f2-l lh-title tracked-tight">{{ service.name }}</h1>
       </a>
       </header>
       <a class="dib link dark-pink underline-hover b ttu" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">More<i class="fa fa-fw fa-long-arrow-right"></i></a>
       <p class="dn db-l measure lh-copy wow animated fadeIn">{{ service.description }}</p>
     </article>
   {% endfor %}
-  </div>
+  </center>
   <footer class="db mv5">
     <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-dark-pink b ttu tracked" href="{{ site.baseurl }}/about.html">Get Started</a>
   </footer>
@@ -102,28 +104,29 @@ services:
 
 {% include contact.html %}
 {% include location.html %}
-<center class="cf tl-ns ph4 pv4 bg-white" id="news">
+{% include follow.html %}
+{% include subscribe.html %}
+<!-- <center class="cf ph3 ph4-ns pv4 pv6-ns bg-white" id="news">
   <header class="wow animated fadeInDown">
-    <h1 class="f4 mb5 f3-ns lh-title normal">Latest News</h1>
+    <h1 class="f4 mb5 f3-ns lh-title normal">Latest News &amp; Posts</h1>
   </header>
-  <div class="cf">
+  <center class="dt vh-60 vh-40-ns">
   {% for service in page.services limit:3 %}
-    <article class="fl ma0 relative w-50 w-third-l tl-ns ph4 pv4 bg-animate bg-{% cycle 'near-white', 'light-gray' %} hover-bg-{% cycle 'washed-blue', 'washed-yellow' %}">
+    <article class="dtc v-mid ma0 relative w-100 w-third-ns tl-ns ph4 ph5-ns pv4 pv5-ns bg-animate bg-{% cycle 'washed-blue', 'near-white' %}">
       <header class="db w-100 wow animated fadeInUp">
       <a class="dib no-underline hover-light-red dark-gray" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">
         <h1 class="mv2 f4 f3-l lh-title tracked-tight">{{ service.name }}</h1>
       </a>
       </header>
-      <p class="measure lh-copy wow animated fadeIn">{{ service.description }}</p>
+      <p class="dn db-l measure lh-copy wow animated fadeIn">{{ service.description }}</p>
       <a class="dib link light-red underline-hover b ttu" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">Read More<i class="fa fa-fw fa-long-arrow-right"></i></a>
     </article>
   {% endfor %}
-  </div>
+  </center>
   <footer class="db mv5 tc">
     <a class="no-underline br-pill ba bw1 ph4 pv3 dib near-black hover-light-red b ttu tracked" href="{{ site.baseurl }}/about.html">View All News</a>
   </footer>
-</center>
-{% include subscribe.html %}
+</center> -->
 
 <!-- <section class="ph3 ph4-ns pv4 pv6-ns bg-white" id="strategy">
   <h2 class="f2 f1-ns lh-title tracked-tight wow animated fadeInDown">Strategy</h2>

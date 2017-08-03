@@ -5,6 +5,9 @@ categories:
 - Web
 - Interactive Design
 layout: project
+skin:
+  bg: washed-red
+  color: dark-gray
+  link-color: dark-pink
 image: WLUHO9A_xik
 ---
-
