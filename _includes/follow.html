@@ -1,0 +1,13 @@
+<section class="tc center ph3 ph4-ns pv4 pv6-ns bg-white" id="news">
+  <header class="wow animated fadeInDown">
+    <h1 class="f4 f3-ns lh-title normal">Follow {{ site.title }}</h1>
+  </header>
+  <center class="ma4">
+    {% for channel in site.data.social_media %}
+    <span class="fa-stack fa-2x">
+      <i class="fa fa-circle fa-stack-2x dark-blue"></i>
+      <i class="fa fa-{{ channel.name }} fa-stack-1x fa-inverse"></i>
+    </span>
+    {% endfor %}
+  </center>
+</section>
