@@ -6,6 +6,10 @@
 // // Components
 // @import 'buttons';
 // @import 'overlay';
+html {
+  font-size: 80%;
+}
+
 [data-media='bg-video'] {
   top: 50%;
   left: 50%;

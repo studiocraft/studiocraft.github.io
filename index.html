@@ -63,20 +63,20 @@ services:
   </footer>
 </center> -->
 
-<center class="cf tl-ns ph3 ph4-ns pv4 pv6-ns bg-white" id="services">
+<center class="cf tl-ns ph3 ph4-m ph6-l pv5 pv6-ns bg-white" id="services">
   <header class="wow animated fadeInDown">
     <h1 class="f4 mb5 f3-ns lh-title normal">General Services</h1>
   </header>
-  <center class="dt vh-50 vh-75-l">
+  <center class="flex flex-wrap">
   {% for service in page.services limit:3 %}
-    <article class="dtc v-mid ma0 relative w-100 w-third-ns tl-ns ph4 ph5-l pv4 pv5-l bg-animate bg-{% cycle 'near-white', 'light-gray' %}">
+    <article class="items-stretch ma0 w-100 w-third-l tl-ns ph3 ph4-m ph5-l pv5 pv6-ns bg-animate bg-{% cycle 'near-white', 'light-gray' %}">
       <header class="db w-100 wow animated fadeInUp">
       <a class="dib no-underline hover-dark-pink dark-gray" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">
-        <h1 class="mv2 f3 f2-l lh-title tracked-tight">{{ service.name }}</h1>
+        <h1 class="mv2 f4 f3-m f2-l lh-title tracked-tight">{{ service.name }}</h1>
       </a>
       </header>
+      <p class="measure lh-copy wow animated fadeIn">{{ service.description }}</p>
       <a class="dib link dark-pink underline-hover b ttu" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">More<i class="fa fa-fw fa-long-arrow-right"></i></a>
-      <p class="dn db-l measure lh-copy wow animated fadeIn">{{ service.description }}</p>
     </article>
   {% endfor %}
   </center>
@@ -85,26 +85,25 @@ services:
   </footer>
 </center>
 
-<section id="about" class="ph3 ph4-m ph6-l pv4 pv6-ns bg-washed-green" data-flickity='{ "wrapAround": true }'>
+<section id="about" class="ph3 ph4-m ph6-l pv4 pv6-ns bg-washed-green" data-flickity='{ "wrapAround": true, "prevNextButtons": false }'>
   <center class="w-100">
     <header class="wow animated fadeInDown">
-      <h1 class="f2 f1-ns lh-title tracked-tight">About</h1>
+      <h1 class="mv0 f2 f1-ns lh-title tracked-tight">About</h1>
     </header>
     <p class="f4 f3-ns measure lh-copy wow animated fadeIn">{{ site.title }} is an independent design studio &amp; consultancy.</p>
     <a class="no-underline br-pill ba bw1 ph4 pv3 mv2 dib dark-gray b ttu tracked hover-light-green" href="{{ site.baseurl }}/about.html">Our Story</a>
   </center>
   <center class="w-100">
     <header class="wow animated fadeInDown">
-      <h1 class="f2 f1-ns lh-title tracked-tight">People</h1>
+      <h1 class="mv0 f2 f1-ns lh-title tracked-tight">People</h1>
     </header>
-    <p class="f4 f3-ns measure lh-copy wow animated fadeIn">{{ site.title }} is {{ site.about }}</p>
+    <p class="f4 f3-ns measure lh-copy wow animated fadeIn">{{ site.title }} is </p>
     <a class="dim no-underline br-pill ba bw1 ph4 pv3 mv2 dib dark-gray b ttu tracked" href="{{ site.baseurl }}/about.html">Meet the Team</a>
   </center>
 </section>
 
 {% include contact.html %}
 {% include location.html %}
-{% include follow.html %}
 {% include subscribe.html %}
 <!-- <center class="cf ph3 ph4-ns pv4 pv6-ns bg-white" id="news">
   <header class="wow animated fadeInDown">

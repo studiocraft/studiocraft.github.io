@@ -32,7 +32,7 @@ collections:
       values:
         layout: news
 
-port: 3001
+port: 4000
 url: http://studiocraft.cc
 baseurl:
 

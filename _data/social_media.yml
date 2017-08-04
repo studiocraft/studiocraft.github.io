@@ -1,15 +1,19 @@
 - media: Facebook
   name: facebook
   url:
+  color: dark-blue
 
 - media: Twitter
   name: twitter
   url:
+  color: blue
 
 - media: Google+
   name: google-plus
   url:
+  color: red
 
 - media: Dribbble
   name: dribbble
   url:
+  color: pink
