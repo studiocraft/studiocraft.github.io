@@ -63,20 +63,20 @@ services:
   </footer>
 </center> -->
 
-<center class="cf tl-ns ph3 ph4-ns pv4 pv6-ns bg-white" id="services">
-  <header class="wow animated fadeInDown">
-    <h1 class="f4 mb5 f3-ns lh-title normal">General Services</h1>
+<center class="cf tl-ns ph3 ph4-m ph6-l pv5 pv6-ns bg-white" id="general_services">
+  <header class="mv5 mv6-ns wow animated fadeInDown">
+    <h1 class="f4 f3-ns lh-title normal">General Services</h1>
   </header>
   <center class="dt vh-50 vh-75-l">
   {% for service in page.services limit:3 %}
-    <article class="dtc v-mid ma0 relative w-100 w-third-ns tl-ns ph4 ph5-l pv4 pv5-l bg-animate bg-{% cycle 'near-white', 'light-gray' %}">
+    <article class="dtc v-mid ma0 relative w-100 w-third-l tl-ns ph4 ph5-l pv4 pv5-l bg-animate bg-{% cycle 'near-white', 'light-gray' %}">
       <header class="db w-100 wow animated fadeInUp">
-      <a class="dib no-underline hover-dark-pink dark-gray" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">
-        <h1 class="mv2 f3 f2-l lh-title tracked-tight">{{ service.name }}</h1>
-      </a>
+        <a class="dib no-underline hover-dark-pink dark-gray" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">
+          <h1 class="mv2 f3 f2-l lh-title tracked-tight">{{ service.name }}</h1>
+        </a>
       </header>
-      <a class="dib link dark-pink underline-hover b ttu" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">More<i class="fa fa-fw fa-long-arrow-right"></i></a>
       <p class="dn db-l measure lh-copy wow animated fadeIn">{{ service.description }}</p>
+      <a class="dib link dark-pink underline-hover b ttu" href="{{ site.baseurl }}/{{  service.name | slugify | remove: '-amp' }}.html">More<i class="fa fa-fw fa-long-arrow-right"></i></a>
     </article>
   {% endfor %}
   </center>
@@ -85,7 +85,7 @@ services:
   </footer>
 </center>
 
-<section id="about" class="ph3 ph4-m ph6-l pv4 pv6-ns bg-washed-green" data-flickity='{ "wrapAround": true }'>
+<section id="about" class="ph3 ph4-m ph6-l pv5 pv6-ns bg-washed-green" data-flickity='{ "wrapAround": true }'>
   <center class="w-100">
     <header class="wow animated fadeInDown">
       <h1 class="f2 f1-ns lh-title tracked-tight">About</h1>
@@ -101,7 +101,6 @@ services:
     <a class="dim no-underline br-pill ba bw1 ph4 pv3 mv2 dib dark-gray b ttu tracked" href="{{ site.baseurl }}/about.html">Meet the Team</a>
   </center>
 </section>
-
 {% include contact.html %}
 {% include location.html %}
 {% include follow.html %}
