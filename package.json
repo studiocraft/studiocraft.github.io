@@ -15,6 +15,7 @@
     }
   ],
   "dependencies": {
+    "browser-sync": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",

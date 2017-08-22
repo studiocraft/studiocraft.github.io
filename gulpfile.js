@@ -14,11 +14,11 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
+    browserSync = require('browser-sync'),
     favicons = require("gulp-favicons");
 
 // SASS Task
 //
-
 var styles = (function() {
     return {
         compile: function(config) {
@@ -55,7 +55,6 @@ gulp.task('sass', function() {
 
 // CSS Task
 //
-
 var css = (function() {
     return {
         compile: function(config) {
@@ -84,7 +83,6 @@ gulp.task('css', ['sass'], function() {
 
 // Style Stats Task
 //
-
 var stats = (function() {
     return {
         compile: function(config) {
@@ -111,7 +109,6 @@ gulp.task('stats', ['css'], function() {
 
 // Scripts Task
 //
-
 var scripts = (function() {
     return {
         compile: function(config) {
@@ -137,7 +134,6 @@ gulp.task('scripts', function() {
 
 // JS Task
 //
-
 var js = (function() {
     return {
         compile: function(config) {
@@ -162,7 +158,6 @@ gulp.task('js', ['scripts'], function() {
 
 // Modernizr Task
 //
-
 var mdrnzr = (function() {
     return {
         compile: function(config) {
@@ -189,7 +184,6 @@ gulp.task('modernizr', ['js', 'css'], function() {
 
 // Favicons Task
 //
-
 var icons = (function() {
     return {
         compile: function(config) {
@@ -229,11 +223,36 @@ gulp.task('icons', function() {
 
 });
 
+// Browser Sync Task
+//
+var settings = (function() {
+    return {
+        init: function(config) {
+            browserSync.init({
+                proxy: config.proxy + ':' + config.port,
+                port: config.port,
+                files: config.site,
+            });
+
+              return this;
+        }
+    };
+}());
+
+gulp.task('browser-sync', function() {
+    return settings
+        .init({
+            proxy: "localhost",
+            port: "4000",
+            site: "_site/*.*"
+        });
+});
+
 gulp.task('watch', function() {
     gulp.watch(['assets/styles/**/*.scss'], ['sass']);
     gulp.watch(['assets/scripts/**/*.js'], ['scripts']);
     gulp.watch(['assets/images/favicons/*.src.png'], ['icons']);
 });
 
-gulp.task('default', ['sass', 'scripts', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'browser-sync', 'watch']);
 gulp.task('build', ['modernizr', 'icons']);
